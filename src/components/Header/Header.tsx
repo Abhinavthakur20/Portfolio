@@ -41,7 +41,7 @@ export default function Header() {
       <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
         <div className={styles.container}>
           <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            NEXUS3D
+            ABHINAV
           </div>
           
           <nav className={styles.nav}>

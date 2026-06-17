@@ -17,39 +17,39 @@ type SkillGroup = {
 
 export default function Skills() {
   const frontendSkills: SkillGroup = {
-    title: "Frontend Stack",
+    title: "Web Technologies",
     icon: <Code size={20} style={{ color: "var(--text-primary)" }} />,
     skills: [
-      { name: "React / React 19", level: 95 },
-      { name: "Next.js 15/16 App Router", level: 90 },
-      { name: "TypeScript", level: 88 },
-      { name: "Vanilla CSS & Modules", level: 92 },
-      { name: "HTML5 & Web Semantics", level: 95 },
+      { name: "React.js / Next.js", level: 90 },
+      { name: "Node.js / Express.js", level: 88 },
+      { name: "Socket.io & WebRTC", level: 85 },
+      { name: "Tailwind CSS & CSS Modules", level: 92 },
+      { name: "HTML5 & TypeScript", level: 85 },
     ],
   };
 
   const creativeSkills: SkillGroup = {
-    title: "3D & Creative",
+    title: "Languages & Databases",
     icon: <Monitor size={20} style={{ color: "var(--accent-orange)" }} />,
     skills: [
-      { name: "Three.js / WebGL", level: 85 },
-      { name: "React Three Fiber / Drei", level: 88 },
-      { name: "GLSL / Shaders", level: 70 },
-      { name: "Figma UI/UX Design", level: 80 },
-      { name: "Motion & Keyframes", level: 85 },
+      { name: "Java Programming", level: 90 },
+      { name: "JavaScript / Python", level: 88 },
+      { name: "MongoDB (MERN)", level: 92 },
+      { name: "PostgreSQL / SQL", level: 82 },
+      { name: "Zustand (State Management)", level: 85 },
     ],
     colorClass: styles.creativeFill,
   };
 
   const backendSkills: SkillGroup = {
-    title: "Backend & Devops",
+    title: "Tools & Core Competencies",
     icon: <Server size={20} style={{ color: "var(--text-muted)" }} />,
     skills: [
-      { name: "Node.js / Express", level: 82 },
-      { name: "REST & GraphQL APIs", level: 85 },
-      { name: "PostgreSQL / Prisma", level: 80 },
-      { name: "Docker & Containerization", level: 75 },
-      { name: "CI/CD & Git Actions", level: 85 },
+      { name: "Data Structures & Algorithms", level: 85 },
+      { name: "REST API Design", level: 90 },
+      { name: "Git / GitHub / Maven", level: 88 },
+      { name: "Postman / Vercel", level: 85 },
+      { name: "Authentication (JWT / RBAC)", level: 88 },
     ],
   };
 

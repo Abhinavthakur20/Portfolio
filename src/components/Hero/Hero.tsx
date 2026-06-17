@@ -22,16 +22,16 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={styles.welcome}>
           <span className={styles.welcomeDot}></span>
-          Available for Freelance & Contract
+          Full-Stack MERN Developer
         </div>
         
         <h1 className={styles.title}>
-          Crafting Immersive <br />
-          <span className="gradient-text">3D Web Systems</span>
+          Hi, I&apos;m Abhinav Thakur <br />
+          <span className="gradient-text">MERN & Real-Time Systems</span>
         </h1>
         
         <p className={styles.description}>
-          I build high-performance, aesthetically stunning web applications that combine modern frontend frameworks with WebGL animations and fluid interactive design.
+          I build scalable real-time systems, secure payment pipelines, and AI-powered web applications using React, Node.js, Express, MongoDB, Socket.io, and WebRTC.
         </p>
         
         <div className={styles.btnGroup}>

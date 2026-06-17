@@ -15,31 +15,31 @@ export default function About() {
         {/* Left Column: Biography & Stats */}
         <div className={`${styles.bioCard} glass-card`}>
           <h3 className={styles.timelineTitle}>
-            <Award size={22} className="gradient-text" style={{ stroke: "url(#blue-purple-gradient)" }} />
+            <Award size={22} className="gradient-text" />
             My Journey
           </h3>
           <p className={styles.bioText}>
-            Hello! I am a software engineer dedicated to building immersive, high-fidelity digital systems. I specialize in merging advanced web development patterns with interactive WebGL rendering.
+            Hello! I am a Full-Stack MERN developer and computer science student with hands-on internship experience building real-time systems, secure payment integrations, and AI-powered web applications.
           </p>
           <p className={styles.highlightText}>
-            I bridge the gap between creative visual artistry and complex technical engineering.
+            I focus on designing and contributing to scalable, impactful products that solve real-world problems.
           </p>
           <p className={styles.bioText}>
-            Over the years, I have honed my skills in frameworks like Next.js and React, pairing them with Three.js/WebGL pipelines to craft experiences that wow visitors while maintaining perfect performance and accessibility.
+            From schema architectures handling extensive relational collections to frontends with reusable components, I love building low-latency, secure collaborative systems that people enjoy using.
           </p>
 
           <div className={styles.statsGrid}>
             <div className={styles.statItem}>
-              <span className={styles.statNum}>5+</span>
-              <span className={styles.statLabel}>Years Exp</span>
+              <span className={styles.statNum}>7.58</span>
+              <span className={styles.statLabel}>B.Tech CGPA</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNum}>40+</span>
-              <span className={styles.statLabel}>Projects</span>
+              <span className={styles.statLabel}>REST Endpoints</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNum}>99%</span>
-              <span className={styles.statLabel}>Success</span>
+              <span className={styles.statNum}>14+</span>
+              <span className={styles.statLabel}>DB Collections</span>
             </div>
           </div>
         </div>
@@ -47,38 +47,38 @@ export default function About() {
         {/* Right Column: Timeline */}
         <div className={`${styles.timelineCard} glass-card`}>
           <h3 className={styles.timelineTitle}>
-            <Briefcase size={22} style={{ color: "var(--accent-blue)" }} />
+            <Briefcase size={22} style={{ color: "var(--accent-orange)" }} />
             Experience & Education
           </h3>
 
           <div className={styles.timeline}>
             <div className={styles.timelineItem}>
               <span className={styles.timelineDot}></span>
-              <span className={styles.timelineDate}>2024 - Present</span>
-              <h4 className={styles.timelineRole}>Lead Creative Developer</h4>
-              <div className={styles.timelineCompany}>Nexus3D Lab | Freelance</div>
+              <span className={styles.timelineDate}>Dec 2025 - May 2026</span>
+              <h4 className={styles.timelineRole}>Web Developer Trainee</h4>
+              <div className={styles.timelineCompany}>O7 Services | Jalandhar, Punjab</div>
               <p className={styles.timelineDesc}>
-                Architecting next-gen 3D dashboards and WebGL applications for global tech companies.
+                Built BagPacker trip planner, integrated Razorpay payment pipeline, implemented role-based access, and deployed 40+ REST API endpoints.
               </p>
             </div>
 
             <div className={styles.timelineItem}>
               <span className={styles.timelineDot}></span>
-              <span className={styles.timelineDate}>2021 - 2024</span>
-              <h4 className={styles.timelineRole}>Senior React Engineer</h4>
-              <div className={styles.timelineCompany}>Prism Technologies</div>
+              <span className={styles.timelineDate}>Aug 2022 - May 2026</span>
+              <h4 className={styles.timelineRole}>B.Tech in Computer Science</h4>
+              <div className={styles.timelineCompany}>Guru Nanak Dev University | Punjab, India</div>
               <p className={styles.timelineDesc}>
-                Developed scalable SaaS interfaces, driving transition to Next.js App Router and design systems.
+                Studied Data Structures & Algorithms, DBMS, Operating Systems, OOP, and Web Development. (CGPA: 7.58/10)
               </p>
             </div>
 
             <div className={styles.timelineItem}>
               <span className={styles.timelineDot}></span>
-              <span className={styles.timelineDate}>2017 - 2021</span>
-              <h4 className={styles.timelineRole}>B.S. in Computer Science</h4>
-              <div className={styles.timelineCompany}>Global Tech University</div>
+              <span className={styles.timelineDate}>Certifications</span>
+              <h4 className={styles.timelineRole}>Professional Credentials</h4>
+              <div className={styles.timelineCompany}>Crio.Do & TalentSprint</div>
               <p className={styles.timelineDesc}>
-                Focused study in Computer Graphics, Algorithms, and Human-Computer Interaction (HCI).
+                Core Java & OOP principles (Crio.Do) and ML algorithms with practical AI applications (TalentSprint).
               </p>
             </div>
           </div>

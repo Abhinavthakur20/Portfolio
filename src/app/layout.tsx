@@ -18,10 +18,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Creative 3D Portfolio | Next.js & WebGL Developer",
-  description: "Explore an interactive 3D portfolio featuring immersive WebGL experiences, modern design, sleek glassmorphism, and responsive UI components. Built with Next.js, Three.js, and Vanilla CSS.",
-  keywords: ["Next.js", "Three.js", "React Three Fiber", "3D Portfolio", "WebGL", "Creative Developer", "TypeScript"],
-  authors: [{ name: "Creative Developer" }],
+  title: "Abhinav Thakur | Full-Stack MERN Developer",
+  description: "Explore the interactive portfolio of Abhinav Thakur. Full-stack MERN developer experienced in Next.js, Node.js, Socket.io, WebRTC, and building secure real-time web applications.",
+  keywords: ["Abhinav Thakur", "MERN Developer", "Full-Stack Developer", "Next.js", "Socket.io", "WebRTC", "Software Engineer", "React.js"],
+  authors: [{ name: "Abhinav Thakur" }],
 };
 
 export default function RootLayout({

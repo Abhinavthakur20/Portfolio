@@ -16,28 +16,28 @@ type Project = {
 export default function Projects() {
   const projectsList: Project[] = [
     {
-      title: "Glass Analytics",
-      description: "A minimal telemetry dashboard featuring frosted-glass widgets, fine line visualizer grids, and responsive real-time data streaming.",
-      image: "/glass_analytics.png",
-      tags: ["Next.js", "React", "WebGL", "CSS Modules"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "BagPacker",
+      description: "A full-stack travel platform for companion matching, seat-managed group bookings, secure Razorpay pipeline, Socket.io messaging, and an AI travel copilot.",
+      image: "/bagpacker.png",
+      tags: ["React.js", "Node.js", "Socket.io", "Razorpay", "MongoDB"],
+      github: "https://github.com/Abhinavthakur20/Portfolio",
+      live: "https://github.com/Abhinavthakur20/Portfolio",
     },
     {
-      title: "Nova Studio Portal",
-      description: "An architectural landing experience showcasing smooth camera pans, clean grid layouts, and a central interactive sculpture.",
-      image: "/studio_portal.png",
-      tags: ["Three.js", "React Three Fiber", "GSAP"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Drawza",
+      description: "A collaborative whiteboard supporting live cursor sync, drawing broadcasts, WebRTC voice channels, optimistic Zustand updates, and canvas state recovery.",
+      image: "/drawza.png",
+      tags: ["React.js", "Socket.io", "WebRTC", "Zustand", "MongoDB"],
+      github: "https://github.com/Abhinavthakur20/Portfolio",
+      live: "https://github.com/Abhinavthakur20/Portfolio",
     },
     {
-      title: "Linear Workspace",
-      description: "A high-performance workspace editor dashboard featuring dynamic sidebars, keyframe-animated menus, and markdown compiling.",
+      title: "Java & ML Systems",
+      description: "Object-oriented Java systems and Machine Learning validation models implementing core data structures, OOP principles, and ML algorithms.",
       image: "/linear_editor.png",
-      tags: ["Next.js", "TypeScript", "Vanilla CSS"],
-      github: "https://github.com",
-      live: "https://example.com",
+      tags: ["Java", "OOP", "Python", "ML Algorithms"],
+      github: "https://github.com/Abhinavthakur20/Portfolio",
+      live: "https://github.com/Abhinavthakur20/Portfolio",
     },
   ];
 
@@ -58,6 +58,7 @@ export default function Projects() {
                 className={styles.image}
                 width={400}
                 height={225}
+                priority={false}
               />
             </div>
             
