@@ -1,0 +1,68 @@
+.cursorDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-orange);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursorRing {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(234, 88, 12, 0.4);
+  background-color: rgba(234, 88, 12, 0.02);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.25s, height 0.25s, border-color 0.25s, background-color 0.25s;
+}
+
+/* Hover States */
+.cursorHovered .cursorDot {
+  width: 4px;
+  height: 4px;
+  background-color: #09090b;
+}
+
+.cursorHovered .cursorRing {
+  width: 50px;
+  height: 50px;
+  border-color: #09090b;
+  background-color: rgba(9, 9, 11, 0.04);
+}
+
+/* Hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+  :global(html),
+  :global(body),
+  :global(a),
+  :global(button),
+  :global(input),
+  :global(textarea),
+  :global(*) {
+    cursor: none !important;
+  }
+}
+
+/* Hide custom cursor on touchscreens */
+@media (max-width: 1024px), (pointer: coarse) {
+  .cursorDot,
+  .cursorRing {
+    display: none !important;
+  }
+  :global(html),
+  :global(body),
+  :global(*) {
+    cursor: auto !important;
+  }
+}

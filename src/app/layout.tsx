@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`} style={{ scrollBehavior: "smooth" }}>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+        <CustomCursor />
         {children}
       </body>
     </html>
