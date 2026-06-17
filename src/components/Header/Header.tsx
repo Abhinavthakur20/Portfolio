@@ -49,6 +49,7 @@ export default function Header() {
             <a href="#about" onClick={(e) => handleNavClick(e, "about")} className={styles.navLink}>About</a>
             <a href="#skills" onClick={(e) => handleNavClick(e, "skills")} className={styles.navLink}>Skills</a>
             <a href="#projects" onClick={(e) => handleNavClick(e, "projects")} className={styles.navLink}>Projects</a>
+            <a href="/Resume_Abhinav.pdf" target="_blank" rel="noopener noreferrer" className={styles.navLink}>Resume</a>
             <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className={styles.contactBtn}>Get in Touch</a>
           </nav>
 
@@ -68,6 +69,7 @@ export default function Header() {
         <a href="#about" onClick={(e) => handleNavClick(e, "about")} className={styles.navLink}>About</a>
         <a href="#skills" onClick={(e) => handleNavClick(e, "skills")} className={styles.navLink}>Skills</a>
         <a href="#projects" onClick={(e) => handleNavClick(e, "projects")} className={styles.navLink}>Projects</a>
+        <a href="/Resume_Abhinav.pdf" target="_blank" rel="noopener noreferrer" className={styles.navLink}>Resume</a>
         <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className={styles.contactBtn} style={{ textAlign: "center" }}>Get in Touch</a>
       </div>
     </>

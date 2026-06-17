@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { useProgress, Html } from "@react-three/drei";
 import ParticleField from "./ParticleField";
-import FloatingModel from "./FloatingModel";
 
 // Loading component inside the canvas
 function CanvasLoader() {
