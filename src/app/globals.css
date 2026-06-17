@@ -101,10 +101,7 @@ a {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #09090b, #ea580c 65%, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-orange);
   display: inline-block;
 }
 
