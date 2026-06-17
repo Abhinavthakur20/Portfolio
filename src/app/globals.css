@@ -10,6 +10,10 @@
   --text-secondary: #3f3f46;
   --text-muted: #71717a;
   
+  /* Font Variables Mapping */
+  --font-outfit: var(--font-space-grotesk);
+  --font-inter: var(--font-plus-jakarta);
+  
   /* Sophisticated Accents */
   --accent-blue: hsl(221, 83%, 53%);
   --accent-purple: hsl(262, 83%, 58%);
@@ -75,7 +79,7 @@ body {
 
 /* Typography Resets */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-primary);
