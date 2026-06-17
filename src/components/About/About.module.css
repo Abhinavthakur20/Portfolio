@@ -158,3 +158,16 @@
     border-bottom: none;
   }
 }
+
+.profileWrapper {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.profileImage {
+  border-radius: 50%;
+  border: 2px solid rgba(234, 88, 12, 0.2);
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(234, 88, 12, 0.08);
+}

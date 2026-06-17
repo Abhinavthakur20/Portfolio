@@ -1,6 +1,7 @@
 "use client";
 
 import { Award, Briefcase } from "lucide-react";
+import Image from "next/image";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -18,6 +19,16 @@ export default function About() {
             <Award size={22} className="gradient-text" />
             My Journey
           </h3>
+          <div className={styles.profileWrapper}>
+            <Image
+              src="/profile.png"
+              alt="Abhinav Thakur Profile"
+              className={styles.profileImage}
+              width={90}
+              height={90}
+              priority
+            />
+          </div>
           <p className={styles.bioText}>
             Hello! I am a Full-Stack MERN developer and computer science student with hands-on internship experience building real-time systems, secure payment integrations, and AI-powered web applications.
           </p>
