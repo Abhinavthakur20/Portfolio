@@ -42,7 +42,6 @@ export default function ThreeCanvas() {
 
         <Suspense fallback={<CanvasLoader />}>
           <ParticleField />
-          <FloatingModel />
         </Suspense>
       </Canvas>
     </div>
