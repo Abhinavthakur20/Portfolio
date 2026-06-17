@@ -1,33 +1,35 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1000px;
   height: 70px;
   display: flex;
   align-items: center;
   z-index: 100;
-  background: rgba(251, 250, 247, 0.96);
+  background: rgba(253, 252, 249, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(14, 13, 18, 0.08);
-  box-shadow: none;
+  border: 1px solid var(--glass-border);
+  border-radius: 0px;
+  box-shadow: 2px 2px 0px rgba(14, 13, 18, 0.08);
   transition: all var(--transition-normal);
 }
 
 .headerScrolled {
-  background: #fcfbfa;
-  border-bottom: 1px solid rgba(14, 13, 18, 0.18);
+  background: rgba(253, 252, 249, 0.98);
+  border: 1px solid var(--text-primary);
+  box-shadow: 4px 4px 0px rgba(14, 13, 18, 0.15);
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;                 /* Matches page width */
-  margin: 0 auto;
-  padding: 0 2rem;
   width: 100%;
+  padding: 0 2rem;
 }
 
 .logo {
@@ -108,27 +110,35 @@
   border: none;
   color: var(--text-primary);
   cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.menuToggle:hover {
+  color: var(--accent-orange);
 }
 
 /* Mobile Navigation Drawer */
 .mobileNav {
   position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  background: #fbfaf7;
-  border-bottom: 1px solid rgba(14, 13, 18, 0.15);
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 0px;
+  box-shadow: 3px 3px 0px rgba(14, 13, 18, 0.12);
   display: flex;
   flex-direction: column;
   padding: 2rem;
   gap: 1.5rem;
   z-index: 99;
-  transform: translateY(-150%);
   transition: transform var(--transition-normal);
 }
 
 .mobileNavActive {
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 @media (max-width: 1024px) {
@@ -137,5 +147,21 @@
   }
   .menuToggle {
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 12px;
+    width: calc(100% - 24px);
+    height: 60px;
+  }
+  .container {
+    padding: 0 1.25rem;
+  }
+  .mobileNav {
+    top: 80px;
+    width: calc(100% - 24px);
+    padding: 1.5rem;
   }
 }
