@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Download, Send, Zap, Cpu, ShieldCheck } from "lucide-react";
+import { Download, Send, ArrowRight, Zap, Cpu, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 
@@ -24,92 +24,76 @@ export default function Hero() {
       {/* Giant layout backdrop text */}
       <div className={styles.giantBackgroundText}>ABHINAV</div>
       
-      <div className={styles.gridContainer}>
-        {/* Left Side: Developer details and key strengths */}
-        <div className={styles.heroDetails}>
-          <div className={styles.welcome}>
-            <span className={styles.welcomeDot}></span>
-            Full-Stack MERN Trainee
+      <div className={styles.content}>
+        {/* Active Status Pill */}
+        <div className={styles.welcome}>
+          <span className={styles.welcomeDot}></span>
+          Full-Stack MERN Trainee
+        </div>
+        
+        <h1 className={styles.title}>
+          Architecting Scalable <br />
+          <span className="gradient-text">Real-Time Systems</span>
+        </h1>
+        
+        <p className={styles.description}>
+          Computer Science student & MERN engineer experienced in building group travel portals, collaborative whiteboards, WebSocket communication layers, and secure Razorpay pipelines.
+        </p>
+
+        {/* Center Competencies Spec Grid */}
+        <div className={styles.focusGrid}>
+          <div className={styles.focusCard}>
+            <Zap size={16} className={styles.focusIcon} />
+            <span className={styles.focusTitle}>Real-Time Sync</span>
           </div>
-          
-          <h1 className={styles.title}>
-            Architecting <span className="gradient-text">Real-Time</span> <br />
-            Systems & Collaborative Spaces
-          </h1>
-          
-          <p className={styles.description}>
-            Computer Science student & MERN engineer experienced in building group travel portals, collaborative whiteboards, WebSocket communication layers, and secure payment integrations.
-          </p>
 
-          {/* Micro-cards for core engineering focus areas */}
-          <div className={styles.focusGrid}>
-            <div className={styles.focusCard}>
-              <div className={styles.focusIconWrapper}>
-                <Zap size={18} className={styles.focusIconOrange} />
-              </div>
-              <div className={styles.focusInfo}>
-                <span className={styles.focusTitle}>Real-Time Sync</span>
-                <span className={styles.focusDesc}>Socket.io drawing broadcasts</span>
-              </div>
-            </div>
-
-            <div className={styles.focusCard}>
-              <div className={styles.focusIconWrapper}>
-                <Cpu size={18} className={styles.focusIconOrange} />
-              </div>
-              <div className={styles.focusInfo}>
-                <span className={styles.focusTitle}>Optimistic State</span>
-                <span className={styles.focusDesc}>Zustand memory caches</span>
-              </div>
-            </div>
-
-            <div className={styles.focusCard}>
-              <div className={styles.focusIconWrapper}>
-                <ShieldCheck size={18} className={styles.focusIconOrange} />
-              </div>
-              <div className={styles.focusInfo}>
-                <span className={styles.focusTitle}>Secure Billing</span>
-                <span className={styles.focusDesc}>Razorpay pipeline integration</span>
-              </div>
-            </div>
+          <div className={styles.focusCard}>
+            <Cpu size={16} className={styles.focusIcon} />
+            <span className={styles.focusTitle}>Optimistic State</span>
           </div>
-          
-          <div className={styles.btnGroup}>
-            <button 
-              onClick={() => handleScrollToSection("projects")} 
-              className={styles.primaryBtn}
-            >
-              Selected Projects
-              <ArrowRight size={16} style={{ marginLeft: "0.5rem" }} />
-            </button>
 
-            <a 
-              href="/Resume_Abhinav.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className={styles.secondaryBtn}
-            >
-              <Download size={16} style={{ marginRight: "0.5rem" }} />
-              Download CV
-            </a>
-            
-            <button 
-              onClick={() => handleScrollToSection("contact")} 
-              className={styles.tertiaryBtn}
-            >
-              <Send size={15} style={{ marginRight: "0.5rem" }} />
-              Let&apos;s Connect
-            </button>
+          <div className={styles.focusCard}>
+            <ShieldCheck size={16} className={styles.focusIcon} />
+            <span className={styles.focusTitle}>Secure Billing</span>
           </div>
         </div>
+        
+        {/* Buttons Row */}
+        <div className={styles.btnGroup}>
+          <button 
+            onClick={() => handleScrollToSection("projects")} 
+            className={styles.primaryBtn}
+          >
+            Explore Projects
+            <ArrowRight size={14} style={{ marginLeft: "0.5rem" }} />
+          </button>
 
-        {/* Right Side: Interactive 3D Stack Developer Workbench */}
+          <a 
+            href="/Resume_Abhinav.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.secondaryBtn}
+          >
+            <Download size={14} style={{ marginRight: "0.5rem" }} />
+            Download CV
+          </a>
+          
+          <button 
+            onClick={() => handleScrollToSection("contact")} 
+            className={styles.tertiaryBtn}
+          >
+            <Send size={13} style={{ marginRight: "0.5rem" }} />
+            Let&apos;s Connect
+          </button>
+        </div>
+
+        {/* Centered 3D Stack Developer Workbench Centerpiece */}
         <div className={styles.workbenchContainer}>
           <div className={styles.workbench}>
-            {/* Layer 1: Technical Grid Blueprint in background */}
+            {/* Background Guideline Matrix */}
             <div className={styles.workbenchBlueprint}></div>
 
-            {/* Layer 2: Graphic/Mockup Frame displaying Studio Portal */}
+            {/* Mockup Browser Window */}
             <div className={styles.workbenchMockupCard}>
               <div className={styles.mockupHeader}>
                 <span className={styles.mockupCircle}></span>
@@ -120,7 +104,7 @@ export default function Hero() {
               <div className={styles.mockupImageWrapper}>
                 <Image
                   src="/studio_portal.png"
-                  alt="Developer portal visualization"
+                  alt="Developer portal mockup"
                   width={380}
                   height={220}
                   className={styles.mockupImg}
@@ -129,7 +113,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Layer 3: Floating Terminal displaying live socket connection */}
+            {/* Floating Terminal Block */}
             <div className={styles.codeTerminal}>
               <div className={styles.terminalHeader}>
                 <span className={styles.dotRed}></span>
@@ -151,20 +135,20 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Float profile avatar overlay */}
+            {/* Floating Profile Tag */}
             <div className={styles.avatarCard}>
               <div className={styles.avatarWrapper}>
                 <Image
                   src="/profile.png"
-                  alt="Abhinav Profile Pic"
-                  width={42}
-                  height={42}
+                  alt="Abhinav Profile avatar"
+                  width={38}
+                  height={38}
                   className={styles.avatarImg}
                 />
               </div>
               <div className={styles.avatarLabel}>
                 <span className={styles.avatarName}>Abhinav Thakur</span>
-                <span className={styles.avatarStatus}>Available for Trainee roles</span>
+                <span className={styles.avatarStatus}>Available for roles</span>
               </div>
             </div>
           </div>

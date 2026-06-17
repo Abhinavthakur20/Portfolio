@@ -10,21 +10,21 @@
   background: rgba(251, 250, 247, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(9, 9, 11, 0.08);
+  border-bottom: 1px solid rgba(14, 13, 18, 0.08);
   box-shadow: none;
   transition: all var(--transition-normal);
 }
 
 .headerScrolled {
   background: #fcfbfa;
-  border-bottom: 1px solid rgba(9, 9, 11, 0.18);
+  border-bottom: 1px solid rgba(14, 13, 18, 0.18);
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1000px;                 /* Matches page width */
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
@@ -32,34 +32,30 @@
 
 .logo {
   font-family: var(--font-playfair), Georgia, serif;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 900;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--text-primary);
   text-transform: uppercase;
   cursor: pointer;
-  transition: opacity var(--transition-fast);
-}
-
-.logo:hover {
-  opacity: 0.8;
+  line-height: 1;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 2.25rem;
+  gap: 2rem;
 }
 
 .navLink {
   font-family: var(--font-inter), sans-serif;
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-secondary);
   position: relative;
   padding: 0.4rem 0;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   transition: color var(--transition-fast);
 }
 
@@ -87,17 +83,16 @@
 
 .contactBtn {
   font-family: var(--font-inter), sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.775rem;
   font-weight: 700;
-  padding: 0.55rem 1.25rem;
-  border-radius: 0px;               /* Flat square corners */
+  padding: 0.5rem 1.1rem;
+  border-radius: 0px;               /* Beveled flat */
   border: 1.5px solid var(--text-primary);
   background: transparent;
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   cursor: pointer;
-  box-shadow: none;
   transition: all var(--transition-fast);
 }
 
@@ -106,7 +101,7 @@
   color: var(--bg-primary);
 }
 
-/* Mobile Nav Toggle */
+/* Mobile Toggle */
 .menuToggle {
   display: none;
   background: none;
@@ -115,14 +110,14 @@
   cursor: pointer;
 }
 
-/* Mobile Nav Styles */
+/* Mobile Navigation Drawer */
 .mobileNav {
   position: fixed;
   top: 70px;
   left: 0;
   width: 100%;
   background: #fbfaf7;
-  border-bottom: 1px solid rgba(9, 9, 11, 0.15);
+  border-bottom: 1px solid rgba(14, 13, 18, 0.15);
   display: flex;
   flex-direction: column;
   padding: 2rem;

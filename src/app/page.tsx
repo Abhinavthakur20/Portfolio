@@ -26,7 +26,7 @@ export default function Home() {
           <Header />
         </div>
         
-        <main>
+        <main className={styles.mainContent}>
           <div className={styles.contentSection}>
             <Hero />
           </div>
@@ -50,8 +50,8 @@ export default function Home() {
 
         <footer className={styles.footer}>
           <div className={`${styles.footerContainer} container`}>
-            <div className={styles.footerLogo}>NEXUS3D</div>
-            <p>© {new Date().getFullYear()} Creative Developer. All rights reserved.</p>
+            <div className={styles.footerLogo}>ABHINAV</div>
+            <p>© {new Date().getFullYear()} Abhinav Thakur. All rights reserved.</p>
           </div>
         </footer>
       </div>

@@ -1,5 +1,6 @@
 .about {
   position: relative;
+  width: 100%;
 }
 
 .titleSection {
@@ -12,48 +13,30 @@
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.15em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   display: block;
   font-weight: 700;
 }
 
 .title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 900;
   letter-spacing: -0.02em;
 }
 
-/* Bento Grid Layout */
-.bentoGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.bentoTitle {
-  font-size: 1.15rem;
-  font-family: var(--font-playfair), Georgia, serif;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 900;
-}
-
-/* Bento Items styling overrides */
-.bioItem {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+/* Biography Card Area */
+.biographyCard {
+  background: #ffffff;
+  border: 1px solid rgba(9, 9, 11, 0.1);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .bioHeader {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .profileWrapper {
@@ -64,14 +47,28 @@
 .profileImage {
   border-radius: 50%;
   border: 1.5px solid var(--text-primary);
-  box-shadow: none;
   object-fit: cover;
+}
+
+.bioName {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.bioSub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .bioText {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text-secondary);
+  margin-bottom: 1.25rem;
 }
 
 .highlightText {
@@ -79,26 +76,25 @@
   font-weight: 600;
   border-left: 2px solid var(--accent-orange);
   padding-left: 1rem;
-  margin: 0.25rem 0;
+  margin-bottom: 2rem;
 }
 
+/* LCD Metrics counters */
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin-top: auto;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(9, 9, 11, 0.15);
+  border-top: 1px solid rgba(9, 9, 11, 0.12);
 }
 
 .statItem {
   text-align: center;
-  background: #ffffff;
-  border: 1px solid rgba(9, 9, 11, 0.1);
+  background: var(--bg-secondary);
+  border: 1px solid rgba(9, 9, 11, 0.08);
   padding: 0.65rem 0.5rem;
-  border-radius: 0px;                 /* Square corner cuts */
-  box-shadow: none;
-  transition: all var(--transition-fast);
+  border-radius: 0px;
+  transition: border-color var(--transition-fast);
 }
 
 .statItem:hover {
@@ -107,7 +103,7 @@
 
 .statNum {
   font-family: var(--font-playfair), Georgia, serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-weight: 900;
   color: var(--text-primary);
   margin-bottom: 0.15rem;
@@ -122,25 +118,44 @@
   font-weight: 700;
 }
 
-/* Experience Block (Tall, Span 2 rows) */
-.experienceItem {
-  grid-row: span 2;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  justify-content: flex-start;
+/* Timelines Grid (Experience / Education) */
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 100%;
 }
 
-.experienceDetails {
+.timelineColumn {
   display: flex;
   flex-direction: column;
+}
+
+.columnHeader {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(9, 9, 11, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
 .dateBadge {
   background: var(--bg-secondary);
   border: 1px solid rgba(9, 9, 11, 0.15);
-  padding: 0.25rem 0.75rem;
-  border-radius: 0px;                 /* Flat square corners */
+  padding: 0.25rem 0.65rem;
+  border-radius: 0px;
   font-size: 0.725rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -152,7 +167,7 @@
 }
 
 .roleTitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--text-primary);
 }
@@ -181,7 +196,7 @@
 }
 
 .bulletsList li::before {
-  content: "—";                     /* Printed em-dash bullet */
+  content: "—";                     /* Printed em-dash */
   position: absolute;
   left: 0;
   top: 0;
@@ -189,42 +204,53 @@
   font-weight: 700;
 }
 
-/* Row 2 blocks */
-.educationItem,
-.certsItem {
-  display: flex;
-  flex-direction: column;
+.columnDesc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
 }
 
+/* Certs display items list */
 .certsList {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
-/* Responsive Grid Resets */
-@media (max-width: 1024px) {
-  .bentoGrid {
+.certItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.certTitle {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.certDesc {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+/* Tablet Stacks */
+@media (max-width: 768px) {
+  .timelineGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .bioItem,
-  .experienceItem,
-  .educationItem,
-  .certsItem {
-    grid-column: span 1;
-    grid-row: span 1;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .biographyCard {
+    padding: 1.5rem;
+  }
   .statsGrid {
-    grid-template-columns: 1fr !important;
-    gap: 1.25rem;
-    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .bioHeader {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
   }
 }
