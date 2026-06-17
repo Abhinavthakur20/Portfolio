@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, Briefcase } from "lucide-react";
+import { Award, Briefcase, GraduationCap, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import styles from "./About.module.css";
 
@@ -12,31 +12,34 @@ export default function About() {
         <h2 className={styles.title}>About Me</h2>
       </div>
 
-      <div className={styles.content}>
-        {/* Left Column: Biography & Stats */}
-        <div className={`${styles.bioCard} glass-card`}>
-          <h3 className={styles.timelineTitle}>
-            <Award size={22} className="gradient-text" />
-            My Journey
-          </h3>
-          <div className={styles.profileWrapper}>
-            <Image
-              src="/profile.png"
-              alt="Abhinav Thakur Profile"
-              className={styles.profileImage}
-              width={90}
-              height={90}
-              priority
-            />
+      <div className={styles.bentoGrid}>
+        {/* Block 1: Biography Card (Spans 2 columns) */}
+        <div className={`${styles.bioItem} glass-card`}>
+          <div className={styles.bioHeader}>
+            <div className={styles.profileWrapper}>
+              <Image
+                src="/profile.png"
+                alt="Abhinav Thakur Profile"
+                className={styles.profileImage}
+                width={70}
+                height={70}
+                priority
+              />
+            </div>
+            <div>
+              <h3 className={styles.bentoTitle}>
+                <Award size={20} className="gradient-text" style={{ marginRight: "0.5rem" }} />
+                My Journey
+              </h3>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>Abhinav Thakur | MERN Trainee</p>
+            </div>
           </div>
-          <p className={styles.bioText}>
-            Hello! I am a Full-Stack MERN developer and computer science student with hands-on internship experience building real-time systems, secure payment integrations, and AI-powered web applications.
+          
+          <p className={styles.bioText} style={{ marginTop: "1rem" }}>
+            I am a Full-Stack MERN developer with hands-on internship experience building real-time collaborative whiteboards, group travel planners, WebSocket communication layers, and secure payment integrations.
           </p>
           <p className={styles.highlightText}>
-            I focus on designing and contributing to scalable, impactful products that solve real-world problems.
-          </p>
-          <p className={styles.bioText}>
-            From schema architectures handling extensive relational collections to frontends with reusable components, I love building low-latency, secure collaborative systems that people enjoy using.
+            I bridge the gap between backend API architecture and high-performance frontend interfaces.
           </p>
 
           <div className={styles.statsGrid}>
@@ -55,42 +58,56 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Column: Timeline */}
-        <div className={`${styles.timelineCard} glass-card`}>
-          <h3 className={styles.timelineTitle}>
-            <Briefcase size={22} style={{ color: "var(--accent-orange)" }} />
-            Experience & Education
+        {/* Block 2: Experience Card (Tall, Spans 1 column) */}
+        <div className={`${styles.experienceItem} glass-card`}>
+          <h3 className={styles.bentoTitle}>
+            <Briefcase size={20} style={{ color: "var(--accent-orange)", marginRight: "0.5rem" }} />
+            Work Internship
           </h3>
 
-          <div className={styles.timeline}>
-            <div className={styles.timelineItem}>
-              <span className={styles.timelineDot}></span>
-              <span className={styles.timelineDate}>Dec 2025 - May 2026</span>
-              <h4 className={styles.timelineRole}>Web Developer Trainee</h4>
-              <div className={styles.timelineCompany}>O7 Services | Jalandhar, Punjab</div>
-              <p className={styles.timelineDesc}>
-                Built BagPacker trip planner, integrated Razorpay payment pipeline, implemented role-based access, and deployed 40+ REST API endpoints.
-              </p>
-            </div>
+          <div className={styles.experienceDetails}>
+            <span className={styles.dateBadge}>Dec 2025 - May 2026</span>
+            <h4 className={styles.roleTitle}>Web Developer Trainee</h4>
+            <div className={styles.companyTitle}>O7 Services | Jalandhar</div>
+            <ul className={styles.bulletsList}>
+              <li>Built and shipped <b>BagPacker</b>, a travel tech system handling group bookings.</li>
+              <li>Integrated Razorpay payment pipeline with email ticket confirmations.</li>
+              <li>Designed low-latency chat hubs and direct messaging with Socket.io.</li>
+              <li>Deployed 40+ endpoints securing authentication with JWT & RBAC levels.</li>
+            </ul>
+          </div>
+        </div>
 
-            <div className={styles.timelineItem}>
-              <span className={styles.timelineDot}></span>
-              <span className={styles.timelineDate}>Aug 2022 - May 2026</span>
-              <h4 className={styles.timelineRole}>B.Tech in Computer Science</h4>
-              <div className={styles.timelineCompany}>Guru Nanak Dev University | Punjab, India</div>
-              <p className={styles.timelineDesc}>
-                Studied Data Structures & Algorithms, DBMS, Operating Systems, OOP, and Web Development. (CGPA: 7.58/10)
-              </p>
-            </div>
+        {/* Block 3: Education Card (Row 2, Column 1) */}
+        <div className={`${styles.educationItem} glass-card`}>
+          <h3 className={styles.bentoTitle}>
+            <GraduationCap size={20} style={{ color: "var(--text-secondary)", marginRight: "0.5rem" }} />
+            Education
+          </h3>
+          <div style={{ marginTop: "1rem" }}>
+            <span className={styles.dateBadge}>2022 - 2026</span>
+            <h4 className={styles.roleTitle} style={{ fontSize: "1.05rem" }}>B.Tech in Computer Science</h4>
+            <div className={styles.companyTitle} style={{ marginBottom: "0.5rem" }}>Guru Nanak Dev University</div>
+            <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+              Focused on DSA, Database Management, Systems, OOP and Web Development architectures.
+            </p>
+          </div>
+        </div>
 
-            <div className={styles.timelineItem}>
-              <span className={styles.timelineDot}></span>
-              <span className={styles.timelineDate}>Certifications</span>
-              <h4 className={styles.timelineRole}>Professional Credentials</h4>
-              <div className={styles.timelineCompany}>Crio.Do & TalentSprint</div>
-              <p className={styles.timelineDesc}>
-                Core Java & OOP principles (Crio.Do) and ML algorithms with practical AI applications (TalentSprint).
-              </p>
+        {/* Block 4: Credentials Card (Row 2, Column 2) */}
+        <div className={`${styles.certsItem} glass-card`}>
+          <h3 className={styles.bentoTitle}>
+            <ShieldCheck size={20} style={{ color: "var(--text-muted)", marginRight: "0.5rem" }} />
+            Certifications
+          </h3>
+          <div className={styles.certsList} style={{ marginTop: "1rem" }}>
+            <div className={styles.certItem}>
+              <h5 style={{ fontWeight: 600, color: "var(--text-primary)" }}>Java Programming</h5>
+              <p style={{ fontSize: "0.825rem", color: "var(--text-muted)" }}>Crio.Do - Core OOP, collections, multithreading.</p>
+            </div>
+            <div className={styles.certItem} style={{ marginTop: "0.75rem" }}>
+              <h5 style={{ fontWeight: 600, color: "var(--text-primary)" }}>Demystifying AI/ML</h5>
+              <p style={{ fontSize: "0.825rem", color: "var(--text-muted)" }}>TalentSprint - ML algorithms, models evaluation.</p>
             </div>
           </div>
         </div>

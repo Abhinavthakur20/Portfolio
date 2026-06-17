@@ -19,19 +19,22 @@ export default function Hero() {
 
   return (
     <section id="hero" className={`${styles.hero} container`}>
+      {/* Giant layout backdrop text */}
+      <div className={styles.giantBackgroundText}>ABHINAV</div>
+      
       <div className={styles.content}>
         <div className={styles.welcome}>
           <span className={styles.welcomeDot}></span>
-          Full-Stack MERN Developer
+          Full-Stack MERN Trainee
         </div>
         
         <h1 className={styles.title}>
-          Hi, I&apos;m Abhinav Thakur <br />
-          <span className="gradient-text">MERN & Real-Time Systems</span>
+          Architecting Scalable <br />
+          <span className="gradient-text">Real-Time Systems</span>
         </h1>
         
         <p className={styles.description}>
-          I build scalable real-time systems, secure payment pipelines, and AI-powered web applications using React, Node.js, Express, MongoDB, Socket.io, and WebRTC.
+          Computer Science student & MERN engineer experienced in building group travel portals, collaborative whiteboards, WebSocket communication layers, and secure Razorpay pipelines.
         </p>
         
         <div className={styles.btnGroup}>

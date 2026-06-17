@@ -22,16 +22,24 @@
 
 .grid {
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.skillGroup {
+.skillsCard {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  height: 100%;
+  transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.skillsCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(9, 9, 11, 0.12);
+  box-shadow: 0 16px 40px 0 rgba(9, 9, 11, 0.05);
 }
 
 .groupTitle {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-family: var(--font-outfit), sans-serif;
   color: var(--text-primary);
   display: flex;
@@ -41,63 +49,45 @@
   padding-bottom: 0.75rem;
 }
 
-.skillList {
+/* Tag Cloud Grid */
+.tagGrid {
   display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
 }
 
-.skillItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.skillMeta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.95rem;
-}
-
-.skillName {
+.tag {
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(9, 9, 11, 0.05);
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  cursor: default;
+  transition: all var(--transition-fast);
 }
 
-.skillPercent {
-  color: var(--text-primary);
+.tag:hover {
+  background: #09090b;
+  color: #fafafa;
+  border-color: #09090b;
+  transform: translateY(-2px);
+}
+
+/* Highlighted/Core Stacks */
+.highlightedTag {
+  border-color: rgba(234, 88, 12, 0.25);
+  background: rgba(234, 88, 12, 0.03);
+  color: var(--accent-orange);
   font-weight: 600;
 }
 
-.progressBarTrack {
-  width: 100%;
-  height: 6px;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progressBarFill {
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(to right, #27272a, #71717a);
-  transition: width 1.5s cubic-bezier(0.1, 0.8, 0.2, 1);
-}
-
-/* Give creative skills a clean, subtle blue-gray tint fill */
-.creativeFill {
+.highlightedTag:hover {
   background: var(--accent-orange);
-}
-
-/* Hover effects for cards */
-.skillsCard {
-  transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.skillsCard:hover {
-  transform: translateY(-4px);
-  border-color: rgba(9, 9, 11, 0.15);
-  box-shadow: 0 16px 40px 0 rgba(9, 9, 11, 0.05);
+  border-color: var(--accent-orange);
+  color: #fafafa;
 }
 
 @media (max-width: 992px) {

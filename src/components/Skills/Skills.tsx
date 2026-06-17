@@ -3,77 +3,54 @@
 import { Code, Monitor, Server } from "lucide-react";
 import styles from "./Skills.module.css";
 
-type Skill = {
-  name: string;
-  level: number;
-};
-
 type SkillGroup = {
   title: string;
   icon: React.ReactNode;
-  skills: Skill[];
-  colorClass?: string;
+  tags: string[];
+  highlightedTags?: string[]; // tags to highlight in orange
 };
 
 export default function Skills() {
   const frontendSkills: SkillGroup = {
     title: "Web Technologies",
     icon: <Code size={20} style={{ color: "var(--text-primary)" }} />,
-    skills: [
-      { name: "React.js / Next.js", level: 90 },
-      { name: "Node.js / Express.js", level: 88 },
-      { name: "Socket.io & WebRTC", level: 85 },
-      { name: "Tailwind CSS & CSS Modules", level: 92 },
-      { name: "HTML5 & TypeScript", level: 85 },
-    ],
+    tags: ["React.js", "Next.js", "Node.js", "Express.js", "Socket.io", "WebRTC", "Tailwind CSS", "CSS Modules", "HTML5", "CSS3"],
+    highlightedTags: ["React.js", "Next.js", "Node.js", "Socket.io", "WebRTC"],
   };
 
   const creativeSkills: SkillGroup = {
     title: "Languages & Databases",
     icon: <Monitor size={20} style={{ color: "var(--accent-orange)" }} />,
-    skills: [
-      { name: "Java Programming", level: 90 },
-      { name: "JavaScript / Python", level: 88 },
-      { name: "MongoDB (MERN)", level: 92 },
-      { name: "PostgreSQL / SQL", level: 82 },
-      { name: "Zustand (State Management)", level: 85 },
-    ],
-    colorClass: styles.creativeFill,
+    tags: ["Java Programming", "JavaScript", "TypeScript", "Python", "SQL", "MongoDB", "PostgreSQL", "NoSQL", "Zustand"],
+    highlightedTags: ["Java Programming", "MongoDB", "TypeScript"],
   };
 
   const backendSkills: SkillGroup = {
-    title: "Tools & Core Competencies",
+    title: "Tools & Competencies",
     icon: <Server size={20} style={{ color: "var(--text-muted)" }} />,
-    skills: [
-      { name: "Data Structures & Algorithms", level: 85 },
-      { name: "REST API Design", level: 90 },
-      { name: "Git / GitHub / Maven", level: 88 },
-      { name: "Postman / Vercel", level: 85 },
-      { name: "Authentication (JWT / RBAC)", level: 88 },
-    ],
+    tags: ["Data Structures", "Algorithms", "REST API Design", "Git", "GitHub", "Maven", "Postman", "Vercel", "Vite", "JWT Auth", "RBAC Security"],
+    highlightedTags: ["Data Structures", "REST API Design", "JWT Auth"],
   };
 
   const renderGroup = (group: SkillGroup) => (
-    <div key={group.title} className={`${styles.skillsCard} ${styles.skillGroup} glass-card`}>
+    <div key={group.title} className={`${styles.skillsCard} glass-card`}>
       <h3 className={styles.groupTitle}>
         {group.icon}
         {group.title}
       </h3>
-      <div className={styles.skillList}>
-        {group.skills.map((skill) => (
-          <div key={skill.name} className={styles.skillItem}>
-            <div className={styles.skillMeta}>
-              <span className={styles.skillName}>{skill.name}</span>
-              <span className={styles.skillPercent}>{skill.level}%</span>
-            </div>
-            <div className={styles.progressBarTrack}>
-              <div
-                className={`${styles.progressBarFill} ${group.colorClass || ""}`}
-                style={{ width: `${skill.level}%` }}
-              ></div>
-            </div>
-          </div>
-        ))}
+      
+      <div className={styles.tagGrid}>
+        {group.tags.map((tag) => {
+          const isHighlighted = group.highlightedTags?.includes(tag);
+          return (
+            <span
+              key={tag}
+              className={`${styles.tag} ${isHighlighted ? styles.highlightedTag : ""}`}
+            >
+              {tag}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
