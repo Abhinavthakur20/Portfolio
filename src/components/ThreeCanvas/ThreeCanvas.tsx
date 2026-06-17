@@ -35,10 +35,10 @@ export default function ThreeCanvas() {
         {/* Soft fill light from opposite bottom */}
         <directionalLight position={[-10, -8, -5]} intensity={0.6} />
 
-        {/* Clean, natural point lights for glassy refractions */}
+        {/* Clean point lights simulating warm/cool studio lighting */}
         <pointLight position={[5, 5, 5]} intensity={2.0} color="#ffffff" />
-        <pointLight position={[-5, 5, 3]} intensity={1.5} color="#f0fdfa" /> {/* Very light teal */}
-        <pointLight position={[0, -5, 2]} intensity={1.2} color="#eff6ff" /> {/* Soft blue */}
+        <pointLight position={[-5, 5, 3]} intensity={1.5} color="#ffedd5" /> {/* Soft peach reflection */}
+        <pointLight position={[0, -5, 2]} intensity={1.5} color="#fed7aa" /> {/* Soft warm orange refraction */}
 
         <Suspense fallback={<CanvasLoader />}>
           <ParticleField />

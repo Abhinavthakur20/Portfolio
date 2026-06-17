@@ -75,9 +75,8 @@ export default function FloatingModel() {
       {/* Visual core geometry: TorusKnot for an elegant, premium look */}
       <torusKnotGeometry args={[0.75, 0.22, 180, 18]} />
       
-      {/* High-fidelity Frosted Glass (Physical Material) */}
       <meshPhysicalMaterial
-        color={clicked ? "#cbd5e1" : hovered ? "#e2e8f0" : "#f1f5f9"}
+        color={clicked ? "#ea580c" : hovered ? "#ffedd5" : "#f8fafc"}
         roughness={0.18}
         metalness={0.05}
         clearcoat={1.0}
