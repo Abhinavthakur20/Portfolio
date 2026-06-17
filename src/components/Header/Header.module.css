@@ -15,15 +15,13 @@
   border: 1px solid rgba(9, 9, 11, 0.07);
   border-radius: 100px;
   box-shadow: 0 10px 30px rgba(9, 9, 11, 0.02);
-  transition: all var(--transition-normal);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .headerScrolled {
-  top: 12px;
-  height: 56px;
   background: rgba(255, 255, 255, 0.85);
   border-color: rgba(9, 9, 11, 0.12);
-  box-shadow: 0 12px 40px rgba(9, 9, 11, 0.05);
+  box-shadow: 0 12px 40px rgba(9, 9, 11, 0.06);
 }
 
 .container {
