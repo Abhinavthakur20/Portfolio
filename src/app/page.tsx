@@ -17,9 +17,6 @@ const ThreeCanvas = dynamic(() => import("@/components/ThreeCanvas/ThreeCanvas")
 export default function Home() {
   return (
     <>
-      {/* CRT scanline screen overlay filter */}
-      <div className="crt-overlay" />
-
       {/* 3D WebGL Background Scene */}
       <ThreeCanvas />
       

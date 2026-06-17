@@ -8,14 +8,13 @@
 }
 
 .subtitle {
-  color: var(--accent-pink);
+  color: var(--accent-orange);
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
   display: block;
-  font-weight: 850;
-  text-shadow: 0 0 8px rgba(255, 0, 127, 0.2);
+  font-weight: 700;
 }
 
 .title {
@@ -33,27 +32,26 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal);
 }
 
 .skillsCard:hover {
-  transform: translate(-3px, -3px);
-  border-color: var(--accent-green);
-  box-shadow: 7px 7px 0px var(--accent-green);
+  transform: translateY(-2px);
+  border-color: var(--text-primary);
 }
 
 .groupTitle {
-  font-size: 1.15rem;
-  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.1rem;
+  font-family: var(--font-playfair), Georgia, serif;
   color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 2px dashed rgba(0, 240, 255, 0.15);
+  border-bottom: 1px solid rgba(9, 9, 11, 0.15);
   padding-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 850;
+  font-weight: 900;
 }
 
 /* Tag Cloud Grid */
@@ -68,36 +66,33 @@
   font-size: 0.825rem;
   font-weight: 700;
   color: var(--text-secondary);
-  background: rgba(18, 16, 36, 0.6);
-  border: 1px solid rgba(0, 240, 255, 0.15);
+  background: var(--bg-secondary);
+  border: 1px solid rgba(9, 9, 11, 0.1);
   padding: 0.45rem 0.9rem;
-  border-radius: 4px;
+  border-radius: 0px;
   cursor: default;
   transition: all var(--transition-fast);
 }
 
 .tag:hover {
-  background: var(--accent-blue);
+  background: var(--text-primary);
   color: var(--bg-primary);
-  border-color: var(--accent-blue);
-  transform: translate(-1px, -1px);
-  box-shadow: 2px 2px 0px var(--accent-pink);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 /* Highlighted/Core Stacks */
 .highlightedTag {
-  border-color: rgba(57, 255, 20, 0.3);
-  background: rgba(57, 255, 20, 0.05);
-  color: var(--accent-green);
+  border-color: rgba(153, 27, 27, 0.25);
+  background: var(--bg-secondary);
+  color: var(--accent-orange);
   font-weight: 750;
-  text-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
 }
 
 .highlightedTag:hover {
-  background: var(--accent-green);
-  border-color: var(--accent-green);
-  color: var(--bg-primary);
-  text-shadow: none;
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+  color: #ffffff;
 }
 
 @media (max-width: 992px) {

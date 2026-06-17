@@ -1,8 +1,8 @@
 .cursorDot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-orange);
-  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-primary);
+  border-radius: 0%;                 /* Square print press block dot */
   position: fixed;
   top: 0;
   left: 0;
@@ -13,11 +13,11 @@
 }
 
 .cursorRing {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(234, 88, 12, 0.4);
-  background-color: rgba(234, 88, 12, 0.02);
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(9, 9, 11, 0.25);
+  background-color: transparent;
+  border-radius: 0%;                 /* Square press box */
   position: fixed;
   top: 0;
   left: 0;
@@ -31,14 +31,14 @@
 .cursorHovered .cursorDot {
   width: 4px;
   height: 4px;
-  background-color: #09090b;
+  background-color: var(--accent-orange);
 }
 
 .cursorHovered .cursorRing {
-  width: 50px;
-  height: 50px;
-  border-color: #09090b;
-  background-color: rgba(9, 9, 11, 0.04);
+  width: 44px;
+  height: 44px;
+  border-color: var(--accent-orange);
+  background-color: var(--accent-orange-glow);
 }
 
 /* Hide default cursor on desktop */

@@ -8,14 +8,13 @@
 }
 
 .subtitle {
-  color: var(--accent-pink);
+  color: var(--accent-orange);
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
   display: block;
-  font-weight: 800;
-  text-shadow: 0 0 8px rgba(255, 0, 127, 0.2);
+  font-weight: 700;
 }
 
 .title {
@@ -33,14 +32,14 @@
 }
 
 .bentoTitle {
-  font-size: 1.2rem;
-  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.15rem;
+  font-family: var(--font-playfair), Georgia, serif;
   color: var(--text-primary);
   display: flex;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 850;
+  font-weight: 900;
 }
 
 /* Bento Items styling overrides */
@@ -64,8 +63,8 @@
 
 .profileImage {
   border-radius: 50%;
-  border: 2px solid var(--accent-blue);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+  border: 1.5px solid var(--text-primary);
+  box-shadow: none;
   object-fit: cover;
 }
 
@@ -78,7 +77,7 @@
 .highlightText {
   color: var(--text-primary);
   font-weight: 600;
-  border-left: 3px solid var(--accent-blue);
+  border-left: 2px solid var(--accent-orange);
   padding-left: 1rem;
   margin: 0.25rem 0;
 }
@@ -86,35 +85,31 @@
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
   margin-top: auto;
-  padding-top: 1.25rem;
-  border-top: 2px dashed rgba(0, 240, 255, 0.15);
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(9, 9, 11, 0.15);
 }
 
 .statItem {
   text-align: center;
-  background: rgba(0, 240, 255, 0.02);
-  border: 1px solid rgba(0, 240, 255, 0.08);
-  padding: 0.5rem;
-  border-radius: 4px;
-  box-shadow: 1px 1px 0px rgba(0, 240, 255, 0.1);
+  background: #ffffff;
+  border: 1px solid rgba(9, 9, 11, 0.1);
+  padding: 0.65rem 0.5rem;
+  border-radius: 0px;                 /* Square corner cuts */
+  box-shadow: none;
   transition: all var(--transition-fast);
 }
 
 .statItem:hover {
-  border-color: var(--accent-pink);
-  background: rgba(255, 0, 127, 0.02);
-  box-shadow: 2px 2px 0px var(--accent-pink);
-  transform: translate(-1px, -1px);
+  border-color: var(--text-primary);
 }
 
 .statNum {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 900;
-  color: var(--accent-blue);
-  text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+  color: var(--text-primary);
   margin-bottom: 0.15rem;
   display: block;
 }
@@ -142,13 +137,13 @@
 }
 
 .dateBadge {
-  background: rgba(0, 240, 255, 0.05);
-  border: 1.5px solid rgba(0, 240, 255, 0.2);
+  background: var(--bg-secondary);
+  border: 1px solid rgba(9, 9, 11, 0.15);
   padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--accent-blue);
+  border-radius: 0px;                 /* Flat square corners */
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--text-primary);
   display: inline-block;
   align-self: flex-start;
   margin-bottom: 0.75rem;
@@ -186,14 +181,12 @@
 }
 
 .bulletsList li::before {
-  content: "»";
+  content: "—";                     /* Printed em-dash bullet */
   position: absolute;
   left: 0;
-  top: -1px;
-  color: var(--accent-pink);
-  font-size: 1.1rem;
-  font-weight: 900;
-  text-shadow: 0 0 5px rgba(255, 0, 127, 0.3);
+  top: 0;
+  color: var(--accent-orange);
+  font-weight: 700;
 }
 
 /* Row 2 blocks */
