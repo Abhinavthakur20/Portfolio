@@ -28,9 +28,9 @@
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: var(--accent-blue);
+  background-color: var(--accent-orange);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-blue);
+  box-shadow: 0 0 8px var(--accent-orange);
 }
 
 .title {
@@ -72,8 +72,8 @@
 
 .primaryBtn:hover {
   transform: translateY(-3px);
-  background: #27272a;
-  box-shadow: 0 8px 20px rgba(9, 9, 11, 0.25);
+  background: #ea580c;
+  box-shadow: 0 8px 22px rgba(234, 88, 12, 0.35);
 }
 
 .secondaryBtn {

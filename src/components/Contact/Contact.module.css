@@ -65,9 +65,9 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: #09090b;
+  border-color: var(--accent-orange);
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 12px rgba(9, 9, 11, 0.03);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.05);
 }
 
 .textarea {
@@ -96,8 +96,8 @@
 
 .submitBtn:hover {
   transform: translateY(-2px);
-  background: #27272a;
-  box-shadow: 0 6px 20px rgba(9, 9, 11, 0.25);
+  background: #ea580c;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.25);
 }
 
 .successMessage {

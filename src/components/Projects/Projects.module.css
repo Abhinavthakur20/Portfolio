@@ -8,7 +8,7 @@
 }
 
 .subtitle {
-  color: var(--accent-blue);
+  color: var(--accent-orange);
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
@@ -92,8 +92,8 @@
 }
 
 .projectCard:hover .tag {
-  border-color: rgba(59, 130, 246, 0.15);
-  color: var(--accent-blue);
+  border-color: rgba(234, 88, 12, 0.15);
+  color: var(--accent-orange);
 }
 
 .linkGroup {
@@ -113,7 +113,7 @@
 }
 
 .iconLink:hover {
-  color: var(--text-primary);
+  color: var(--accent-orange);
 }
 
 @media (max-width: 992px) {

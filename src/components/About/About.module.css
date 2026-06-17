@@ -41,7 +41,7 @@
 .highlightText {
   color: var(--text-primary);
   font-weight: 500;
-  border-left: 3px solid #09090b;
+  border-left: 3px solid var(--accent-orange);
   padding-left: 1rem;
   margin: 0.5rem 0;
 }
@@ -61,7 +61,7 @@
   font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--accent-orange);
   margin-bottom: 0.25rem;
   display: block;
 }
@@ -109,7 +109,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--text-primary);
+  background-color: var(--accent-orange);
 }
 
 .timelineDate {

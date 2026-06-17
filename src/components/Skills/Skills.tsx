@@ -30,7 +30,7 @@ export default function Skills() {
 
   const creativeSkills: SkillGroup = {
     title: "3D & Creative",
-    icon: <Monitor size={20} style={{ color: "var(--text-secondary)" }} />,
+    icon: <Monitor size={20} style={{ color: "var(--accent-orange)" }} />,
     skills: [
       { name: "Three.js / WebGL", level: 85 },
       { name: "React Three Fiber / Drei", level: 88 },

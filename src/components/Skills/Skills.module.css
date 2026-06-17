@@ -86,7 +86,7 @@
 
 /* Give creative skills a clean, subtle blue-gray tint fill */
 .creativeFill {
-  background: linear-gradient(to right, #52525b, #a1a1aa);
+  background: linear-gradient(to right, var(--accent-orange), #fb923c);
 }
 
 /* Hover effects for cards */
