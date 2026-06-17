@@ -55,7 +55,7 @@ const containerStyle: React.CSSProperties = {
   width: "100vw",
   height: "100vh",
   zIndex: 1,
-  pointerEvents: "auto",
+  pointerEvents: "none",
   backgroundColor: "transparent",
 };
 

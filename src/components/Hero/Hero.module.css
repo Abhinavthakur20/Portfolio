@@ -540,7 +540,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .hero {
     padding: 120px 0 60px 0;
     min-height: auto;
