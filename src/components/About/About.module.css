@@ -196,3 +196,16 @@
     grid-row: span 1;
   }
 }
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+    text-align: center;
+  }
+  .bioHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

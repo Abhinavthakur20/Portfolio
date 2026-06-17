@@ -604,3 +604,12 @@
     transform: scale(0.68);
   }
 }
+
+@media (max-width: 360px) {
+  .workbench {
+    transform: scale(0.58);
+  }
+  .workbenchContainer {
+    height: 300px;
+  }
+}
