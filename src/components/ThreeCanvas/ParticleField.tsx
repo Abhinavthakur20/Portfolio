@@ -61,9 +61,9 @@ export default function ParticleField() {
       </bufferGeometry>
       <pointsMaterial
         size={0.05}
-        color="#64748b" /* Slate gray dust */
+        color="#00f0ff" /* Electric cyan matrix dust */
         transparent
-        opacity={0.35}
+        opacity={0.3}
         sizeAttenuation
         depthWrite={false}
       />

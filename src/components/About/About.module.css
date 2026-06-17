@@ -8,16 +8,20 @@
 }
 
 .subtitle {
-  color: var(--text-muted);
+  color: var(--accent-pink);
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
   display: block;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.2);
 }
 
 .title {
   font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 /* Bento Grid Layout */
@@ -29,11 +33,14 @@
 }
 
 .bentoTitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-family: var(--font-outfit), sans-serif;
   color: var(--text-primary);
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 850;
 }
 
 /* Bento Items styling overrides */
@@ -57,8 +64,8 @@
 
 .profileImage {
   border-radius: 50%;
-  border: 2px solid rgba(234, 88, 12, 0.2);
-  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.08);
+  border: 2px solid var(--accent-blue);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
   object-fit: cover;
 }
 
@@ -70,8 +77,8 @@
 
 .highlightText {
   color: var(--text-primary);
-  font-weight: 500;
-  border-left: 3px solid var(--accent-orange);
+  font-weight: 600;
+  border-left: 3px solid var(--accent-blue);
   padding-left: 1rem;
   margin: 0.25rem 0;
 }
@@ -81,28 +88,43 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(9, 9, 11, 0.05);
+  padding-top: 1.25rem;
+  border-top: 2px dashed rgba(0, 240, 255, 0.15);
 }
 
 .statItem {
   text-align: center;
+  background: rgba(0, 240, 255, 0.02);
+  border: 1px solid rgba(0, 240, 255, 0.08);
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0px rgba(0, 240, 255, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.statItem:hover {
+  border-color: var(--accent-pink);
+  background: rgba(255, 0, 127, 0.02);
+  box-shadow: 2px 2px 0px var(--accent-pink);
+  transform: translate(-1px, -1px);
 }
 
 .statNum {
   font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 800;
-  color: var(--accent-orange);
+  font-weight: 900;
+  color: var(--accent-blue);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
   margin-bottom: 0.15rem;
   display: block;
 }
 
 .statLabel {
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 /* Experience Block (Tall, Span 2 rows) */
@@ -120,28 +142,30 @@
 }
 
 .dateBadge {
-  background: rgba(9, 9, 11, 0.04);
-  border: 1px solid rgba(9, 9, 11, 0.08);
+  background: rgba(0, 240, 255, 0.05);
+  border: 1.5px solid rgba(0, 240, 255, 0.2);
   padding: 0.25rem 0.75rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-weight: 800;
+  color: var(--accent-blue);
   display: inline-block;
   align-self: flex-start;
   margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .roleTitle {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
 }
 
 .companyTitle {
   font-size: 0.875rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
@@ -158,16 +182,18 @@
   line-height: 1.55;
   color: var(--text-secondary);
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
 .bulletsList li::before {
-  content: "→";
+  content: "»";
   position: absolute;
   left: 0;
-  top: 0;
-  color: var(--accent-orange);
-  font-weight: 700;
+  top: -1px;
+  color: var(--accent-pink);
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-shadow: 0 0 5px rgba(255, 0, 127, 0.3);
 }
 
 /* Row 2 blocks */

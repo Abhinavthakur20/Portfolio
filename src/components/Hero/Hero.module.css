@@ -6,15 +6,15 @@
   position: relative;
   z-index: 10;
   padding: 140px 0 80px 0;
-  /* Premium engineering grid background */
+  /* Retro cyberpunk matrix grid background */
   background-image: 
-    linear-gradient(to right, rgba(9, 9, 11, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(9, 9, 11, 0.015) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(to right, rgba(0, 240, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
   background-position: center;
 }
 
-/* Background daylight ambient glow spot */
+/* Background grid ambient glow */
 .hero::before {
   content: '';
   position: absolute;
@@ -23,7 +23,7 @@
   transform: translate(-50%, -50%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.06) 0%, rgba(255, 0, 127, 0.02) 50%, rgba(255, 255, 255, 0) 70%);
   filter: blur(80px);
   z-index: -1;
   pointer-events: none;
@@ -41,13 +41,13 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(9, 9, 11, 0.025);
+  -webkit-text-stroke: 1px rgba(0, 240, 255, 0.035);
   pointer-events: none;
   z-index: -2;
   white-space: nowrap;
 }
 
-/* Asymmetric 2-Column Grid Container */
+/* Asymmetric Grid Container */
 .gridContainer {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -63,29 +63,30 @@
   text-align: left;
 }
 
+/* Y2K System Online status pill */
 .welcome {
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-orange);
+  color: var(--accent-green);
   margin-bottom: 1.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(234, 88, 12, 0.04);
-  border: 1px solid rgba(234, 88, 12, 0.15);
-  padding: 0.45rem 1.1rem;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.02);
+  background: rgba(57, 255, 20, 0.06);
+  border: 2px solid rgba(57, 255, 20, 0.25);
+  padding: 0.4rem 1.1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px rgba(57, 255, 20, 0.15);
 }
 
 .welcomeDot {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: var(--accent-orange);
+  background-color: var(--accent-green);
   border-radius: 50%;
   position: relative;
 }
@@ -97,9 +98,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--accent-orange);
+  background-color: var(--accent-green);
   border-radius: 50%;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes pulse {
@@ -116,10 +117,11 @@
 .title {
   font-size: clamp(2.4rem, 4.8vw, 3.8rem);
   line-height: 1.15;
-  font-weight: 855;
+  font-weight: 900;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 .description {
@@ -130,7 +132,7 @@
   max-width: 620px;
 }
 
-/* focus areas grid lists */
+/* Y2K System Cards */
 .focusGrid {
   display: flex;
   flex-direction: column;
@@ -144,17 +146,19 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(9, 9, 11, 0.04);
+  background: rgba(18, 16, 36, 0.75);
+  border: 2px solid rgba(0, 240, 255, 0.15);
   padding: 0.75rem 1.25rem;
-  border-radius: 12px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px rgba(0, 240, 255, 0.15);
   transition: all var(--transition-fast);
 }
 
 .focusCard:hover {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(234, 88, 12, 0.15);
-  transform: translateX(4px);
+  background: rgba(26, 23, 52, 0.95);
+  border-color: var(--accent-pink);
+  box-shadow: 3px 3px 0px var(--accent-pink);
+  transform: translate(-1px, -1px);
 }
 
 .focusIconWrapper {
@@ -163,13 +167,17 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: rgba(234, 88, 12, 0.05);
-  border-radius: 8px;
-  border: 1px solid rgba(234, 88, 12, 0.08);
+  background: rgba(0, 240, 255, 0.05);
+  border-radius: 4px;
+  border: 1.5px solid rgba(0, 240, 255, 0.2);
 }
 
 .focusIconOrange {
-  color: var(--accent-orange);
+  color: var(--accent-blue);
+}
+
+.focusCard:hover .focusIconOrange {
+  color: var(--accent-pink);
 }
 
 .focusInfo {
@@ -180,7 +188,9 @@
 .focusTitle {
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--text-primary);
 }
 
@@ -189,7 +199,7 @@
   color: var(--text-secondary);
 }
 
-/* Button layout group updates */
+/* Y2K Terminal-Style Buttons */
 .btnGroup {
   display: flex;
   gap: 1rem;
@@ -200,65 +210,76 @@
 .primaryBtn {
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 800;
   padding: 0.85rem 1.75rem;
-  border-radius: 50px;
-  border: none;
-  background: #09090b;
-  color: #fafafa;
+  border-radius: 4px;
+  border: 2px solid var(--accent-blue);
+  background: var(--accent-blue);
+  color: var(--bg-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  box-shadow: 3px 3px 0px var(--accent-pink);
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(9, 9, 11, 0.1);
 }
 
 .primaryBtn:hover {
-  transform: translateY(-2px);
-  background: #ea580c;
-  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.25);
+  transform: translate(-2px, -2px);
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
+  color: #ffffff;
+  box-shadow: 5px 5px 0px var(--accent-green);
 }
 
 .secondaryBtn {
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 800;
   padding: 0.85rem 1.75rem;
-  border-radius: 50px;
-  border: 1px solid rgba(234, 88, 12, 0.2);
-  background: rgba(234, 88, 12, 0.03);
-  color: #ea580c;
+  border-radius: 4px;
+  border: 2px solid var(--accent-pink);
+  background: rgba(255, 0, 127, 0.04);
+  color: var(--accent-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  box-shadow: 2px 2px 0px rgba(255, 0, 127, 0.15);
   transition: all var(--transition-fast);
 }
 
 .secondaryBtn:hover {
-  background: rgba(234, 88, 12, 0.08);
-  border-color: #ea580c;
-  transform: translateY(-2px);
+  background: rgba(255, 0, 127, 0.1);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--accent-blue);
 }
 
 .tertiaryBtn {
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 800;
   padding: 0.85rem 1.5rem;
-  border-radius: 50px;
-  border: 1px solid rgba(9, 9, 11, 0.06);
-  background: rgba(255, 255, 255, 0.4);
-  color: var(--text-primary);
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.05);
   transition: all var(--transition-fast);
 }
 
 .tertiaryBtn:hover {
   border-color: var(--text-primary);
-  background: rgba(9, 9, 11, 0.03);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--accent-green);
 }
 
 /* 3D Stack Parallax Developer Workbench */
@@ -280,7 +301,7 @@
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Background blueprint grid */
+/* CRT Blueprint background grid */
 .workbenchBlueprint {
   position: absolute;
   top: 10px;
@@ -288,30 +309,29 @@
   width: 380px;
   height: 380px;
   background-image: 
-    radial-gradient(rgba(234, 88, 12, 0.15) 1.5px, transparent 1.5px),
-    linear-gradient(to right, rgba(234, 88, 12, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(234, 88, 12, 0.03) 1px, transparent 1px);
+    radial-gradient(rgba(0, 240, 255, 0.2) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
   background-size: 20px 20px, 40px 40px, 40px 40px;
-  border: 1px dashed rgba(234, 88, 12, 0.15);
-  border-radius: 20px;
+  border: 2px dashed rgba(0, 240, 255, 0.2);
+  border-radius: 8px;
   transform: translateZ(-20px) rotate(-4deg);
   pointer-events: none;
 }
 
-/* Mockup Browser Window Grid */
+/* Windows 95 / Retro Command Window mockup */
 .workbenchMockupCard {
   position: absolute;
   top: 40px;
   left: 20px;
   width: 370px;
   height: 240px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(9, 9, 11, 0.08);
-  border-radius: 12px;
-  box-shadow: 0 12px 36px rgba(9, 9, 11, 0.05);
+  background: #14122d;
+  border: 2px solid var(--accent-blue);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px var(--accent-pink);
   transform: rotateY(-11deg) rotateX(10deg) translateZ(10px);
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   overflow: hidden;
 }
 
@@ -319,27 +339,30 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.6rem 0.8rem;
-  background: rgba(9, 9, 11, 0.03);
-  border-bottom: 1px solid rgba(9, 9, 11, 0.05);
+  padding: 0.5rem 0.8rem;
+  background: var(--bg-tertiary);
+  border-bottom: 2px solid var(--accent-blue);
 }
 
 .mockupCircle {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(9, 9, 11, 0.15);
+  background-color: var(--accent-pink);
 }
+
+.mockupCircle:nth-child(2) { background-color: var(--accent-green); }
+.mockupCircle:nth-child(3) { background-color: var(--accent-blue); }
 
 .mockupAddress {
   font-size: 0.65rem;
-  color: var(--text-muted);
+  color: var(--accent-blue);
   font-family: monospace;
   margin-left: 0.5rem;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(10, 8, 20, 0.8);
   padding: 0.15rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid rgba(9, 9, 11, 0.03);
+  border-radius: 2px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
 }
 
 .mockupImageWrapper {
@@ -347,30 +370,30 @@
   height: calc(100% - 31px);
   position: relative;
   overflow: hidden;
+  background: #000;
 }
 
 .mockupImg {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.95;
-  filter: contrast(0.98) saturate(0.9);
+  opacity: 0.85;
+  filter: contrast(1.1) saturate(1.1) hue-rotate(330deg); /* Y2K Cyber Deck tint */
 }
 
-/* Floating Code Terminal */
+/* Floating Terminal */
 .codeTerminal {
   position: absolute;
   top: 140px;
   right: 15px;
   width: 320px;
   height: 175px;
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  background: rgba(10, 8, 20, 0.95);
+  border: 2px solid var(--accent-pink);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px var(--accent-blue);
   transform: rotateY(-6deg) rotateX(8deg) translateZ(65px) translate(15px, 20px);
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   overflow: hidden;
 }
 
@@ -379,19 +402,21 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.8rem;
-  background: rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-tertiary);
+  border-bottom: 2px solid var(--accent-pink);
 }
 
-.dotRed { width: 6px; height: 6px; border-radius: 50%; background-color: #ef4444; }
-.dotYellow { width: 6px; height: 6px; border-radius: 50%; background-color: #eab308; }
-.dotGreen { width: 6px; height: 6px; border-radius: 50%; background-color: #22c55e; }
+.dotRed { width: 8px; height: 8px; border-radius: 50%; background-color: #ef4444; }
+.dotYellow { width: 8px; height: 8px; border-radius: 50%; background-color: #eab308; }
+.dotGreen { width: 8px; height: 8px; border-radius: 50%; background-color: #39ff14; }
 
 .terminalTitle {
   font-family: monospace;
   font-size: 0.65rem;
-  color: #94a3b8;
+  color: var(--accent-pink);
   margin-left: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .terminalBody {
@@ -407,13 +432,13 @@
   margin: 0;
 }
 
-/* Editor syntax coloring */
-.keyword { color: #f43f5e; }
-.class { color: #38bdf8; }
-.function { color: #a855f7; }
-.string { color: #10b981; }
-.property { color: #fb923c; }
-.number { color: #eab308; }
+/* Y2K Terminal Syntax highlighting styling */
+.keyword { color: var(--accent-pink); font-weight: 800; }
+.class { color: var(--accent-blue); }
+.function { color: var(--accent-green); }
+.string { color: var(--accent-green); }
+.property { color: var(--accent-blue); }
+.number { color: #f97316; }
 
 /* Floating Profile Avatar Bubble */
 .avatarCard {
@@ -423,21 +448,20 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(9, 9, 11, 0.08);
-  border-radius: 50px;
+  background: #121024;
+  border: 2px solid var(--accent-green);
+  border-radius: 4px;
   padding: 0.45rem 1rem 0.45rem 0.45rem;
-  box-shadow: 0 10px 30px rgba(9, 9, 11, 0.06);
+  box-shadow: 3px 3px 0px var(--accent-blue);
   transform: rotateY(-8deg) rotateX(9deg) translateZ(110px) translate(-10px, 30px);
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .avatarWrapper {
   display: flex;
   align-items: center;
   border-radius: 50%;
-  border: 1.5px solid var(--accent-orange);
+  border: 2px solid var(--accent-green);
   overflow: hidden;
 }
 
@@ -454,27 +478,31 @@
 .avatarName {
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.775rem;
-  font-weight: 750;
+  font-weight: 900;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
 .avatarStatus {
   font-size: 0.65rem;
-  color: var(--text-muted);
+  color: var(--accent-green);
+  font-weight: bold;
 }
 
 /* Hover dynamic parallax translation */
 .workbenchContainer:hover .workbenchMockupCard {
   transform: rotateY(-15deg) rotateX(13deg) translateZ(25px) translateY(-5px);
+  box-shadow: 6px 6px 0px var(--accent-green);
 }
 
 .workbenchContainer:hover .codeTerminal {
   transform: rotateY(-8deg) rotateX(10deg) translateZ(95px) translate(25px, 15px);
+  box-shadow: 6px 6px 0px var(--accent-green);
 }
 
 .workbenchContainer:hover .avatarCard {
   transform: rotateY(-11deg) rotateX(12deg) translateZ(145px) translate(-15px, 20px);
+  box-shadow: 5px 5px 0px var(--accent-pink);
 }
 
 /* Scroll indicator */
@@ -487,7 +515,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  opacity: 0.6;
+  opacity: 0.7;
   cursor: pointer;
   transition: opacity var(--transition-fast);
 }
@@ -499,15 +527,15 @@
 .mouse {
   width: 24px;
   height: 40px;
-  border: 2px solid var(--text-muted);
-  border-radius: 20px;
+  border: 2px solid var(--accent-blue);
+  border-radius: 12px;
   position: relative;
 }
 
 .wheel {
   width: 4px;
   height: 8px;
-  background-color: var(--text-primary);
+  background-color: var(--accent-pink);
   border-radius: 2px;
   position: absolute;
   top: 8px;
