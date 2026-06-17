@@ -1,0 +1,160 @@
+.about {
+  position: relative;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.bioCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bioText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.highlightText {
+  color: var(--text-primary);
+  font-weight: 500;
+  border-left: 3px solid #09090b;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNum {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timelineCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timelineTitle {
+  font-size: 1.35rem;
+  font-family: var(--font-outfit), sans-serif;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timelineItem {
+  position: relative;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -20px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+}
+
+.timelineDate {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.timelineRole {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.timelineCompany {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.timelineDesc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .statItem {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .statItem:last-child {
+    border-bottom: none;
+  }
+}

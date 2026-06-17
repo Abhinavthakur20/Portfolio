@@ -1,0 +1,114 @@
+.skills {
+  position: relative;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.groupTitle {
+  font-size: 1.3rem;
+  font-family: var(--font-outfit), sans-serif;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.75rem;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.skillName {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skillPercent {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.progressBarTrack {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #27272a, #71717a);
+  transition: width 1.5s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+/* Give creative skills a clean, subtle blue-gray tint fill */
+.creativeFill {
+  background: linear-gradient(to right, #52525b, #a1a1aa);
+}
+
+/* Hover effects for cards */
+.skillsCard {
+  transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.skillsCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(9, 9, 11, 0.15);
+  box-shadow: 0 16px 40px 0 rgba(9, 9, 11, 0.05);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,130 @@
+.projects {
+  position: relative;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.projectCard:hover .image {
+  transform: scale(1.08);
+}
+
+.details {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.projectTitle {
+  font-size: 1.35rem;
+  font-family: var(--font-outfit), sans-serif;
+  color: var(--text-primary);
+}
+
+.projectDesc {
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  flex-grow: 1;
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.projectCard:hover .tag {
+  border-color: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+}
+
+.linkGroup {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.iconLink:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
