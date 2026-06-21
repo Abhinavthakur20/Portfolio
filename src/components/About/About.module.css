@@ -43,47 +43,47 @@
   font-weight: 700;
 }
 
-/* Right Column Timeline */
+/* Right Column Train Track Timeline */
 .right {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
 .timeline {
   position: relative;
   padding-left: 2rem;
-  margin-top: 0.5rem;
 }
 
-/* Vertical line track */
+/* Thick train track line */
 .timeline::before {
   content: "";
   position: absolute;
   top: 0.5rem;
   bottom: 0.5rem;
-  left: 6px;
+  left: 7px; /* Centered relative to the 16px station dot */
   width: 2px;
-  background: rgba(26, 26, 26, 0.08);
+  background: var(--bg-secondary); /* Track color */
 }
 
 .timelineItem {
   position: relative;
-  margin-bottom: 2.25rem;
+  margin-bottom: 3.5rem;
 }
 
 .timelineItem:last-child {
   margin-bottom: 0;
 }
 
-/* Floating Timeline Dot Node */
+/* Station checkpoint node */
 .timelineDot {
   position: absolute;
   left: -2rem;
-  top: 0.75rem;
-  width: 14px;
-  height: 14px;
+  top: 0.35rem;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: var(--bg-card);
+  background: var(--bg-primary);
   transform: translateX(-50%);
   z-index: 2;
   box-shadow: 0 0 0 4px var(--bg-primary);
@@ -98,71 +98,67 @@
   border: 3px solid var(--accent-red);
 }
 
-.timelineItem:hover .timelineDot {
+.timelineItem:hover .timelineDotEdu {
+  background: #0284c7;
   transform: translateX(-50%) scale(1.2);
 }
 
-/* Timeline card content panel */
-.timelineContent {
-  background: var(--bg-card);
-  border-radius: 16px;
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.015);
-  border: 1px solid rgba(26, 26, 26, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  transition: all var(--transition-normal);
+.timelineItem:hover .timelineDotExp {
+  background: var(--accent-red);
+  transform: translateX(-50%) scale(1.2);
 }
 
-.timelineContent:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(26, 26, 26, 0.04);
-  border-color: rgba(26, 26, 26, 0.1);
+/* Clean transparent content */
+.timelineContent {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: transform var(--transition-normal);
 }
 
 .cardTypeBadge {
   font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   align-self: flex-start;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  margin-bottom: 0.15rem;
 }
 
 .cardTypeBadgeEdu {
   color: #0284c7;
   background: rgba(2, 132, 199, 0.08);
-  padding: 0.15rem 0.5rem;
-  border-radius: 50px;
 }
 
 .cardTypeBadgeExp {
   color: var(--accent-red);
   background: rgba(230, 57, 70, 0.08);
-  padding: 0.15rem 0.5rem;
-  border-radius: 50px;
 }
 
 .timelineHeader {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
 }
 
 .cardMainTitle {
   font-family: var(--font-fraunces), Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
   line-height: 1.35;
-  flex-grow: 1;
 }
 
 .cardSubTitle {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   margin: 0;
 }
@@ -171,29 +167,26 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.3rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed rgba(26, 26, 26, 0.08);
+  margin-top: 0.25rem;
 }
 
 .metaBadge {
   font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--text-primary);
-  background: var(--bg-primary);
+  color: var(--text-secondary);
+  background: rgba(26, 26, 26, 0.04);
   padding: 0.15rem 0.55rem;
   border-radius: 50px;
-  border: 1px solid rgba(26, 26, 26, 0.04);
+  border: 1px solid rgba(26, 26, 26, 0.02);
 }
 
 .metaPeriod {
   font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-muted);
   white-space: nowrap;
-  margin-top: 0.2rem;
 }
 
 @media (max-width: 768px) {
