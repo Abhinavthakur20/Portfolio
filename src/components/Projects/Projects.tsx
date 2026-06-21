@@ -2,6 +2,7 @@
 
 import { Github, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
 
 const projects = [
@@ -14,7 +15,6 @@ const projects = [
     github: "https://github.com/Abhinavthakur20/Portfolio",
     live: "https://github.com/Abhinavthakur20/Portfolio",
     color: "#89CFF0",
-    featured: true,
   },
   {
     id: "02",
@@ -48,33 +48,84 @@ const projects = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+};
+
 export default function Projects() {
   return (
     <section id="projects" className={`${styles.projects} section`}>
       <div className={`${styles.inner} container`}>
-        <h2 className={styles.sectionTitle}>Tiny fraction of my work</h2>
-        <p className={styles.sectionDesc}>
+        <motion.h2 
+          className={styles.sectionTitle}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          Tiny fraction of my work
+        </motion.h2>
+        
+        <motion.p 
+          className={styles.sectionDesc}
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+        >
           Building products that solve real problems — from payments to 
           real-time collaboration to AI-powered workflows.
-        </p>
+        </motion.p>
 
-        <div className={styles.grid}>
+        <motion.div 
+          className={styles.grid}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className={`${styles.card} ${project.featured ? styles.cardFeatured : ""}`}
+              className={styles.card}
+              variants={cardVariants}
+              whileHover={{ 
+                y: -6, 
+                boxShadow: "0 12px 30px rgba(26, 26, 26, 0.06)",
+                transition: { duration: 0.2 } 
+              }}
             >
               <div className={styles.cardImage}>
                 <div
                   className={styles.cardImageBg}
-                  style={{ backgroundColor: project.color + "18" }}
+                  style={{ backgroundColor: project.color + "12" }}
                 >
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={500}
-                    height={300}
+                    width={280}
+                    height={160}
                     className={styles.img}
+                    priority={project.id === "01"}
                   />
                 </div>
               </div>
@@ -83,10 +134,10 @@ export default function Projects() {
                   <h3 className={styles.cardTitle}>{project.title}</h3>
                   <div className={styles.cardLinks}>
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
-                      <Github size={16} />
+                      <Github size={14} />
                     </a>
                     <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
-                      <ArrowUpRight size={16} />
+                      <ArrowUpRight size={14} />
                     </a>
                   </div>
                 </div>
@@ -97,9 +148,9 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
