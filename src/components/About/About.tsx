@@ -1,14 +1,44 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import styles from "./About.module.css";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, x: 30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 90,
+      damping: 14,
+    },
+  },
+};
 
 export default function About() {
   return (
     <section id="about" className={`${styles.about} section`}>
       <div className={`${styles.inner} container`}>
         <div className={styles.layout}>
-          <div className={styles.left}>
+          <motion.div 
+            className={styles.left}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <h2 className={styles.title}>Behind the code</h2>
             <p className={styles.subtitle}>
               A quick peek into my world.
@@ -31,37 +61,43 @@ export default function About() {
                 about distributed systems, or sketching out product ideas.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={styles.right}>
-            <div className={styles.profileCard}>
+          <motion.div 
+            className={styles.right}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <motion.div className={styles.profileCard} variants={cardVariants}>
               <Image
                 src="/profile.png"
                 alt="Abhinav Thakur"
-                width={200}
-                height={200}
+                width={130}
+                height={130}
                 className={styles.profileImg}
                 priority
               />
-            </div>
+            </motion.div>
 
             <div className={styles.statsRow}>
-              <div className={styles.stat}>
+              <motion.div className={styles.stat} variants={cardVariants}>
                 <span className={styles.statVal}>7.58</span>
                 <span className={styles.statLabel}>B.Tech CGPA</span>
-              </div>
-              <div className={styles.stat}>
+              </motion.div>
+              <motion.div className={styles.stat} variants={cardVariants}>
                 <span className={styles.statVal}>4+</span>
                 <span className={styles.statLabel}>Projects Shipped</span>
-              </div>
+              </motion.div>
             </div>
 
-            <div className={styles.experience}>
+            <motion.div className={styles.experience} variants={cardVariants}>
               <div className={styles.expBadge}>Dec 2025 — Present</div>
               <h4 className={styles.expTitle}>Web Developer Trainee</h4>
               <p className={styles.expPlace}>O7 Services • Jalandhar</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
