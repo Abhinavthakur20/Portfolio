@@ -27,16 +27,16 @@ export default function About() {
           </div>
           <div>
             <h3 className={styles.bioName}>Abhinav Thakur</h3>
-            <p className={styles.bioSub}>Software Engineer & MERN Trainee</p>
+            <p className={styles.bioSub}>Software Engineer & Full-Stack AI Developer</p>
           </div>
         </div>
         
         <p className={styles.bioText}>
-          I am a Full-Stack MERN developer with hands-on internship experience building real-time collaborative whiteboards, group travel planners, WebSocket communication layers, and secure payment integrations.
+          I am a Full-Stack AI developer with hands-on experience building local unigram/bigram vector embedders, pgvector hybrid search databases, HTML5 streaming chat interfaces, and high-availability LLM failover cascades.
         </p>
         
         <p className={styles.highlightText}>
-          I bridge the gap between backend API architecture and high-performance frontend interfaces.
+          I bridge the gap between backend vector/RAG architecture and high-performance, real-time AI client interfaces.
         </p>
 
         {/* LCD-Style Stats Row */}
@@ -46,12 +46,12 @@ export default function About() {
             <span className={styles.statLabel}>B.Tech CGPA</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNum}>40+</span>
-            <span className={styles.statLabel}>REST Endpoints</span>
+            <span className={styles.statNum}>768-D</span>
+            <span className={styles.statLabel}>Vector Embed</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statNum}>14+</span>
-            <span className={styles.statLabel}>DB Collections</span>
+            <span className={styles.statNum}>100%</span>
+            <span className={styles.statLabel}>Uptime Fallback</span>
           </div>
         </div>
       </div>
@@ -70,10 +70,10 @@ export default function About() {
             <h4 className={styles.roleTitle}>Web Developer Trainee</h4>
             <div className={styles.companyTitle}>O7 Services | Jalandhar</div>
             <ul className={styles.bulletsList}>
-              <li>Built and shipped <b>BagPacker</b>, a travel platform handling group bookings.</li>
-              <li>Integrated Razorpay payment pipeline with email ticket confirmations.</li>
-              <li>Designed low-latency chat hubs and direct messaging with Socket.io.</li>
-              <li>Deployed 40+ endpoints securing authentication with JWT & RBAC levels.</li>
+              <li>Built and shipped <b>Vivid Prompt Forge</b>, an AI-driven ad prompt orchestration web app.</li>
+              <li>Designed and implemented custom unigram/bigram local vector embeddings.</li>
+              <li>Integrated Supabase pgvector search with database fail-safe memory backups.</li>
+              <li>Created multi-model LLM integrations (xAI, Groq) with automated retries and failover routes.</li>
             </ul>
           </div>
         </div>

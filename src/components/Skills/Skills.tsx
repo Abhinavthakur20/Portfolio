@@ -14,22 +14,22 @@ export default function Skills() {
   const frontendSkills: SkillGroup = {
     title: "Web Technologies",
     icon: <Code size={20} style={{ color: "var(--text-primary)" }} />,
-    tags: ["React.js", "Next.js", "Node.js", "Express.js", "Socket.io", "WebRTC", "Tailwind CSS", "CSS Modules", "HTML5", "CSS3"],
-    highlightedTags: ["React.js", "Next.js", "Node.js", "Socket.io", "WebRTC"],
+    tags: ["React.js", "Next.js 14", "Node.js", "Express.js", "Tailwind CSS", "CSS Modules", "HTML5 ReadableStreams", "SSE Streaming"],
+    highlightedTags: ["React.js", "Next.js 14", "Node.js", "HTML5 ReadableStreams"],
   };
 
   const creativeSkills: SkillGroup = {
     title: "Languages & Databases",
     icon: <Monitor size={20} style={{ color: "var(--accent-orange)" }} />,
-    tags: ["Java Programming", "JavaScript", "TypeScript", "Python", "SQL", "MongoDB", "PostgreSQL", "NoSQL", "Zustand"],
-    highlightedTags: ["Java Programming", "MongoDB", "TypeScript"],
+    tags: ["TypeScript", "JavaScript", "Python", "SQL", "Supabase", "PostgreSQL", "pgvector", "Zustand", "Java Programming"],
+    highlightedTags: ["TypeScript", "pgvector", "Supabase"],
   };
 
   const backendSkills: SkillGroup = {
-    title: "Tools & Competencies",
+    title: "AI Engineering & Tools",
     icon: <Server size={20} style={{ color: "var(--text-muted)" }} />,
-    tags: ["Data Structures", "Algorithms", "REST API Design", "Git", "GitHub", "Maven", "Postman", "Vercel", "Vite", "JWT Auth", "RBAC Security"],
-    highlightedTags: ["Data Structures", "REST API Design", "JWT Auth"],
+    tags: ["RAG Architectures", "LLM APIs (xAI / Groq)", "Vector Embeddings", "Data Structures", "REST API Design", "Git", "GitHub", "Postman", "Vercel"],
+    highlightedTags: ["RAG Architectures", "LLM APIs (xAI / Groq)", "Vector Embeddings"],
   };
 
   const renderGroup = (group: SkillGroup) => (

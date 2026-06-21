@@ -28,33 +28,33 @@ export default function Hero() {
         {/* Active Status Pill */}
         <div className={styles.welcome}>
           <span className={styles.welcomeDot}></span>
-          Full-Stack MERN Trainee
+          Full-Stack AI Developer
         </div>
         
         <h1 className={styles.title}>
           Architecting Scalable <br />
-          <span className="gradient-text">Real-Time Systems</span>
+          <span className="gradient-text">AI & RAG Platforms</span>
         </h1>
         
         <p className={styles.description}>
-          Computer Science student & MERN engineer experienced in building group travel portals, collaborative whiteboards, WebSocket communication layers, and secure Razorpay pipelines.
+          Computer Science student & AI engineer experienced in building vector retrieval databases, real-time LLM streaming architectures, resilient fail-safe backends, and offline NLP embedding engines.
         </p>
 
         {/* Center Competencies Spec Grid */}
         <div className={styles.focusGrid}>
           <div className={styles.focusCard}>
             <Zap size={16} className={styles.focusIcon} />
-            <span className={styles.focusTitle}>Real-Time Sync</span>
+            <span className={styles.focusTitle}>RAG Architecture</span>
           </div>
 
           <div className={styles.focusCard}>
             <Cpu size={16} className={styles.focusIcon} />
-            <span className={styles.focusTitle}>Optimistic State</span>
+            <span className={styles.focusTitle}>Local Vector Math</span>
           </div>
 
           <div className={styles.focusCard}>
             <ShieldCheck size={16} className={styles.focusIcon} />
-            <span className={styles.focusTitle}>Secure Billing</span>
+            <span className={styles.focusTitle}>Fail-Safe Routing</span>
           </div>
         </div>
         
@@ -99,7 +99,7 @@ export default function Hero() {
                 <span className={styles.mockupCircle}></span>
                 <span className={styles.mockupCircle}></span>
                 <span className={styles.mockupCircle}></span>
-                <span className={styles.mockupAddress}>localhost:3000/bagpacker</span>
+                <span className={styles.mockupAddress}>localhost:3000/prompt-forge</span>
               </div>
               <div className={styles.mockupImageWrapper}>
                 <Image
@@ -119,16 +119,16 @@ export default function Hero() {
                 <span className={styles.dotRed}></span>
                 <span className={styles.dotYellow}></span>
                 <span className={styles.dotGreen}></span>
-                <span className={styles.terminalTitle}>socket-server.ts</span>
+                <span className={styles.terminalTitle}>stream-route.ts</span>
               </div>
               <div className={styles.terminalBody}>
                 <pre>
                   <code>
-                    <span className={styles.keyword}>const</span> io = <span className={styles.keyword}>new</span> <span className={styles.class}>Server</span>(<span className={styles.number}>3001</span>);<br />
-                    io.<span className={styles.function}>on</span>(<span className={styles.string}>&quot;connection&quot;</span>, (socket) =&gt; &#123;<br />
-                    &nbsp;&nbsp;socket.<span className={styles.function}>on</span>(<span className={styles.string}>&quot;draw&quot;</span>, (vector) =&gt; &#123;<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;socket.<span className={styles.property}>broadcast</span>.<span className={styles.function}>emit</span>(<span className={styles.string}>&quot;draw&quot;</span>, vector);<br />
-                    &nbsp;&nbsp;&#125;);<br />
+                    <span className={styles.keyword}>const</span> stream = <span className={styles.keyword}>new</span> <span className={styles.class}>ReadableStream</span>(&#123;<br />
+                    &nbsp;&nbsp;start(controller) &#123;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.keyword}>const</span> reader = response.body.getReader();<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;pushChunks(reader, controller);<br />
+                    &nbsp;&nbsp;&#125;<br />
                     &#125;);
                   </code>
                 </pre>
