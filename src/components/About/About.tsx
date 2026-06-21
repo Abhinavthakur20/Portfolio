@@ -70,10 +70,10 @@ export default function About() {
             <h4 className={styles.roleTitle}>Web Developer Trainee</h4>
             <div className={styles.companyTitle}>O7 Services | Jalandhar</div>
             <ul className={styles.bulletsList}>
-              <li>Built and shipped <b>Vivid Prompt Forge</b>, an AI-driven ad prompt orchestration web app.</li>
-              <li>Designed and implemented custom unigram/bigram local vector embeddings.</li>
-              <li>Integrated Supabase pgvector search with database fail-safe memory backups.</li>
-              <li>Created multi-model LLM integrations (xAI, Groq) with automated retries and failover routes.</li>
+              <li>Built and shipped <b>BagPacker</b> (a travel platform) and <b>Vivid Prompt Forge</b> (an AI prompt manager).</li>
+              <li>Integrated Razorpay payment systems with cryptographic signature verification and offline unigram/bigram token embeddings.</li>
+              <li>Designed low-latency messaging rooms via Socket.IO and Supabase pgvector search with fail-safe database routing.</li>
+              <li>Developed context-aware AI travel guides and xAI/Groq LLM provider layers with automated failover routes.</li>
             </ul>
           </div>
         </div>

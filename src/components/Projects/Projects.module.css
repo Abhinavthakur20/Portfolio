@@ -291,10 +291,10 @@
   transform: scale(1.02);
 }
 
-/* Grid Supporting projects - 2 columns side-by-side */
+/* Grid Supporting projects - 3 columns side-by-side */
 .subGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 

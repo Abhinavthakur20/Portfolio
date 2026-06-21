@@ -230,6 +230,153 @@ export default function Projects() {
               </div>
             </div>
           </div>
+
+          {/* Project 4: Drawza */}
+          <div className={`${styles.gridCard} glass-card glow-effect`}>
+            <div className={styles.cardInfo}>
+              <div className={styles.cardHeaderInfo}>
+                <span className={styles.projectIndex}>04</span>
+                <span className={styles.gridBadge}>REAL-TIME COLLAB</span>
+              </div>
+              
+              <h3 className={styles.projectTitle}>Drawza</h3>
+              
+              <p className={styles.projectDesc}>
+                A collaborative whiteboard application supporting room-based drawing sync, real-time cursor presence, WebRTC voice chat signaling, and board state auto-saving.
+              </p>
+
+              <div className={styles.tagContainer}>
+                {["React", "Vite", "Zustand", "Node.js", "Socket.IO", "WebRTC", "MongoDB"].map(tag => (
+                  <span key={tag} className={styles.tag}>{tag}</span>
+                ))}
+              </div>
+
+              <div className={styles.linkGroup}>
+                <a
+                  href="https://github.com/Abhinavthakur20/Portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.iconLink}
+                >
+                  <Github size={15} /> Code
+                </a>
+                <a
+                  href="https://github.com/Abhinavthakur20/Portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.iconLink}
+                >
+                  Live <ArrowUpRight size={13} />
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.gridVisual}>
+              <div className={styles.terminalOverlay}>
+                <div className={styles.terminalHeader}>
+                  <span className={styles.termDotRed}></span>
+                  <span className={styles.termDotYellow}></span>
+                  <span className={styles.termDotGreen}></span>
+                  <span className={styles.terminalTitle}>canvas-stream.log</span>
+                </div>
+                <div className={styles.terminalCode}>
+                  <code>
+                    <span className={styles.logTag}>[SOCKET]</span> joined room: room_102<br />
+                    <span className={styles.logTag}>[WEBRTC]</span> voice signal broadcasting<br />
+                    <span className={styles.logTag}>[ZUSTAND]</span> board state auto-saved (MongoDB)
+                  </code>
+                </div>
+              </div>
+
+              <div className={styles.imageFrame}>
+                <Image
+                  src="/drawza.png"
+                  alt="Drawza collaborative whiteboard workspace"
+                  className={styles.cardImg}
+                  width={400}
+                  height={225}
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Project 5: Featured Platform (BagPacker) - Full Width Banner */}
+        <div className={`${styles.featuredCard} glass-card glow-effect`}>
+          <div className={styles.featuredDetails}>
+            <div className={styles.cardHeaderInfo}>
+              <span className={styles.projectIndex}>05</span>
+              <span className={styles.featuredBadge}>FEATURED WORK</span>
+            </div>
+            
+            <h3 className={styles.projectTitle}>BagPacker</h3>
+            
+            <p className={styles.projectDesc}>
+              A full-stack travel platform for companion matching, seat-managed group bookings, secure Razorpay payments, Socket.IO messaging, and an AI-assisted travel copilot.
+            </p>
+
+            <div className={styles.featuredMetrics}>
+              <div className={styles.metricItem}>
+                <span className={styles.metricVal}>40+</span>
+                <span className={styles.metricLbl}>REST Endpoints</span>
+              </div>
+              <div className={styles.metricItem}>
+                <span className={styles.metricVal}>Low-Latency</span>
+                <span className={styles.metricLbl}>Chat & Sockets</span>
+              </div>
+              <div className={styles.metricItem}>
+                <span className={styles.metricVal}>Razorpay</span>
+                <span className={styles.metricLbl}>Secured Payments</span>
+              </div>
+            </div>
+
+            <div className={styles.tagContainer}>
+              {["React 19", "Vite", "Node.js / Express", "MongoDB", "Socket.IO", "Razorpay", "Nodemailer", "Groq API"].map(tag => (
+                <span key={tag} className={styles.tag}>{tag}</span>
+              ))}
+            </div>
+
+            <div className={styles.linkGroup}>
+              <a
+                href="https://github.com/Abhinavthakur20/Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.primaryLink}
+              >
+                <Github size={16} /> Code Repository
+              </a>
+              <a
+                href="https://github.com/Abhinavthakur20/Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.secondaryLink}
+              >
+                Live Demo <ArrowUpRight size={14} />
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.featuredVisual}>
+            <div className={styles.browserFrame}>
+              <div className={styles.browserHeader}>
+                <span className={styles.dotRed}></span>
+                <span className={styles.dotYellow}></span>
+                <span className={styles.dotGreen}></span>
+                <span className={styles.browserAddress}>localhost:5173</span>
+              </div>
+              <div className={styles.browserBody}>
+                <Image
+                  src="/bagpacker.png"
+                  alt="BagPacker travel planner workspace"
+                  className={styles.browserImg}
+                  width={640}
+                  height={360}
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
