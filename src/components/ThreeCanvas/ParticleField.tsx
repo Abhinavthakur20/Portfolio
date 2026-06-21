@@ -60,10 +60,10 @@ export default function ParticleField() {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.035}
-        color="#78716c" /* Subtle warm stone dust motes */
+        size={0.025}
+        color="#c2b5a3" /* Warm beige dust */
         transparent
-        opacity={0.15}
+        opacity={0.12}
         sizeAttenuation
         depthWrite={false}
       />
