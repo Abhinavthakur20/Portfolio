@@ -60,7 +60,7 @@
 }
 
 .title {
-  font-family: var(--font-space-grotesk), sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 700;
   line-height: 1.05;
@@ -115,7 +115,7 @@
 }
 
 .stepText {
-  font-family: var(--font-space-grotesk), sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-primary);

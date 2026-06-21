@@ -8,7 +8,7 @@
 }
 
 .sectionTitle {
-  font-family: var(--font-space-grotesk), sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 700;
   margin-bottom: 0.75rem;
@@ -81,7 +81,7 @@
 }
 
 .cardTitle {
-  font-family: var(--font-space-grotesk), sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
 }
