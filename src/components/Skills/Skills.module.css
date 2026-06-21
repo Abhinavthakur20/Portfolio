@@ -8,7 +8,7 @@
 }
 
 .title {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 700;
   margin-bottom: 0.75rem;
@@ -57,7 +57,7 @@
 }
 
 .groupTitle {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);

@@ -20,7 +20,7 @@
 }
 
 .footerText {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 1.1rem;
   color: var(--text-primary);
 }
