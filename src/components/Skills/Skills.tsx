@@ -46,7 +46,7 @@ const groupVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 90,
       damping: 14,
     },
@@ -58,7 +58,7 @@ const badgeVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: "spring", stiffness: 120, damping: 10 },
+    transition: { type: "spring" as const, stiffness: 120, damping: 10 },
   },
 };
 

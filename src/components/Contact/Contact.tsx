@@ -20,7 +20,7 @@ const formFieldVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 15 },
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
   },
 };
 
@@ -142,7 +142,7 @@ export default function Contact() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                    transition={{ type: "spring" as const, stiffness: 400, damping: 15 }}
                   >
                     {isSubmitting ? "Sending..." : "Send message"}
                   </motion.button>

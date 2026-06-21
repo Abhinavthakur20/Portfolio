@@ -99,7 +99,7 @@ export default function Hero() {
             onClick={() => handleScroll("contact")}
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 400, damping: 15 }}
+            transition={{ type: "spring" as const, stiffness: 400, damping: 15 }}
           >
             Chat with me
           </motion.button>
