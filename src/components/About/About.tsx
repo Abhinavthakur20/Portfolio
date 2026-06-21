@@ -9,7 +9,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -70,32 +70,51 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
+            {/* Profile Avatar Card */}
             <motion.div className={styles.profileCard} variants={cardVariants}>
               <Image
                 src="/profile.png"
                 alt="Abhinav Thakur"
-                width={130}
-                height={130}
+                width={110}
+                height={110}
                 className={styles.profileImg}
                 priority
               />
             </motion.div>
 
-            <div className={styles.statsRow}>
-              <motion.div className={styles.stat} variants={cardVariants}>
-                <span className={styles.statVal}>7.58</span>
-                <span className={styles.statLabel}>B.Tech CGPA</span>
-              </motion.div>
-              <motion.div className={styles.stat} variants={cardVariants}>
-                <span className={styles.statVal}>4+</span>
-                <span className={styles.statLabel}>Projects Shipped</span>
-              </motion.div>
-            </div>
+            {/* Education Card */}
+            <motion.div className={styles.infoCard} variants={cardVariants}>
+              <span className={`${styles.cardTypeBadge} ${styles.cardTypeBadgeEdu}`}>Education</span>
+              <h4 className={styles.cardMainTitle}>B.Tech in Computer Science & Engineering</h4>
+              <p className={styles.cardSubTitle}>Guru Nanak Dev University, Amritsar</p>
+              <div className={styles.cardMeta}>
+                <span className={styles.metaBadge}>CGPA: 7.58 / 10</span>
+                <span className={styles.metaPeriod}>2022 — 2026</span>
+              </div>
+            </motion.div>
 
-            <motion.div className={styles.experience} variants={cardVariants}>
-              <div className={styles.expBadge}>Dec 2025 — Present</div>
-              <h4 className={styles.expTitle}>Web Developer Trainee</h4>
-              <p className={styles.expPlace}>O7 Services • Jalandhar</p>
+            {/* Experience Card */}
+            <motion.div className={styles.infoCard} variants={cardVariants}>
+              <span className={`${styles.cardTypeBadge} ${styles.cardTypeBadgeExp}`}>Work Experience</span>
+              <h4 className={styles.cardMainTitle}>Web Developer Trainee</h4>
+              <p className={styles.cardSubTitle}>O7 Services • Jalandhar</p>
+              <div className={styles.cardMeta}>
+                <span className={styles.metaBadge}>Traineeship</span>
+                <span className={styles.metaPeriod}>Dec 2025 — Present</span>
+              </div>
+            </motion.div>
+
+            {/* Project Stats Capsule */}
+            <motion.div 
+              className={styles.infoCard} 
+              variants={cardVariants} 
+              style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}
+            >
+              <div>
+                <h4 className={styles.cardMainTitle} style={{ fontSize: "1rem" }}>4+ High-impact projects</h4>
+                <p className={styles.cardSubTitle} style={{ fontSize: "0.8rem", marginTop: "0.15rem" }}>Shipped using modern AI & Full-Stack Tech</p>
+              </div>
+              <span className={styles.metaBadge} style={{ background: "rgba(26,26,26,0.05)", border: "none", fontSize: "0.9rem" }}>🚀</span>
             </motion.div>
           </motion.div>
         </div>

@@ -47,17 +47,18 @@
 .right {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .profileCard {
   background: var(--bg-card);
   border-radius: 16px;
-  padding: 1.25rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 30px rgba(26, 26, 26, 0.04);
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.02);
+  border: 1px solid rgba(26, 26, 26, 0.04);
 }
 
 .profileImg {
@@ -65,63 +66,84 @@
   object-fit: cover;
 }
 
-.statsRow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.stat {
-  background: var(--bg-card);
-  border-radius: 16px;
-  padding: 1.25rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.03);
-}
-
-.statVal {
-  font-family: var(--font-playfair), Georgia, serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.statLabel {
-  font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.experience {
+.infoCard {
   background: var(--bg-card);
   border-radius: 16px;
   padding: 1.25rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.03);
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.02);
+  border: 1px solid rgba(26, 26, 26, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: all var(--transition-normal);
 }
 
-.expBadge {
-  font-size: 0.7rem;
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(26, 26, 26, 0.04);
+  border-color: rgba(26, 26, 26, 0.1);
+}
+
+.cardTypeBadge {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: var(--accent-red);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
+  align-self: flex-start;
 }
 
-.expTitle {
+.cardTypeBadgeEdu {
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+}
+
+.cardTypeBadgeExp {
+  color: var(--accent-red);
+  background: rgba(230, 57, 70, 0.08);
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+}
+
+.cardMainTitle {
   font-family: var(--font-playfair), Georgia, serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 0.15rem;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
 }
 
-.expPlace {
-  font-size: 0.85rem;
+.cardSubTitle {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(26, 26, 26, 0.08);
+}
+
+.metaBadge {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  padding: 0.15rem 0.55rem;
+  border-radius: 50px;
+  border: 1px solid rgba(26, 26, 26, 0.04);
+}
+
+.metaPeriod {
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 

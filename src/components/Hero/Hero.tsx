@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -112,13 +113,15 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
+        onClick={() => handleScroll("projects")}
+        style={{ cursor: "pointer" }}
       >
         <motion.div 
           className={styles.stepIcon}
           animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" as const }}
         >
-          🚀
+          <ChevronDown size={24} />
         </motion.div>
         <p className={styles.stepText}>Step into my digital home</p>
       </motion.div>
