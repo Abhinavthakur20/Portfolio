@@ -12,7 +12,7 @@ export default function Projects() {
       </div>
 
       <div className={styles.asymmetricGrid}>
-        {/* Project 1: Featured Platform (Vivid Prompt Forge) - Full Width Banner */}
+        {/* Project 1: Featured Platform (BagPacker) - Full Width Banner */}
         <div className={`${styles.featuredCard} glass-card glow-effect`}>
           <div className={styles.featuredDetails}>
             <div className={styles.cardHeaderInfo}>
@@ -20,29 +20,29 @@ export default function Projects() {
               <span className={styles.featuredBadge}>FEATURED WORK</span>
             </div>
             
-            <h3 className={styles.projectTitle}>Vivid Prompt Forge</h3>
+            <h3 className={styles.projectTitle}>BagPacker</h3>
             
             <p className={styles.projectDesc}>
-              A full-stack AI application designed for creative directors to generate, refine, and stream high-conversion, policy-compliant ad prompts for image/video generative AI models.
+              A full-stack travel platform for companion matching, seat-managed group bookings, secure Razorpay payments, Socket.IO messaging, and an AI-assisted travel copilot.
             </p>
 
             <div className={styles.featuredMetrics}>
               <div className={styles.metricItem}>
-                <span className={styles.metricVal}>768-D</span>
-                <span className={styles.metricLbl}>Vector Embed</span>
+                <span className={styles.metricVal}>40+</span>
+                <span className={styles.metricLbl}>REST Endpoints</span>
               </div>
               <div className={styles.metricItem}>
-                <span className={styles.metricVal}>Real-Time</span>
-                <span className={styles.metricLbl}>Streaming SSE</span>
+                <span className={styles.metricVal}>Low-Latency</span>
+                <span className={styles.metricLbl}>Chat & Sockets</span>
               </div>
               <div className={styles.metricItem}>
-                <span className={styles.metricVal}>Fail-Safe</span>
-                <span className={styles.metricLbl}>In-Memory Fallback</span>
+                <span className={styles.metricVal}>Razorpay</span>
+                <span className={styles.metricLbl}>Secured Payments</span>
               </div>
             </div>
 
             <div className={styles.tagContainer}>
-              {["Next.js 14", "React 18", "Supabase", "pgvector", "Groq / xAI", "Tailwind CSS"].map(tag => (
+              {["React 19", "Vite", "Node.js / Express", "MongoDB", "Socket.IO", "Razorpay", "Nodemailer", "Groq API"].map(tag => (
                 <span key={tag} className={styles.tag}>{tag}</span>
               ))}
             </div>
@@ -73,12 +73,12 @@ export default function Projects() {
                 <span className={styles.dotRed}></span>
                 <span className={styles.dotYellow}></span>
                 <span className={styles.dotGreen}></span>
-                <span className={styles.browserAddress}>localhost:3000/prompt-forge</span>
+                <span className={styles.browserAddress}>localhost:5173</span>
               </div>
               <div className={styles.browserBody}>
                 <Image
-                  src="/glass_analytics.png"
-                  alt="Vivid Prompt Forge dashboard workspace"
+                  src="/bagpacker.png"
+                  alt="BagPacker travel planner workspace"
                   className={styles.browserImg}
                   width={640}
                   height={360}
@@ -232,7 +232,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Project 4: Featured Platform (BagPacker) - Full Width Banner */}
+        {/* Project 4: Featured Platform (Vivid Prompt Forge) - Full Width Banner */}
         <div className={`${styles.featuredCard} glass-card glow-effect`}>
           <div className={styles.featuredDetails}>
             <div className={styles.cardHeaderInfo}>
@@ -240,29 +240,29 @@ export default function Projects() {
               <span className={styles.featuredBadge}>FEATURED WORK</span>
             </div>
             
-            <h3 className={styles.projectTitle}>BagPacker</h3>
+            <h3 className={styles.projectTitle}>Vivid Prompt Forge</h3>
             
             <p className={styles.projectDesc}>
-              A full-stack travel platform for companion matching, seat-managed group bookings, secure Razorpay payments, Socket.IO messaging, and an AI-assisted travel copilot.
+              A full-stack AI application designed for creative directors to generate, refine, and stream high-conversion, policy-compliant ad prompts for image/video generative AI models.
             </p>
 
             <div className={styles.featuredMetrics}>
               <div className={styles.metricItem}>
-                <span className={styles.metricVal}>40+</span>
-                <span className={styles.metricLbl}>REST Endpoints</span>
+                <span className={styles.metricVal}>768-D</span>
+                <span className={styles.metricLbl}>Vector Embed</span>
               </div>
               <div className={styles.metricItem}>
-                <span className={styles.metricVal}>Low-Latency</span>
-                <span className={styles.metricLbl}>Chat & Sockets</span>
+                <span className={styles.metricVal}>Real-Time</span>
+                <span className={styles.metricLbl}>Streaming SSE</span>
               </div>
               <div className={styles.metricItem}>
-                <span className={styles.metricVal}>Razorpay</span>
-                <span className={styles.metricLbl}>Secured Payments</span>
+                <span className={styles.metricVal}>Fail-Safe</span>
+                <span className={styles.metricLbl}>In-Memory Fallback</span>
               </div>
             </div>
 
             <div className={styles.tagContainer}>
-              {["React 19", "Vite", "Node.js / Express", "MongoDB", "Socket.IO", "Razorpay", "Nodemailer", "Groq API"].map(tag => (
+              {["Next.js 14", "React 18", "Supabase", "pgvector", "Groq / xAI", "Tailwind CSS"].map(tag => (
                 <span key={tag} className={styles.tag}>{tag}</span>
               ))}
             </div>
@@ -293,12 +293,12 @@ export default function Projects() {
                 <span className={styles.dotRed}></span>
                 <span className={styles.dotYellow}></span>
                 <span className={styles.dotGreen}></span>
-                <span className={styles.browserAddress}>localhost:5173</span>
+                <span className={styles.browserAddress}>localhost:3000/prompt-forge</span>
               </div>
               <div className={styles.browserBody}>
                 <Image
-                  src="/bagpacker.png"
-                  alt="BagPacker travel planner workspace"
+                  src="/glass_analytics.png"
+                  alt="Vivid Prompt Forge dashboard workspace"
                   className={styles.browserImg}
                   width={640}
                   height={360}
