@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./About.module.css";
 
@@ -9,7 +8,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -70,52 +69,55 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Profile Avatar Card */}
-            <motion.div className={styles.profileCard} variants={cardVariants}>
-              <Image
-                src="/profile.png"
-                alt="Abhinav Thakur"
-                width={110}
-                height={110}
-                className={styles.profileImg}
-                priority
-              />
-            </motion.div>
+            <div className={styles.timeline}>
+              {/* Event 1: Work Experience (Most Recent) */}
+              <motion.div className={styles.timelineItem} variants={cardVariants}>
+                <div className={`${styles.timelineDot} ${styles.timelineDotExp}`} />
+                <div className={styles.timelineContent}>
+                  <span className={`${styles.cardTypeBadge} ${styles.cardTypeBadgeExp}`}>Work Experience</span>
+                  <div className={styles.timelineHeader}>
+                    <h4 className={styles.cardMainTitle}>Web Developer Trainee</h4>
+                    <span className={styles.metaPeriod}>Dec 2025 — Present</span>
+                  </div>
+                  <p className={styles.cardSubTitle}>O7 Services • Jalandhar</p>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.metaBadge}>Traineeship</span>
+                    <span className={styles.metaBadge} style={{ background: "rgba(230, 57, 70, 0.05)", color: "var(--accent-red)", border: "none" }}>Full-Stack MERN</span>
+                  </div>
+                </div>
+              </motion.div>
 
-            {/* Education Card */}
-            <motion.div className={styles.infoCard} variants={cardVariants}>
-              <span className={`${styles.cardTypeBadge} ${styles.cardTypeBadgeEdu}`}>Education</span>
-              <h4 className={styles.cardMainTitle}>B.Tech in Computer Science & Engineering</h4>
-              <p className={styles.cardSubTitle}>Guru Nanak Dev University, Amritsar</p>
-              <div className={styles.cardMeta}>
-                <span className={styles.metaBadge}>CGPA: 7.58 / 10</span>
-                <span className={styles.metaPeriod}>2022 — 2026</span>
-              </div>
-            </motion.div>
+              {/* Event 2: Education */}
+              <motion.div className={styles.timelineItem} variants={cardVariants}>
+                <div className={`${styles.timelineDot} ${styles.timelineDotEdu}`} />
+                <div className={styles.timelineContent}>
+                  <span className={`${styles.cardTypeBadge} ${styles.cardTypeBadgeEdu}`}>Education</span>
+                  <div className={styles.timelineHeader}>
+                    <h4 className={styles.cardMainTitle}>B.Tech in Computer Science & Engineering</h4>
+                    <span className={styles.metaPeriod}>2022 — 2026</span>
+                  </div>
+                  <p className={styles.cardSubTitle}>Guru Nanak Dev University, Amritsar</p>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.metaBadge}>CGPA: 7.58 / 10</span>
+                    <span className={styles.metaBadge} style={{ background: "rgba(2, 132, 199, 0.05)", color: "#0284c7", border: "none" }}>B.Tech CSE</span>
+                  </div>
+                </div>
+              </motion.div>
 
-            {/* Experience Card */}
-            <motion.div className={styles.infoCard} variants={cardVariants}>
-              <span className={`${styles.cardTypeBadge} ${styles.cardTypeBadgeExp}`}>Work Experience</span>
-              <h4 className={styles.cardMainTitle}>Web Developer Trainee</h4>
-              <p className={styles.cardSubTitle}>O7 Services • Jalandhar</p>
-              <div className={styles.cardMeta}>
-                <span className={styles.metaBadge}>Traineeship</span>
-                <span className={styles.metaPeriod}>Dec 2025 — Present</span>
-              </div>
-            </motion.div>
-
-            {/* Project Stats Capsule */}
-            <motion.div 
-              className={styles.infoCard} 
-              variants={cardVariants} 
-              style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}
-            >
-              <div>
-                <h4 className={styles.cardMainTitle} style={{ fontSize: "1rem" }}>4+ High-impact projects</h4>
-                <p className={styles.cardSubTitle} style={{ fontSize: "0.8rem", marginTop: "0.15rem" }}>Shipped using modern AI & Full-Stack Tech</p>
-              </div>
-              <span className={styles.metaBadge} style={{ background: "rgba(26,26,26,0.05)", border: "none", fontSize: "0.9rem" }}>🚀</span>
-            </motion.div>
+              {/* Highlight Event: Shipped Projects */}
+              <motion.div className={styles.timelineItem} variants={cardVariants}>
+                <div className={`${styles.timelineDot}`} style={{ border: "3px solid #f39c12" }} />
+                <div className={styles.timelineContent} style={{ padding: "1rem 1.25rem" }}>
+                  <div className={styles.timelineHeader} style={{ alignItems: "center" }}>
+                    <div>
+                      <h4 className={styles.cardMainTitle} style={{ fontSize: "1rem" }}>4+ High-impact projects</h4>
+                      <p className={styles.cardSubTitle} style={{ fontSize: "0.8rem", marginTop: "0.15rem" }}>Shipped using modern AI & Full-Stack Tech</p>
+                    </div>
+                    <span className={styles.metaBadge} style={{ background: "rgba(26,26,26,0.05)", border: "none", fontSize: "0.95rem", padding: "0.3rem 0.5rem" }}>🚀</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
