@@ -9,7 +9,6 @@ import Skills from "@/components/Skills/Skills";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact/Contact";
 
-// Dynamic import of the 3D canvas (SSR disabled) to prevent hydration mismatches
 const ThreeCanvas = dynamic(() => import("@/components/ThreeCanvas/ThreeCanvas"), {
   ssr: false,
 });
@@ -17,41 +16,22 @@ const ThreeCanvas = dynamic(() => import("@/components/ThreeCanvas/ThreeCanvas")
 export default function Home() {
   return (
     <>
-      {/* 3D WebGL Background Scene */}
       <ThreeCanvas />
-      
-      {/* Scrollable layout content overlays */}
-      <div className={styles.pageContainer}>
-        <div className={styles.contentSection}>
-          <Header />
-        </div>
-        
-        <main className={styles.mainContent}>
-          <div className={styles.contentSection}>
-            <Hero />
-          </div>
-          
-          <div className={styles.contentSection}>
-            <About />
-          </div>
-          
-          <div className={styles.contentSection}>
-            <Skills />
-          </div>
-          
-          <div className={styles.contentSection}>
-            <Projects />
-          </div>
-          
-          <div className={styles.contentSection}>
-            <Contact />
-          </div>
+      <div className={styles.page}>
+        <Header />
+        <main>
+          <Hero />
+          <Projects />
+          <Skills />
+          <About />
+          <Contact />
         </main>
-
         <footer className={styles.footer}>
-          <div className={`${styles.footerContainer} container`}>
-            <div className={styles.footerLogo}>ABHINAV</div>
-            <p>© {new Date().getFullYear()} Abhinav Thakur. All rights reserved.</p>
+          <div className={`${styles.footerInner} container`}>
+            <p className={styles.footerText}>
+              Crafted with care by <strong>Abhinav Thakur</strong>
+            </p>
+            <p className={styles.footerCopy}>© {new Date().getFullYear()}</p>
           </div>
         </footer>
       </div>

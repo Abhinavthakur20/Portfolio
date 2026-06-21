@@ -1,39 +1,33 @@
-/* globals.css */
+/* globals.css — Warm Editorial Aesthetic */
 
 :root {
-  /* Print Editorial Warm Oatmeal Palette */
-  --bg-primary: #ece8df;         /* Warm Sand Paper */
-  --bg-secondary: #e2ddd3;       /* Oatmeal Border Guide */
-  --bg-tertiary: #d7d1c5;        /* Darker Sand guide */
+  /* Warm Cream Palette */
+  --bg-primary: #f5f0eb;
+  --bg-secondary: #ebe5de;
+  --bg-card: #ffffff;
   
-  --text-primary: #0e0d12;       /* Rich Ink Black */
-  --text-secondary: #2f2e34;     /* Ink Charcoal */
-  --text-muted: #6b6973;         /* Lead Grey */
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --text-muted: #9a9a9a;
   
-  /* Font Variables Mapping */
-  --font-outfit: var(--font-playfair);
-  --font-inter: var(--font-plus-jakarta);
+  /* Fonts */
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-plus-jakarta: var(--font-plus-jakarta);
+  --font-playfair: var(--font-playfair);
   
-  /* Rich Editorial Print Accents */
-  --accent-blue: #1d4ed8;        /* Royal Blue Ink */
-  --accent-purple: #4c1d95;      /* Deep Violet Ink */
-  --accent-pink: #b91c1c;        /* Crimson Wine */
-  --accent-orange: #991b1b;      /* Primary Editorial Red */
-  --accent-green: #15803d;       /* Forest Ink Green */
-  
-  --accent-orange-glow: rgba(153, 27, 27, 0.08);
-  
-  /* Print Layout Card Borders & Columns */
-  --glass-bg: #fdfcf9;           /* Off-white paper sheets on sand background */
-  --glass-bg-hover: #ffffff;     /* Pure white sheets on hover */
-  --glass-border: rgba(14, 13, 18, 0.12);
-  --glass-border-hover: #0e0d12;
-  --glass-shadow: none;          /* Flat print layout, no card drop shadows */
+  /* Playful Accents */
+  --accent-red: #e63946;
+  --accent-blue: #89CFF0;
+  --accent-green: #2d936c;
+  --accent-orange: #e63946;
+  --accent-purple: #7c3aed;
+  --accent-cyan: #0284c7;
+  --accent-magenta: #db2777;
   
   /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-normal: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-slow: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -47,8 +41,7 @@ html {
   color-scheme: light;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
@@ -58,34 +51,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Print-like Scrollbars */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-  border-left: 1px solid rgba(9, 9, 11, 0.05);
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(9, 9, 11, 0.15);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(9, 9, 11, 0.3);
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(26, 26, 26, 0.12); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(26, 26, 26, 0.25); }
 
-/* Custom Print Selection */
 ::selection {
-  background: var(--text-primary);
-  color: var(--bg-primary);
+  background: rgba(230, 57, 70, 0.15);
+  color: var(--accent-red);
 }
 
-/* Serif Headings Hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), Georgia, serif;
   font-weight: 700;
-  letter-spacing: -0.01em;
   color: var(--text-primary);
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 p {
@@ -99,7 +79,6 @@ a {
   transition: var(--transition-fast);
 }
 
-/* Common Core Components & Helpers */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -107,68 +86,45 @@ a {
   width: 100%;
 }
 
-.gradient-text {
-  color: var(--accent-orange);
-  display: inline-block;
-  font-weight: 900;
-}
-
-/* Flat Magazine Page Section Blocks */
-.glass-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 0px;             /* Crisp square cut edges for editorial blocks */
-  box-shadow: none;
-  padding: 2rem;
-  transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal);
-}
-
-.glass-card:hover {
-  background: var(--glass-bg-hover);
-  border-color: var(--glass-border-hover);
-  transform: translateY(-2px);   /* Soft float, no shadow scaling */
-}
-
-/* Responsive Grid Base */
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-/* Keyframes for Floating elements */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.floating {
-  animation: float 4s ease-in-out infinite;
-}
-
-/* Custom glow borders/gradients */
-.glow-effect {
-  position: relative;
-}
-
-/* Section Spacing */
 .section {
-  padding: 8rem 0 4rem 0;
+  padding: 7rem 0;
   position: relative;
   z-index: 10;
 }
 
+/* Pill Button Base */
+.pill-btn {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  border: 2px solid var(--text-primary);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(26, 26, 26, 0.2);
+}
+
+.pill-btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.pill-btn-outline:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
 @media (max-width: 768px) {
-  .section {
-    padding: 6rem 0 3rem 0;
-  }
-  .container {
-    padding: 0 1.5rem;
-  }
+  .section { padding: 5rem 0; }
+  .container { padding: 0 1.25rem; }
 }

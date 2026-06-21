@@ -1,53 +1,31 @@
-.pageContainer {
+.page {
   position: relative;
+  z-index: 10;
   width: 100%;
   min-height: 100vh;
-  z-index: 10;
-  /* Allow mouse interaction to pass through to the 3D Canvas behind it */
-  pointer-events: none;
-}
-
-/* Enable mouse interaction for components */
-.contentSection {
-  pointer-events: auto;
-}
-
-.mainContent {
-  max-width: 1000px;                 /* Centered page grid width */
-  margin: 0 auto;
-  padding: 0 2rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  pointer-events: auto;
 }
 
 .footer {
-  padding: 4rem 0 3rem 0;
+  padding: 4rem 0 3rem;
   text-align: center;
-  border-top: 1px solid rgba(14, 13, 18, 0.08);
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  pointer-events: auto;
   position: relative;
   z-index: 10;
-  background: rgba(251, 250, 247, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 
-.footerContainer {
+.footerInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-.footerLogo {
+.footerText {
   font-family: var(--font-playfair), Georgia, serif;
-  font-size: 1.25rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
+  font-size: 1.1rem;
   color: var(--text-primary);
-  text-transform: uppercase;
+}
+
+.footerCopy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }

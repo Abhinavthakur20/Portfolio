@@ -60,8 +60,8 @@ export default function ParticleField() {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.04}
-        color="#2e2e30" /* Faint charcoal paper fibers */
+        size={0.035}
+        color="#78716c" /* Subtle warm stone dust motes */
         transparent
         opacity={0.15}
         sizeAttenuation

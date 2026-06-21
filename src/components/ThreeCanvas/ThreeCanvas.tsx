@@ -1,5 +1,4 @@
 "use client";
-
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { useProgress, Html } from "@react-three/drei";
@@ -25,19 +24,17 @@ export default function ThreeCanvas() {
         camera={{ position: [0, 0, 5], fov: 60 }}
         gl={{ antialias: true, alpha: true }}
       >
-        {/* Soft, clean ambient light replicating daylight */}
-        <ambientLight intensity={0.7} />
+        {/* Soft, bright ambient light replicating daylight */}
+        <ambientLight intensity={0.95} />
         
-        {/* Directional light to define highlights & silhouettes */}
-        <directionalLight position={[10, 10, 8]} intensity={1.8} castShadow />
-        
-        {/* Soft fill light from opposite bottom */}
-        <directionalLight position={[-10, -8, -5]} intensity={0.6} />
+        {/* Clean directional lights for details */}
+        <directionalLight position={[10, 10, 8]} intensity={0.8} color="#fafaf9" />
+        <directionalLight position={[-10, -8, -5]} intensity={0.4} color="#e7e5e4" />
 
-        {/* Clean point lights simulating warm/cool studio lighting */}
-        <pointLight position={[5, 5, 5]} intensity={2.0} color="#ffffff" />
-        <pointLight position={[-5, 5, 3]} intensity={1.5} color="#ffedd5" /> {/* Soft peach reflection */}
-        <pointLight position={[0, -5, 2]} intensity={1.5} color="#fed7aa" /> {/* Soft warm orange refraction */}
+        {/* Soft pastel studio point lights */}
+        <pointLight position={[6, 5, 5]} intensity={2.5} color="#e0f2fe" />    {/* Sky Blue tint */}
+        <pointLight position={[-6, 5, 3]} intensity={2.0} color="#f3e8ff" />   {/* Lavender Purple tint */}
+        <pointLight position={[0, -5, 2]} intensity={1.8} color="#ffedd5" />   {/* Soft Peach tint */}
 
         <Suspense fallback={<CanvasLoader />}>
           <ParticleField />
@@ -64,22 +61,22 @@ const loaderStyle: React.CSSProperties = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  color: "#09090b",
-  fontFamily: "var(--font-outfit), sans-serif",
+  color: "#1c1917",
+  fontFamily: "var(--font-space-grotesk), sans-serif",
   backgroundColor: "rgba(255, 255, 255, 0.95)",
   padding: "2rem",
   borderRadius: "16px",
-  border: "1px solid rgba(0, 0, 0, 0.08)",
-  backdropFilter: "blur(8px)",
+  border: "1px solid rgba(28, 25, 23, 0.08)",
+  backdropFilter: "blur(12px)",
   width: "180px",
-  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.05)",
+  boxShadow: "0 20px 40px rgba(28, 25, 23, 0.06)",
 };
 
 const spinnerStyle: React.CSSProperties = {
   width: "40px",
   height: "40px",
-  border: "3px solid rgba(9, 9, 11, 0.08)",
-  borderTop: "3px solid #09090b",
+  border: "3px solid rgba(28, 25, 23, 0.08)",
+  borderTop: "3px solid #0284c7",
   borderRadius: "50%",
   animation: "spin 1s linear infinite",
   marginBottom: "1rem",

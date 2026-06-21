@@ -19,17 +19,31 @@
 }
 
 .title {
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
-/* Biography Card Area */
+/* Biography Card Area - Premium Glassmorphism */
 .biographyCard {
-  background: #ffffff;
-  border: 1px solid rgba(9, 9, 11, 0.1);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
   padding: 2.5rem;
   margin-bottom: 3rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-normal);
+}
+
+.biographyCard:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 25px 50px -12px rgba(28, 25, 23, 0.08), 0 0 15px rgba(194, 65, 12, 0.05);
+  transform: translateY(-2px);
 }
 
 .bioHeader {
@@ -46,21 +60,22 @@
 
 .profileImage {
   border-radius: 50%;
-  border: 1.5px solid var(--text-primary);
+  border: 2px solid var(--accent-orange);
+  box-shadow: 0 0 15px rgba(194, 65, 12, 0.15);
   object-fit: cover;
 }
 
 .bioName {
-  font-family: var(--font-playfair), Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 900;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
 .bioSub {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
@@ -74,44 +89,47 @@
 .highlightText {
   color: var(--text-primary);
   font-weight: 600;
-  border-left: 2px solid var(--accent-orange);
+  border-left: 3px solid var(--accent-orange);
   padding-left: 1rem;
   margin-bottom: 2rem;
 }
 
-/* LCD Metrics counters */
+/* Stats Grid */
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(9, 9, 11, 0.12);
+  border-top: 1px solid var(--glass-border);
 }
 
 .statItem {
   text-align: center;
-  background: var(--bg-secondary);
-  border: 1px solid rgba(9, 9, 11, 0.08);
-  padding: 0.65rem 0.5rem;
-  border-radius: 0px;
-  transition: border-color var(--transition-fast);
+  background: rgba(28, 25, 23, 0.02);
+  border: 1px solid var(--glass-border);
+  padding: 0.75rem 0.5rem;
+  border-radius: 12px;
+  transition: all var(--transition-fast);
 }
 
 .statItem:hover {
-  border-color: var(--text-primary);
+  border-color: var(--accent-orange);
+  background: rgba(194, 65, 12, 0.04);
+  box-shadow: 0 0 10px rgba(194, 65, 12, 0.08);
+  transform: translateY(-1px);
 }
 
 .statNum {
-  font-family: var(--font-playfair), Georgia, serif;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 900;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 0.15rem;
   display: block;
 }
 
 .statLabel {
-  font-size: 0.725rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -132,33 +150,44 @@
 }
 
 .columnHeader {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 1.15rem;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--text-primary);
   display: flex;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(9, 9, 11, 0.15);
+  border-bottom: 1px solid var(--glass-border);
   margin-bottom: 1.5rem;
 }
 
 .timelineItem {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all var(--transition-fast);
+}
+
+.timelineItem:hover {
+  border-color: rgba(194, 65, 12, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateX(4px);
 }
 
 .dateBadge {
-  background: var(--bg-secondary);
-  border: 1px solid rgba(9, 9, 11, 0.15);
-  padding: 0.25rem 0.65rem;
-  border-radius: 0px;
+  background: rgba(194, 65, 12, 0.04);
+  border: 1px solid rgba(194, 65, 12, 0.25);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
   font-size: 0.725rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--accent-orange);
   display: inline-block;
   align-self: flex-start;
   margin-bottom: 0.75rem;
@@ -167,14 +196,16 @@
 }
 
 .roleTitle {
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--text-primary);
+  margin-bottom: 0.25rem;
 }
 
 .companyTitle {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -196,7 +227,7 @@
 }
 
 .bulletsList li::before {
-  content: "—";                     /* Printed em-dash */
+  content: "✦";
   position: absolute;
   left: 0;
   top: 0;
@@ -220,17 +251,30 @@
 .certItem {
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.certItem:hover {
+  border-color: rgba(194, 65, 12, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateX(4px);
 }
 
 .certTitle {
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 0.925rem;
   font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 0.15rem;
 }
 
 .certDesc {
   font-size: 0.825rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 /* Tablet Stacks */

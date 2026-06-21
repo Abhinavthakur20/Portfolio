@@ -9,13 +9,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,14 +19,9 @@ export default function Header() {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      const offset = 80;
+      const pos = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: pos, behavior: "smooth" });
     }
   };
 
@@ -40,21 +29,16 @@ export default function Header() {
     <>
       <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
         <div className={styles.container}>
-          <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            ABHINAV
-          </div>
-          
-          <nav className={styles.nav}>
-            <a href="#hero" onClick={(e) => handleNavClick(e, "hero")} className={styles.navLink}>Home</a>
-            <a href="#about" onClick={(e) => handleNavClick(e, "about")} className={styles.navLink}>About</a>
-            <a href="#skills" onClick={(e) => handleNavClick(e, "skills")} className={styles.navLink}>Skills</a>
-            <a href="#projects" onClick={(e) => handleNavClick(e, "projects")} className={styles.navLink}>Projects</a>
-            <a href="/Resume_Abhinav.pdf" target="_blank" rel="noopener noreferrer" className={styles.navLink}>Resume</a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className={styles.contactBtn}>Get in Touch</a>
-          </nav>
+          <a href="#projects" onClick={(e) => handleNavClick(e, "projects")} className={styles.navLink}>works</a>
 
-          <button 
-            className={styles.menuToggle} 
+          <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <span className={styles.logoText}>abhinav</span>
+          </div>
+
+          <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className={styles.navLink}>contact</a>
+
+          <button
+            className={styles.menuToggle}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,14 +47,12 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile navigation menu */}
       <div className={`${styles.mobileNav} ${mobileMenuOpen ? styles.mobileNavActive : ""}`}>
-        <a href="#hero" onClick={(e) => handleNavClick(e, "hero")} className={styles.navLink}>Home</a>
-        <a href="#about" onClick={(e) => handleNavClick(e, "about")} className={styles.navLink}>About</a>
-        <a href="#skills" onClick={(e) => handleNavClick(e, "skills")} className={styles.navLink}>Skills</a>
-        <a href="#projects" onClick={(e) => handleNavClick(e, "projects")} className={styles.navLink}>Projects</a>
-        <a href="/Resume_Abhinav.pdf" target="_blank" rel="noopener noreferrer" className={styles.navLink}>Resume</a>
-        <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className={styles.contactBtn} style={{ textAlign: "center" }}>Get in Touch</a>
+        <a href="#projects" onClick={(e) => handleNavClick(e, "projects")} className={styles.mobileLink}>Works</a>
+        <a href="#skills" onClick={(e) => handleNavClick(e, "skills")} className={styles.mobileLink}>Skills</a>
+        <a href="#about" onClick={(e) => handleNavClick(e, "about")} className={styles.mobileLink}>About</a>
+        <a href="/Resume_Abhinav.pdf" target="_blank" rel="noopener noreferrer" className={styles.mobileLink}>Resume</a>
+        <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className={styles.mobileCta}>Get in Touch</a>
       </div>
     </>
   );
