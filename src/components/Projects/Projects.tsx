@@ -300,13 +300,83 @@ export default function Projects() {
               </div>
             </div>
           </div>
+
+          {/* Project 5: Eco-Route */}
+          <div className={`${styles.gridCard} glass-card glow-effect`}>
+            <div className={styles.cardInfo}>
+              <div className={styles.cardHeaderInfo}>
+                <span className={styles.projectIndex}>05</span>
+                <span className={styles.gridBadge}>SUSTAINABLE TRANSIT</span>
+              </div>
+              
+              <h3 className={styles.projectTitle}>Eco-Route</h3>
+              
+              <p className={styles.projectDesc}>
+                A carbon journey planner comparing real-time transit emissions, mapping OSRM-computed paths using Leaflet, and logging user savings in local storage.
+              </p>
+
+              <div className={styles.tagContainer}>
+                {["React", "Vite", "Leaflet Maps", "OSRM API", "Nominatim", "Tailwind CSS", "LocalStorage"].map(tag => (
+                  <span key={tag} className={styles.tag}>{tag}</span>
+                ))}
+              </div>
+
+              <div className={styles.linkGroup}>
+                <a
+                  href="https://github.com/Abhinavthakur20/eco-route"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.iconLink}
+                >
+                  <Github size={15} /> Code
+                </a>
+                <a
+                  href="https://github.com/Abhinavthakur20/eco-route"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.iconLink}
+                >
+                  Live <ArrowUpRight size={13} />
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.gridVisual}>
+              <div className={styles.terminalOverlay}>
+                <div className={styles.terminalHeader}>
+                  <span className={styles.termDotRed}></span>
+                  <span className={styles.termDotYellow}></span>
+                  <span className={styles.termDotGreen}></span>
+                  <span className={styles.terminalTitle}>osrm-router.ts</span>
+                </div>
+                <div className={styles.terminalCode}>
+                  <code>
+                    <span className={styles.keyword}>const</span> route = <span className={styles.keyword}>await</span> fetchRoute(start, end);<br />
+                    <span className={styles.keyword}>const</span> co2Saved = calcSavings(distance, mode);<br />
+                    updateLocalStats(co2Saved); <span className={styles.comment}>// localStorage tracker</span>
+                  </code>
+                </div>
+              </div>
+
+              <div className={styles.imageFrame}>
+                <Image
+                  src="/linear_editor.png"
+                  alt="Eco-Route map layout dashboard"
+                  className={styles.cardImg}
+                  width={400}
+                  height={225}
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Project 5: Featured Platform (BagPacker) - Full Width Banner */}
+        {/* Project 6: Featured Platform (BagPacker) - Full Width Banner */}
         <div className={`${styles.featuredCard} glass-card glow-effect`}>
           <div className={styles.featuredDetails}>
             <div className={styles.cardHeaderInfo}>
-              <span className={styles.projectIndex}>05</span>
+              <span className={styles.projectIndex}>06</span>
               <span className={styles.featuredBadge}>FEATURED WORK</span>
             </div>
             
