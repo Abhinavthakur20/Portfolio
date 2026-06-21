@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Send } from "lucide-react";
 import confetti from "canvas-confetti";
 import styles from "./Contact.module.css";
 
@@ -23,100 +22,72 @@ export default function Contact() {
       setError("Please fill out all fields.");
       return;
     }
-
     setIsSubmitting(true);
     setError("");
-
-    // Simulate API request
     try {
       await new Promise((resolve) => setTimeout(resolve, 1200));
       setIsSubmitting(false);
       setSubmitted(true);
-      
-      // Trigger canvas-confetti celebration!
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ["#0284c7", "#2563eb", "#7c3aed", "#c2410c"]
+        colors: ["#e63946", "#89CFF0", "#2d936c", "#1a1a1a"],
       });
-
-      // Reset form
       setFormData({ name: "", email: "", message: "" });
     } catch {
       setIsSubmitting(false);
-      setError("Failed to send message. Please try again.");
+      setError("Failed to send. Please try again.");
     }
   };
 
   return (
-    <section id="contact" className={`${styles.contact} section container`}>
-      <div className={styles.titleSection}>
-        <span className={styles.subtitle}>Get in Touch</span>
-        <h2 className={styles.title}>Let&apos;s Work Together</h2>
-      </div>
+    <section id="contact" className={`${styles.contact} section`}>
+      <div className={`${styles.inner} container`}>
+        <h2 className={styles.title}>Let&apos;s work together</h2>
+        <p className={styles.subtitle}>
+          Have an idea or a project? Drop me a message — I&apos;d love to hear from you.
+        </p>
 
-      <div className={styles.content}>
-        <div className={`${styles.formCard} glass-card`}>
+        <div className={styles.formWrapper}>
           {submitted ? (
-            <div className={styles.successMessage}>
-              Thank you for reaching out! I&apos;ll get back to you as soon as possible.
+            <div className={styles.success}>
+              Thanks for reaching out! I&apos;ll get back to you soon. 🎉
             </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formGroup}>
-                <label htmlFor="name" className={styles.label}>Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  className={styles.input}
-                  disabled={isSubmitting}
-                />
+              <div className={styles.row}>
+                <div className={styles.field}>
+                  <label htmlFor="name" className={styles.label}>Name</label>
+                  <input
+                    id="name" name="name" type="text"
+                    value={formData.name} onChange={handleChange}
+                    placeholder="Your name"
+                    className={styles.input} disabled={isSubmitting}
+                  />
+                </div>
+                <div className={styles.field}>
+                  <label htmlFor="email" className={styles.label}>Email</label>
+                  <input
+                    id="email" name="email" type="email"
+                    value={formData.email} onChange={handleChange}
+                    placeholder="you@example.com"
+                    className={styles.input} disabled={isSubmitting}
+                  />
+                </div>
               </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="email" className={styles.label}>Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="name@example.com"
-                  className={styles.input}
-                  disabled={isSubmitting}
-                />
-              </div>
-
-              <div className={styles.formGroup}>
+              <div className={styles.field}>
                 <label htmlFor="message" className={styles.label}>Message</label>
                 <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  id="message" name="message"
+                  value={formData.message} onChange={handleChange}
                   placeholder="Tell me about your project..."
-                  className={styles.textarea}
-                  disabled={isSubmitting}
-                ></textarea>
+                  className={styles.textarea} disabled={isSubmitting}
+                />
               </div>
-
-              {error && <p style={{ color: "#ef4444", fontSize: "0.9rem", margin: 0 }}>{error}</p>}
-
-              <button
-                type="submit"
-                className={styles.submitBtn}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Sending..." : (
-                  <>
-                    Send Message <Send size={16} />
-                  </>
-                )}
+              {error && <p className={styles.error}>{error}</p>}
+              <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send message"}
               </button>
             </form>
           )}
