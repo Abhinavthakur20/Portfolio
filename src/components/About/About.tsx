@@ -70,10 +70,10 @@ export default function About() {
             <h4 className={styles.roleTitle}>Web Developer Trainee</h4>
             <div className={styles.companyTitle}>O7 Services | Jalandhar</div>
             <ul className={styles.bulletsList}>
-              <li>Built and shipped <b>BagPacker</b> (travel), <b>Drawza</b> (whiteboard), <b>Eco-Route</b> (transit maps), and <b>Vivid Prompt Forge</b> (AI prompts).</li>
-              <li>Integrated Razorpay payment systems, WebRTC voice chat signaling, Leaflet routing maps, and offline unigram/bigram token embeddings.</li>
-              <li>Designed low-latency room-based socket networks, OSRM routing/Nominatim geocoding pipelines, and Supabase pgvector database backends.</li>
-              <li>Developed context-aware LLM cascades (xAI/Groq), localStorage trip savings tracking, and auto-saving MongoDB databases.</li>
+              <li>Built and shipped <b>BagPacker</b> (travel platform), <b>Drawza</b> (collaborative canvas), <b>Eco-Route</b> (transit mapping), and <b>Vivid Prompt Forge</b> (AI prompts).</li>
+              <li>Integrated Razorpay payment systems, WebRTC voice chat signaling, Leaflet routing maps, and Supabase pgvector search databases.</li>
+              <li>Designed low-latency room-based socket networks (Socket.IO), OSRM routing/Nominatim geocoding APIs, and local state sync layers.</li>
+              <li>Developed context-aware AI travel guides, localStorage trip savings tracking, and auto-saving MongoDB board state pipelines.</li>
             </ul>
           </div>
         </div>

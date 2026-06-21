@@ -91,151 +91,11 @@ export default function Projects() {
 
         {/* Second Row: Supporting Grid Projects (Side-by-side) */}
         <div className={styles.subGrid}>
-          {/* Project 2: LiteEmbed NLP Engine */}
+          {/* Project 2: Drawza */}
           <div className={`${styles.gridCard} glass-card glow-effect`}>
             <div className={styles.cardInfo}>
               <div className={styles.cardHeaderInfo}>
                 <span className={styles.projectIndex}>02</span>
-                <span className={styles.gridBadge}>NLP & VECTOR EMBED</span>
-              </div>
-              
-              <h3 className={styles.projectTitle}>LiteEmbed NLP Engine</h3>
-              
-              <p className={styles.projectDesc}>
-                A high-performance Node.js unigram/bigram token-hashing text embedding algorithm generating 768-dimensional vector embeddings offline, eliminating external API usage costs.
-              </p>
-
-              <div className={styles.tagContainer}>
-                {["Node.js", "NLP Algorithms", "Vector Math", "L2 Normalization", "TypeScript"].map(tag => (
-                  <span key={tag} className={styles.tag}>{tag}</span>
-                ))}
-              </div>
-
-              <div className={styles.linkGroup}>
-                <a
-                  href="https://github.com/Abhinavthakur20/Portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.iconLink}
-                >
-                  <Github size={15} /> Code
-                </a>
-                <a
-                  href="https://github.com/Abhinavthakur20/Portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.iconLink}
-                >
-                  Live <ArrowUpRight size={13} />
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.gridVisual}>
-              <div className={styles.terminalOverlay}>
-                <div className={styles.terminalHeader}>
-                  <span className={styles.termDotRed}></span>
-                  <span className={styles.termDotYellow}></span>
-                  <span className={styles.termDotGreen}></span>
-                  <span className={styles.terminalTitle}>embedder.ts</span>
-                </div>
-                <div className={styles.terminalCode}>
-                  <code>
-                    <span className={styles.keyword}>const</span> tokens = tokenize(text); <span className={styles.comment}>// unigrams/bigrams</span><br />
-                    <span className={styles.keyword}>const</span> vector = hashToVector(tokens, 768);<br />
-                    <span className={styles.keyword}>const</span> normVec = l2Normalize(vector); <span className={styles.comment}>// zero latency</span>
-                  </code>
-                </div>
-              </div>
-              
-              <div className={styles.imageFrame}>
-                <Image
-                  src="/linear_editor.png"
-                  alt="LiteEmbed NLP Engine vector visualization"
-                  className={styles.cardImg}
-                  width={400}
-                  height={225}
-                  priority={false}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Project 3: Cascade Failover Router */}
-          <div className={`${styles.gridCard} glass-card glow-effect`}>
-            <div className={styles.cardInfo}>
-              <div className={styles.cardHeaderInfo}>
-                <span className={styles.projectIndex}>03</span>
-                <span className={styles.gridBadge}>HIGH-AVAILABILITY ROUTER</span>
-              </div>
-              
-              <h3 className={styles.projectTitle}>Cascade Failover Router</h3>
-              
-              <p className={styles.projectDesc}>
-                A resilient Next.js API routing middleware featuring automated retry mechanisms, dynamic LLM provider cascading (xAI/Groq), and fallbacks to in-memory local backup databases.
-              </p>
-
-              <div className={styles.tagContainer}>
-                {["Next.js API", "xAI (Grok-3)", "Groq (Llama 3.3)", "In-Memory Store"].map(tag => (
-                  <span key={tag} className={styles.tag}>{tag}</span>
-                ))}
-              </div>
-
-              <div className={styles.linkGroup}>
-                <a
-                  href="https://github.com/Abhinavthakur20/Portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.iconLink}
-                >
-                  <Github size={15} /> Code
-                </a>
-                <a
-                  href="https://github.com/Abhinavthakur20/Portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.iconLink}
-                >
-                  Live <ArrowUpRight size={13} />
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.gridVisual}>
-              <div className={styles.terminalOverlay}>
-                <div className={styles.terminalHeader}>
-                  <span className={styles.termDotRed}></span>
-                  <span className={styles.termDotYellow}></span>
-                  <span className={styles.termDotGreen}></span>
-                  <span className={styles.terminalTitle}>failover_cascade.log</span>
-                </div>
-                <div className={styles.terminalCode}>
-                  <code>
-                    <span className={styles.logTag}>[DB_CONN]</span> pgvector offline; engaging fallback<br />
-                    <span className={styles.logTag}>[MEMORY]</span> retrieved in-memory backup store<br />
-                    <span className={styles.logTag}>[LLM_API]</span> xAI timed out; fallback to Groq Llama 3.3
-                  </code>
-                </div>
-              </div>
-
-              <div className={styles.imageFrame}>
-                <Image
-                  src="/studio_portal.png"
-                  alt="API cascading logs portal"
-                  className={styles.cardImg}
-                  width={400}
-                  height={225}
-                  priority={false}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Project 4: Drawza */}
-          <div className={`${styles.gridCard} glass-card glow-effect`}>
-            <div className={styles.cardInfo}>
-              <div className={styles.cardHeaderInfo}>
-                <span className={styles.projectIndex}>04</span>
                 <span className={styles.gridBadge}>REAL-TIME COLLAB</span>
               </div>
               
@@ -301,11 +161,11 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Project 5: Eco-Route */}
+          {/* Project 3: Eco-Route */}
           <div className={`${styles.gridCard} glass-card glow-effect`}>
             <div className={styles.cardInfo}>
               <div className={styles.cardHeaderInfo}>
-                <span className={styles.projectIndex}>05</span>
+                <span className={styles.projectIndex}>03</span>
                 <span className={styles.gridBadge}>SUSTAINABLE TRANSIT</span>
               </div>
               
@@ -372,11 +232,11 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Project 6: Featured Platform (BagPacker) - Full Width Banner */}
+        {/* Project 4: Featured Platform (BagPacker) - Full Width Banner */}
         <div className={`${styles.featuredCard} glass-card glow-effect`}>
           <div className={styles.featuredDetails}>
             <div className={styles.cardHeaderInfo}>
-              <span className={styles.projectIndex}>06</span>
+              <span className={styles.projectIndex}>04</span>
               <span className={styles.featuredBadge}>FEATURED WORK</span>
             </div>
             
