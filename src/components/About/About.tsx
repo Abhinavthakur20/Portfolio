@@ -70,10 +70,10 @@ export default function About() {
             <h4 className={styles.roleTitle}>Web Developer Trainee</h4>
             <div className={styles.companyTitle}>O7 Services | Jalandhar</div>
             <ul className={styles.bulletsList}>
-              <li>Built and shipped <b>BagPacker</b> (a travel platform) and <b>Vivid Prompt Forge</b> (an AI prompt manager).</li>
-              <li>Integrated Razorpay payment systems with cryptographic signature verification and offline unigram/bigram token embeddings.</li>
-              <li>Designed low-latency messaging rooms via Socket.IO and Supabase pgvector search with fail-safe database routing.</li>
-              <li>Developed context-aware AI travel guides and xAI/Groq LLM provider layers with automated failover routes.</li>
+              <li>Built and shipped <b>BagPacker</b> (travel platform), <b>Drawza</b> (real-time whiteboard), and <b>Vivid Prompt Forge</b> (AI prompt manager).</li>
+              <li>Integrated Razorpay payment systems, WebRTC voice chat signaling, and offline unigram/bigram token embeddings.</li>
+              <li>Designed low-latency room-based socket networks (Socket.IO) and Supabase pgvector search with database fail-safe backends.</li>
+              <li>Developed context-aware LLM provider routing (xAI, Groq) and auto-saving MongoDB board state pipelines.</li>
             </ul>
           </div>
         </div>
