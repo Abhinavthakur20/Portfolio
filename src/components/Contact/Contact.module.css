@@ -9,7 +9,7 @@
 }
 
 .title {
-  font-family: var(--font-plus-jakarta), sans-serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 0.75rem;
@@ -110,7 +110,7 @@
 }
 
 .success {
-  font-family: var(--font-plus-jakarta), sans-serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   font-size: 1.3rem;
   font-weight: 600;
   text-align: center;

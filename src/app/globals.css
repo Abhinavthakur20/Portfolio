@@ -11,9 +11,8 @@
   --text-muted: #9a9a9a;
   
   /* Fonts */
-  --font-space-grotesk: var(--font-space-grotesk);
+  --font-fraunces: var(--font-fraunces);
   --font-plus-jakarta: var(--font-plus-jakarta);
-  --font-playfair: var(--font-playfair);
   
   /* Playful Accents */
   --accent-red: #e63946;
@@ -62,7 +61,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-plus-jakarta), sans-serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.1;

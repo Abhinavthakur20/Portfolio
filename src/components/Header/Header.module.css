@@ -29,9 +29,10 @@
 }
 
 .logoText {
-  font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 1.4rem;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 1.5rem;
   font-weight: 700;
+  font-style: italic;
   color: var(--accent-red);
   letter-spacing: 0.02em;
 }
@@ -73,7 +74,7 @@
 }
 
 .mobileLink {
-  font-family: var(--font-plus-jakarta), sans-serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
