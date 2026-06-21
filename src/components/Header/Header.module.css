@@ -71,12 +71,6 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  transform: translateY(-100%);
-  transition: transform var(--transition-normal);
-}
-
-.mobileNavActive {
-  transform: translateY(0);
 }
 
 .mobileLink {
