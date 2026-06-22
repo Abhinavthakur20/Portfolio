@@ -1,52 +1,111 @@
 .header {
   position: fixed;
-  top: 0;
+  top: 1.5rem;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 1.25rem 2.5rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
   transition: all var(--transition-normal);
 }
 
-.headerScrolled {
-  background: rgba(245, 240, 235, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(26, 26, 26, 0.06);
-}
-
 .container {
+  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  max-width: 600px;
+  gap: 1.5rem;
+  width: fit-content;
+  max-width: 90%;
   margin: 0 auto;
+  background: rgba(245, 240, 235, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 100px;
+  padding: 0.5rem 1.75rem;
+  box-shadow: 
+    0 10px 30px rgba(26, 26, 26, 0.04),
+    0 1px 3px rgba(26, 26, 26, 0.02);
+  transition: all var(--transition-normal);
+}
+
+.headerScrolled .container {
+  padding: 0.4rem 1.25rem;
+  background: rgba(245, 240, 235, 0.9);
+  border-color: rgba(26, 26, 26, 0.12);
+  box-shadow: 
+    0 12px 30px rgba(26, 26, 26, 0.08),
+    0 1px 3px rgba(26, 26, 26, 0.04);
+  transform: translateY(-2px) scale(0.97);
+}
+
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo {
   cursor: pointer;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoText {
   font-family: var(--font-fraunces), Georgia, serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   font-style: italic;
   color: var(--accent-red);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
+  transition: transform var(--transition-fast);
 }
 
 .navLink {
+  position: relative;
   font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-primary);
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
   transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+.navLink span {
+  position: relative;
+  z-index: 2;
+}
+
+.activeIndicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.06);
+  border-radius: 100px;
+  z-index: 1;
 }
 
 .navLink:hover {
   color: var(--accent-red);
+}
+
+.navLink.active {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .menuToggle {
@@ -55,6 +114,12 @@
   border: none;
   color: var(--text-primary);
   cursor: pointer;
+  padding: 0.25rem;
+  transition: transform var(--transition-fast);
+}
+
+.menuToggle:hover {
+  transform: scale(1.05);
 }
 
 /* Mobile Nav */
@@ -65,7 +130,9 @@
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: var(--bg-primary);
+  background: rgba(245, 240, 235, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,15 +148,16 @@
   transition: color var(--transition-fast);
 }
 
-.mobileLink:hover {
-  color: var(--accent-red);
+.mobileLink:hover,
+.mobileActive {
+  color: var(--accent-red) !important;
 }
 
 .mobileCta {
   font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  padding: 0.75rem 2rem;
+  padding: 0.85rem 2.25rem;
   border-radius: 50px;
   background: var(--text-primary);
   color: var(--bg-primary);
@@ -99,19 +167,32 @@
 
 .mobileCta:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(26, 26, 26, 0.15);
+}
+
+.mobileActiveCta {
+  background: var(--accent-red) !important;
+  color: #ffffff !important;
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 1rem 1.25rem;
+    top: 1rem;
+    padding: 0 1rem;
   }
+  
   .container {
-    justify-content: space-between;
+    width: 100%;
     max-width: none;
+    padding: 0.5rem 1.25rem;
+    justify-content: space-between;
+    border-radius: 30px;
   }
-  .navLink {
+  
+  .navGroup {
     display: none;
   }
+  
   .menuToggle {
     display: block;
   }
