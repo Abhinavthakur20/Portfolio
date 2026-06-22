@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Poppins } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-plus-jakarta",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -31,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${plusJakartaSans.variable}`} style={{ scrollBehavior: "smooth" }}>
-      <body style={{ fontFamily: "var(--font-plus-jakarta), system-ui, sans-serif" }}>
+    <html lang="en" className={`${outfit.variable} ${poppins.variable}`} style={{ scrollBehavior: "smooth" }}>
+      <body style={{ fontFamily: "var(--font-poppins), system-ui, sans-serif" }}>
         <CustomCursor />
         {children}
       </body>
