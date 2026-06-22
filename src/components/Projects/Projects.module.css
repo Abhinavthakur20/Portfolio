@@ -50,7 +50,7 @@
 .cardImageBg {
   padding: 0;
   display: block;
-  height: 320px;
+  height: 400px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -141,7 +141,7 @@
   }
   
   .cardImageBg {
-    height: 240px;
+    height: 280px;
   }
 
   .sectionTitle {
