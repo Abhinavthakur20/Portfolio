@@ -12,8 +12,8 @@ const projects = [
     desc: "Full-stack travel platform with companion matching, Razorpay payments, Socket.IO messaging, and AI copilot.",
     tags: ["React 19", "Node.js", "MongoDB", "Socket.IO", "Razorpay"],
     image: "/himalayan_trails.jpg",
-    github: "https://github.com/Abhinavthakur20/Portfolio",
-    live: "https://github.com/Abhinavthakur20/Portfolio",
+    github: "https://github.com/Abhinavthakur20/BagPacker",
+    live: "https://bag-packer.vercel.app/",
     color: "#89CFF0",
   },
   {
@@ -22,8 +22,8 @@ const projects = [
     desc: "Collaborative whiteboard with real-time drawing sync, WebRTC voice chat, and persistent board state.",
     tags: ["React", "Zustand", "Socket.IO", "WebRTC", "MongoDB"],
     image: "/drawza_hero.png",
-    github: "https://github.com/Abhinavthakur20/Portfolio",
-    live: "https://github.com/Abhinavthakur20/Portfolio",
+    github: "https://github.com/Abhinavthakur20/Drawza",
+    live: "https://drawza.vercel.app/",
     color: "#e63946",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     tags: ["React", "Leaflet", "OSRM", "Nominatim"],
     image: "/ecoroute_hero.jpg",
     github: "https://github.com/Abhinavthakur20/eco-route",
-    live: "https://github.com/Abhinavthakur20/eco-route",
+    live: "https://eco-route-psi.vercel.app/",
     color: "#2d936c",
   },
   {
@@ -42,8 +42,8 @@ const projects = [
     desc: "AI app for generating policy-compliant ad prompts with vector embeddings and LLM streaming.",
     tags: ["Next.js 14", "Supabase", "pgvector", "Groq / xAI"],
     image: "/vivid_prompt_hero.png",
-    github: "https://github.com/Abhinavthakur20/Portfolio",
-    live: "https://github.com/Abhinavthakur20/Portfolio",
+    github: "https://github.com/Abhinavthakur20/Rag-Chatbot",
+    live: "https://rag-chatbot-ashen-iota.vercel.app/",
     color: "#7c3aed",
   },
 ];
