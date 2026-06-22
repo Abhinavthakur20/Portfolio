@@ -50,8 +50,8 @@
 .cardImageBg {
   padding: 0;
   display: block;
-  height: 400px;
   width: 100%;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
 }
@@ -140,9 +140,7 @@
     gap: 1.25rem;
   }
   
-  .cardImageBg {
-    height: 280px;
-  }
+
 
   .sectionTitle {
     font-size: 1.8rem;
