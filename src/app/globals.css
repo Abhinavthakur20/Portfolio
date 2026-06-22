@@ -11,8 +11,8 @@
   --text-muted: #9a9a9a;
   
   /* Fonts */
-  --font-fraunces: var(--font-fraunces);
-  --font-plus-jakarta: var(--font-plus-jakarta);
+  --font-fraunces: var(--font-outfit);
+  --font-plus-jakarta: var(--font-poppins);
   
   /* Playful Accents */
   --accent-red: #e63946;
