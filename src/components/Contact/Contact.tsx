@@ -45,19 +45,33 @@ export default function Contact() {
     setIsSubmitting(true);
     setError("");
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-      setIsSubmitting(false);
-      setSubmitted(true);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ["#e63946", "#89CFF0", "#2d936c", "#1a1a1a"],
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: "", email: "", message: "" });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitting(false);
+        setSubmitted(true);
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ["#e63946", "#89CFF0", "#2d936c", "#1a1a1a"],
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setIsSubmitting(false);
+        setError(result.message || "Failed to send. Please try again.");
+      }
     } catch {
       setIsSubmitting(false);
-      setError("Failed to send. Please try again.");
+      setError("Failed to send. Please try again later.");
     }
   };
 
