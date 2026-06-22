@@ -122,8 +122,8 @@ export default function Projects() {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={500}
-                    height={300}
+                    width={600}
+                    height={400}
                     className={styles.img}
                     priority={project.id === "01"}
                   />
