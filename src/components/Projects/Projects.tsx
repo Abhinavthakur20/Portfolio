@@ -31,7 +31,7 @@ const projects = [
     title: "Eco-Route",
     desc: "Carbon journey planner comparing transit emissions with interactive Leaflet maps and savings tracker.",
     tags: ["React", "Leaflet", "OSRM", "Nominatim"],
-    image: "/ecoroute_cover.png",
+    image: "/ecoroute_hero.jpg",
     github: "https://github.com/Abhinavthakur20/eco-route",
     live: "https://github.com/Abhinavthakur20/eco-route",
     color: "#2d936c",
