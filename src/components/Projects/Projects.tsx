@@ -21,7 +21,7 @@ const projects = [
     title: "Drawza",
     desc: "Collaborative whiteboard with real-time drawing sync, WebRTC voice chat, and persistent board state.",
     tags: ["React", "Zustand", "Socket.IO", "WebRTC", "MongoDB"],
-    image: "/drawza_cover.png",
+    image: "/drawza_hero.png",
     github: "https://github.com/Abhinavthakur20/Portfolio",
     live: "https://github.com/Abhinavthakur20/Portfolio",
     color: "#e63946",
@@ -122,8 +122,8 @@ export default function Projects() {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={280}
-                    height={160}
+                    width={500}
+                    height={300}
                     className={styles.img}
                     priority={project.id === "01"}
                   />
