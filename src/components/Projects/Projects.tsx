@@ -41,7 +41,7 @@ const projects = [
     title: "Vivid Prompt Forge",
     desc: "AI app for generating policy-compliant ad prompts with vector embeddings and LLM streaming.",
     tags: ["Next.js 14", "Supabase", "pgvector", "Groq / xAI"],
-    image: "/vivid_prompt_cover.png",
+    image: "/vivid_prompt_hero.png",
     github: "https://github.com/Abhinavthakur20/Portfolio",
     live: "https://github.com/Abhinavthakur20/Portfolio",
     color: "#7c3aed",
