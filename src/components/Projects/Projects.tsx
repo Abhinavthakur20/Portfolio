@@ -11,7 +11,7 @@ const projects = [
     title: "BagPacker",
     desc: "Full-stack travel platform with companion matching, Razorpay payments, Socket.IO messaging, and AI copilot.",
     tags: ["React 19", "Node.js", "MongoDB", "Socket.IO", "Razorpay"],
-    image: "/bagpacker_cover.png",
+    image: "/himalayan_trails.jpg",
     github: "https://github.com/Abhinavthakur20/Portfolio",
     live: "https://github.com/Abhinavthakur20/Portfolio",
     color: "#89CFF0",
