@@ -106,7 +106,7 @@
 }
 
 .navLink.active {
-  color: var(--text-primary);
+  color: var(--accent-red);
   font-weight: 600;
 }
 
