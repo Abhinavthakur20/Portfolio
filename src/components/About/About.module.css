@@ -119,6 +119,10 @@
   transition: transform var(--transition-normal);
 }
 
+.timelineItem:hover .timelineContent {
+  transform: translateX(4px);
+}
+
 .cardTypeBadge {
   font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 0.6rem;
