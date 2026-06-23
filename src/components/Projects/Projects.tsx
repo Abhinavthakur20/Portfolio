@@ -46,16 +46,6 @@ const projects = [
     live: "https://rag-chatbot-ashen-iota.vercel.app/",
     color: "#7c3aed",
   },
-  {
-    id: "05",
-    title: "Git-Share",
-    desc: "A developer collaboration hub for instant code-sharing, repository linking, and project showcases.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Appwrite"],
-    image: "/git_share_hero.png",
-    github: "https://github.com/Abhinavthakur20",
-    live: "https://github.com/Abhinavthakur20",
-    color: "#f39c12",
-  },
 ];
 
 const containerVariants = {
