@@ -23,9 +23,14 @@ export default function ParticleField() {
   useFrame((state) => {
     if (!pointsRef.current) return;
     
-    // Slow default rotation
-    pointsRef.current.rotation.y = state.clock.getElapsedTime() * 0.015;
-    pointsRef.current.rotation.x = state.clock.getElapsedTime() * 0.005;
+    // Continuous slow rotation combined with mouse position reactive tilt
+    const time = state.clock.getElapsedTime();
+    const targetX = state.pointer.y * 0.25 + time * 0.005;
+    const targetY = state.pointer.x * 0.25 + time * 0.015;
+
+    // Smoothly interpolate (lerp) points rotation towards target values
+    pointsRef.current.rotation.x = THREE.MathUtils.lerp(pointsRef.current.rotation.x, targetX, 0.05);
+    pointsRef.current.rotation.y = THREE.MathUtils.lerp(pointsRef.current.rotation.y, targetY, 0.05);
 
     let scrollY = 0;
     if (typeof window !== "undefined") {
@@ -60,10 +65,10 @@ export default function ParticleField() {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.025}
-        color="#c2b5a3" /* Warm beige dust */
+        size={0.06}
+        color="#f39c12" /* Golden amber magic dust */
         transparent
-        opacity={0.12}
+        opacity={0.35}
         sizeAttenuation
         depthWrite={false}
       />
