@@ -90,8 +90,8 @@ export default function Hero() {
 
         <motion.p className={styles.subtitle} variants={itemVariants}>
           I build scalable AI platforms, real-time collaborative apps, 
-          and resilient backend architectures. I help startups ship 
-          production-grade products fast.
+          and resilient backend architectures. I love turning complex problems 
+          into clean, high-performance digital solutions.
         </motion.p>
 
         <motion.div variants={itemVariants}>
