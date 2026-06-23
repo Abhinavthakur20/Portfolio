@@ -8,13 +8,27 @@ const PARTICLE_COUNT = 800;
 
 // Initialize particle positions and speeds statically outside render to ensure perfect React purity
 const staticPositions = new Float32Array(PARTICLE_COUNT * 3);
+const staticColors = new Float32Array(PARTICLE_COUNT * 3);
 const staticSpeeds = new Float32Array(PARTICLE_COUNT);
+
+const colorsList = [
+  [0.90, 0.22, 0.27], // Terracotta Red
+  [0.54, 0.81, 0.94], // Sky Blue
+  [0.18, 0.58, 0.42], // Mint Green
+  [0.49, 0.23, 0.93], // Purple
+  [0.95, 0.61, 0.07]  // Amber Gold
+];
 
 for (let i = 0; i < PARTICLE_COUNT; i++) {
   staticPositions[i * 3] = (Math.random() - 0.5) * 35;     // X
   staticPositions[i * 3 + 1] = (Math.random() - 0.5) * 35; // Y
   staticPositions[i * 3 + 2] = (Math.random() - 0.5) * 30; // Z
   staticSpeeds[i] = 0.015 + Math.random() * 0.035;         // speed
+
+  const color = colorsList[Math.floor(Math.random() * colorsList.length)];
+  staticColors[i * 3] = color[0];     // R
+  staticColors[i * 3 + 1] = color[1]; // G
+  staticColors[i * 3 + 2] = color[2]; // B
 }
 
 export default function ParticleField() {
@@ -76,12 +90,16 @@ export default function ParticleField() {
           attach="attributes-position"
           args={[staticPositions, 3]}
         />
+        <bufferAttribute
+          attach="attributes-color"
+          args={[staticColors, 3]}
+        />
       </bufferGeometry>
       <pointsMaterial
         size={0.08}
-        color="#f39c12" /* Golden amber magic dust */
+        vertexColors
         transparent
-        opacity={0.5}
+        opacity={0.45}
         sizeAttenuation
         depthWrite={false}
       />
