@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
@@ -22,63 +21,6 @@ export default function Home() {
     <>
       <ThreeCanvas />
       <div className={styles.page}>
-        {/* Ambient background glow blobs */}
-        <motion.div 
-          className={`${styles.bgBlob} ${styles.blobPurple}`}
-          style={{ top: "22%", right: "-10%" }}
-          animate={{
-            x: [0, 20, -15, 0],
-            y: [0, -30, 20, 0],
-            scale: [1, 1.08, 0.92, 1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div 
-          className={`${styles.bgBlob} ${styles.blobBlue}`}
-          style={{ top: "45%", left: "-12%" }}
-          animate={{
-            x: [0, -25, 20, 0],
-            y: [0, 20, -25, 0],
-            scale: [1, 0.92, 1.08, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div 
-          className={`${styles.bgBlob} ${styles.blobGreen}`}
-          style={{ top: "68%", right: "-8%" }}
-          animate={{
-            x: [0, 15, -20, 0],
-            y: [0, -20, 15, 0],
-            scale: [1, 1.05, 0.95, 1],
-          }}
-          transition={{
-            duration: 11,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div 
-          className={`${styles.bgBlob} ${styles.blobRed}`}
-          style={{ top: "85%", left: "-10%" }}
-          animate={{
-            x: [0, -20, 15, 0],
-            y: [0, 25, -20, 0],
-            scale: [1, 0.95, 1.05, 1],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
         <Header />
         <main>
           <Hero />
