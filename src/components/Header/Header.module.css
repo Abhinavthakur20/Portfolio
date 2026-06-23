@@ -82,7 +82,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .navLink span {

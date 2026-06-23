@@ -79,7 +79,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>about</span>
+              <span>About</span>
               {activeSection === "about" && (
                 <motion.div 
                   layoutId="activeNavIndicator"
@@ -95,7 +95,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>works</span>
+              <span>Works</span>
               {activeSection === "projects" && (
                 <motion.div 
                   layoutId="activeNavIndicator"
@@ -113,7 +113,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className={styles.logoText}>abhinav</span>
+            <span className={styles.logoText}>Abhinav</span>
           </motion.div>
 
           {/* Right Navigation Group */}
@@ -125,7 +125,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>skills</span>
+              <span>Skills</span>
               {activeSection === "skills" && (
                 <motion.div 
                   layoutId="activeNavIndicator"
@@ -141,7 +141,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>contact</span>
+              <span>Contact</span>
               {activeSection === "contact" && (
                 <motion.div 
                   layoutId="activeNavIndicator"
@@ -158,7 +158,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>resume</span>
+              <span>Resume</span>
             </motion.a>
           </div>
 
