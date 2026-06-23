@@ -12,7 +12,7 @@ const skillGroups = [
   {
     category: "Backend",
     color: "#7c3aed", // purple
-    skills: ["Node.js", "Express.js", "Socket.IO", "REST APIs", "JWT Auth"],
+    skills: ["Node.js", "Express.js", "Socket.IO", "FastAPI", "REST APIs", "JWT Auth"],
   },
   {
     category: "Databases",
@@ -27,7 +27,7 @@ const skillGroups = [
   {
     category: "Tools",
     color: "#6b6b6b", // slate gray
-    skills: ["Git", "GitHub", "Postman", "Vercel", "Cloudinary"],
+    skills: ["Git", "GitHub", "Docker", "Postman", "Vercel", "Cloudinary"],
   },
   {
     category: "Languages",
