@@ -56,8 +56,8 @@ export default function About() {
                 products that actually work.
               </p>
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new tech, reading 
-                about distributed systems, or sketching out product ideas.
+                When I&apos;m not coding, you&apos;ll find me exploring new tech, contributing 
+                to open-source projects, reading about distributed systems, or sketching out product ideas.
               </p>
             </div>
           </motion.div>
