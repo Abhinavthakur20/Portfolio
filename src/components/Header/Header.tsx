@@ -150,6 +150,16 @@ export default function Header() {
                 />
               )}
             </motion.a>
+            <motion.a 
+              href="/Resume_Abhinav.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.navLink}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>resume</span>
+            </motion.a>
           </div>
 
           <button
