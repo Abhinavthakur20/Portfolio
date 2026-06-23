@@ -29,3 +29,22 @@
   font-size: 0.8rem;
   color: var(--text-muted);
 }
+
+.footerSocials {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0.75rem 0;
+}
+
+.socialLink {
+  color: var(--text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLink:hover {
+  color: var(--accent-red);
+  transform: translateY(-2px);
+}
