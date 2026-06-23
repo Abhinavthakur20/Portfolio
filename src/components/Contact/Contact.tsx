@@ -42,6 +42,11 @@ export default function Contact() {
       setError("Please fill out all fields.");
       return;
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
     setIsSubmitting(true);
     setError("");
     try {
