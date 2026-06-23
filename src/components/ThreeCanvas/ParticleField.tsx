@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -19,14 +19,28 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
 
 export default function ParticleField() {
   const pointsRef = useRef<THREE.Points>(null);
+  const mouseRef = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      // Normalize client coordinates to standard [-1, 1] range
+      mouseRef.current.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouseRef.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   useFrame((state) => {
     if (!pointsRef.current) return;
     
     // Continuous slow rotation combined with mouse position reactive tilt
     const time = state.clock.getElapsedTime();
-    const targetX = state.pointer.y * 0.25 + time * 0.005;
-    const targetY = state.pointer.x * 0.25 + time * 0.015;
+    const targetX = mouseRef.current.y * 0.45 + time * 0.005; // increased tilt range
+    const targetY = mouseRef.current.x * 0.45 + time * 0.015;
 
     // Smoothly interpolate (lerp) points rotation towards target values
     pointsRef.current.rotation.x = THREE.MathUtils.lerp(pointsRef.current.rotation.x, targetX, 0.05);
@@ -47,7 +61,6 @@ export default function ParticleField() {
       // Wrap particles back if they pass the camera
       if (positionsArray[zIndex] > 12) {
         positionsArray[zIndex] = -22;
-        // inline recalculations inside animation loop (not render) is allowed
         positionsArray[i * 3] = (Math.random() - 0.5) * 35;
         positionsArray[i * 3 + 1] = (Math.random() - 0.5) * 35;
       }
@@ -65,10 +78,10 @@ export default function ParticleField() {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.06}
+        size={0.08}
         color="#f39c12" /* Golden amber magic dust */
         transparent
-        opacity={0.35}
+        opacity={0.5}
         sizeAttenuation
         depthWrite={false}
       />
