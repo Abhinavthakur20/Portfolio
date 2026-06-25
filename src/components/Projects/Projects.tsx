@@ -9,7 +9,7 @@ const projects = [
   {
     id: "01",
     title: "BagPacker",
-    desc: "Full-stack travel platform with companion matching, Razorpay payments, Socket.IO messaging, and AI copilot.",
+    desc: "Travel platform with companion matching, Razorpay payments, Socket.IO messaging, and an AI trip copilot.",
     tags: ["React 19", "Node.js", "MongoDB", "Socket.IO", "Razorpay"],
     image: "/himalayan_trails.jpg",
     github: "https://github.com/Abhinavthakur20/BagPacker",
@@ -19,7 +19,7 @@ const projects = [
   {
     id: "02",
     title: "Drawza",
-    desc: "Collaborative whiteboard with real-time drawing sync, WebRTC voice chat, and persistent board state.",
+    desc: "Collaborative whiteboard with low-latency drawing sync, WebRTC voice chat, and persistent board state.",
     tags: ["React", "Zustand", "Socket.IO", "WebRTC", "MongoDB"],
     image: "/drawza_hero.png",
     github: "https://github.com/Abhinavthakur20/Drawza",
@@ -39,7 +39,7 @@ const projects = [
   {
     id: "04",
     title: "Vivid Prompt Forge",
-    desc: "AI app for generating policy-compliant ad prompts with vector embeddings and LLM streaming.",
+    desc: "AI workspace for generating policy-compliant ad prompts with vector embeddings and LLM streaming.",
     tags: ["Next.js 14", "Supabase", "pgvector", "Groq / xAI"],
     image: "/vivid_prompt_hero.png",
     github: "https://github.com/Abhinavthakur20/Rag-Chatbot",
