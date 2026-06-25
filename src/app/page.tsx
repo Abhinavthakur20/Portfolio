@@ -32,7 +32,7 @@ export default function Home() {
         <footer className={styles.footer}>
           <div className={`${styles.footerInner} container`}>
             <p className={styles.footerText}>
-              Crafted with care by <strong>Abhinav Thakur</strong>
+              Building practical web and AI products — <strong>Abhinav Thakur</strong>
             </p>
             <div className={styles.footerSocials}>
               <a href={socials.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
