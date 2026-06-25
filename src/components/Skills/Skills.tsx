@@ -7,7 +7,7 @@ const skillGroups = [
   {
     category: "Frontend",
     color: "#89CFF0", // sky blue
-    skills: ["React.js", "Next.js 14", "Tailwind CSS", "CSS Modules", "Zustand"],
+    skills: ["React 19", "Next.js", "Tailwind CSS", "CSS Modules", "Zustand"],
   },
   {
     category: "Backend",
