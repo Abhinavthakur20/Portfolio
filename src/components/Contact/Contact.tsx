@@ -130,6 +130,8 @@ export default function Contact() {
                       id="name" name="name" type="text"
                       value={formData.name} onChange={handleChange}
                       placeholder="Your name"
+                      autoComplete="name"
+                      required
                       className={styles.input} disabled={isSubmitting}
                     />
                   </motion.div>
@@ -139,6 +141,8 @@ export default function Contact() {
                       id="email" name="email" type="email"
                       value={formData.email} onChange={handleChange}
                       placeholder="you@example.com"
+                      autoComplete="email"
+                      required
                       className={styles.input} disabled={isSubmitting}
                     />
                   </motion.div>
@@ -149,6 +153,9 @@ export default function Contact() {
                     id="message" name="message"
                     value={formData.message} onChange={handleChange}
                     placeholder="Tell me about your project..."
+                    minLength={10}
+                    required
+                    rows={6}
                     className={styles.textarea} disabled={isSubmitting}
                   />
                 </motion.div>
