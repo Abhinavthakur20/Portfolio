@@ -133,10 +133,10 @@ export default function Projects() {
                 <div className={styles.cardTop}>
                   <h3 className={styles.cardTitle}>{project.title}</h3>
                   <div className={styles.cardLinks}>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.cardLink} aria-label={`${project.title} GitHub repository`}>
                       <Github size={14} />
                     </a>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.cardLink} aria-label={`${project.title} live site`}>
                       <ArrowUpRight size={14} />
                     </a>
                   </div>
