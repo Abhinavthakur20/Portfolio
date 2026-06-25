@@ -82,7 +82,7 @@ export default function About() {
                   <p className={styles.cardSubTitle}>Guru Nanak Dev University, Amritsar</p>
                   <div className={styles.cardMeta}>
                     <span className={styles.metaBadge}>CGPA: 7.58 / 10</span>
-                    <span className={styles.metaBadge} style={{ background: "rgba(2, 132, 199, 0.05)", color: "#0284c7", border: "none" }}>B.Tech CSE</span>
+                    <span className={styles.metaBadge} style={{ background: "rgba(2, 132, 199, 0.05)", color: "#0284c7", border: "none" }}>Expected 2026</span>
                   </div>
                 </div>
               </motion.div>
@@ -99,7 +99,7 @@ export default function About() {
                   <p className={styles.cardSubTitle}>O7 Services • Jalandhar</p>
                   <div className={styles.cardMeta}>
                     <span className={styles.metaBadge}>Traineeship</span>
-                    <span className={styles.metaBadge} style={{ background: "rgba(230, 57, 70, 0.05)", color: "var(--accent-red)", border: "none" }}>Full-Stack MERN</span>
+                    <span className={styles.metaBadge} style={{ background: "rgba(230, 57, 70, 0.05)", color: "var(--accent-red)", border: "none" }}>Client Projects</span>
                   </div>
                 </div>
               </motion.div>
