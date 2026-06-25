@@ -52,8 +52,8 @@ export default function About() {
               <p>
                 I specialize in building full-stack applications — from real-time chat 
                 systems and payment flows to AI-powered tools with vector search and 
-                LLM streaming. I care deeply about clean architecture and shipping 
-                products that actually work.
+                LLM streaming. I care about clear architecture, reliable APIs, and 
+                interfaces that feel fast in production.
               </p>
               <p>
                 When I&apos;m not coding, you&apos;ll find me exploring new tech, contributing 
