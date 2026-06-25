@@ -102,7 +102,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring" as const, stiffness: 400, damping: 15 }}
           >
-            Chat with me
+            Start a project
           </motion.button>
         </motion.div>
       </motion.div>
@@ -123,7 +123,7 @@ export default function Hero() {
         >
           <ChevronDown size={24} />
         </motion.div>
-        <p className={styles.stepText}>Step into my digital home</p>
+        <p className={styles.stepText}>See selected work</p>
       </motion.div>
     </section>
   );
