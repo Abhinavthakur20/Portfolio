@@ -165,7 +165,9 @@ export default function Header() {
           <button
             className={styles.menuToggle}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-controls="mobile-navigation"
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -175,6 +177,7 @@ export default function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
+            id="mobile-navigation"
             className={styles.mobileNav}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
