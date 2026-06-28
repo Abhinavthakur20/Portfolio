@@ -46,8 +46,7 @@
 
 .group:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-  border-color: rgba(26, 26, 26, 0.15);
+  border-color: var(--group-theme-color);
 }
 
 .groupHeader {
@@ -64,12 +63,24 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  width: 100%;
 }
 
 .dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+}
+
+.counter {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 12px;
+  background: var(--group-theme-color-bg);
+  color: var(--group-theme-color);
+  margin-left: auto;
 }
 
 .skillTags {

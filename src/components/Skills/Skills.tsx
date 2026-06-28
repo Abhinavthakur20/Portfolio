@@ -103,6 +103,14 @@ export default function Skills() {
               key={group.category} 
               className={styles.group}
               variants={groupVariants}
+              style={{
+                "--group-theme-color": group.color,
+                "--group-theme-color-bg": group.color + "0d",
+              } as React.CSSProperties}
+              whileHover={{
+                y: -4,
+                boxShadow: `0 8px 30px ${group.color}18`,
+              }}
             >
               <div className={styles.groupHeader}>
                 <h3 className={styles.groupTitle}>
@@ -111,6 +119,7 @@ export default function Skills() {
                     style={{ backgroundColor: group.color }}
                   />
                   {group.category}
+                  <span className={styles.counter}>{group.skills.length}</span>
                 </h3>
               </div>
               <div className={styles.skillTags}>
