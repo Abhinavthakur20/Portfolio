@@ -60,6 +60,21 @@ export default function About() {
                 to open-source projects, reading about distributed systems, or sketching out product ideas.
               </p>
             </div>
+
+            <div className={styles.metrics}>
+              <div className={styles.metricItem}>
+                <span className={styles.metricVal}>7.58</span>
+                <span className={styles.metricLabel}>B.Tech CGPA</span>
+              </div>
+              <div className={styles.metricItem}>
+                <span className={styles.metricVal}>10+</span>
+                <span className={styles.metricLabel}>Projects Built</span>
+              </div>
+              <div className={styles.metricItem}>
+                <span className={styles.metricVal}>6+</span>
+                <span className={styles.metricLabel}>Months Trainee</span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div 
