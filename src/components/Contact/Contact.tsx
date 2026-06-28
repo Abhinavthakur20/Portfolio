@@ -148,12 +148,16 @@ export default function Contact() {
                   </motion.div>
                 </div>
                 <motion.div className={styles.field} variants={formFieldVariants}>
-                  <label htmlFor="message" className={styles.label}>Message</label>
+                  <div className={styles.fieldHeader}>
+                    <label htmlFor="message" className={styles.label}>Message</label>
+                    <span className={styles.charCounter}>{formData.message.length} / 1000</span>
+                  </div>
                   <textarea
                     id="message" name="message"
                     value={formData.message} onChange={handleChange}
                     placeholder="Tell me about your project..."
                     minLength={10}
+                    maxLength={1000}
                     required
                     rows={6}
                     className={styles.textarea} disabled={isSubmitting}

@@ -44,6 +44,19 @@
   gap: 0.4rem;
 }
 
+.fieldHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.charCounter {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
 .label {
   font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 0.8rem;
@@ -68,8 +81,8 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: var(--text-primary);
-  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.04);
+  border-color: var(--accent-red);
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.08);
 }
 
 .textarea {
