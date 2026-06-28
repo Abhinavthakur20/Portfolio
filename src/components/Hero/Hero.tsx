@@ -1,10 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
+  const roles = [
+    "Full-Stack AI",
+    "MERN Developer",
+    "Real-Time Builder"
+  ];
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 2800);
+    return () => clearInterval(timer);
+  }, []);
+
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -83,7 +98,21 @@ export default function Hero() {
         </motion.p>
         
         <motion.h1 className={styles.title} variants={itemVariants}>
-          Full-Stack AI<br />
+          <span className={styles.roleWrapper}>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={roleIndex}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+                className={styles.roleText}
+              >
+                {roles[roleIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+          <br />
           Developer you<br />
           can count on
         </motion.h1>

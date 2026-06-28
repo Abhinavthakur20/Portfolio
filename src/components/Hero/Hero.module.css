@@ -69,6 +69,17 @@
   color: var(--text-primary);
 }
 
+.roleWrapper {
+  display: inline-block;
+  position: relative;
+  min-width: 250px;
+}
+
+.roleText {
+  display: inline-block;
+  color: var(--accent-red);
+}
+
 .subtitle {
   font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 1.05rem;
