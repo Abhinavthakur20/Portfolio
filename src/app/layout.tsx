@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Poppins } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress/ScrollProgress";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -54,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${poppins.variable}`} style={{ scrollBehavior: "smooth" }}>
       <body style={{ fontFamily: "var(--font-poppins), system-ui, sans-serif" }}>
+        <ScrollProgress />
         <CustomCursor />
         {children}
       </body>
