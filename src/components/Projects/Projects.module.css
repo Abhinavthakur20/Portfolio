@@ -104,9 +104,9 @@
 }
 
 .cardLink:hover {
-  background: var(--text-primary);
+  background: var(--card-theme-color);
   color: var(--bg-primary);
-  border-color: var(--text-primary);
+  border-color: var(--card-theme-color);
 }
 
 .cardDesc {
@@ -132,6 +132,14 @@
   border-radius: 50px;
   background: var(--bg-primary);
   color: var(--text-secondary);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.card:hover .tag {
+  background: var(--card-theme-color-bg);
+  color: var(--card-theme-color);
+  border-color: var(--card-theme-color);
 }
 
 @media (max-width: 768px) {

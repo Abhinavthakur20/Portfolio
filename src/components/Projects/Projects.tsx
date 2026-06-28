@@ -108,6 +108,10 @@ export default function Projects() {
               key={project.id}
               className={styles.card}
               variants={cardVariants}
+              style={{
+                "--card-theme-color": project.color,
+                "--card-theme-color-bg": project.color + "1a",
+              } as React.CSSProperties}
               whileHover={{ 
                 y: -6, 
                 boxShadow: "0 12px 30px rgba(26, 26, 26, 0.06)",
