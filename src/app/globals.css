@@ -50,6 +50,13 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide default cursor on desktop when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+  html, body, a, button, input, textarea, select, [role="button"] {
+    cursor: none !important;
+  }
+}
+
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--accent-red); border-radius: 4px; opacity: 0.7; }

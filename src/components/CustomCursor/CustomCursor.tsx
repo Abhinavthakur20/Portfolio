@@ -13,6 +13,9 @@ export default function CustomCursor() {
   const ringCoords = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouch) return;
+
     const onMouseMove = (e: MouseEvent) => {
       mouseCoords.current.x = e.clientX;
       mouseCoords.current.y = e.clientY;

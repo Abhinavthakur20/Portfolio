@@ -43,15 +43,7 @@
 
 /* Hide default cursor on desktop */
 @media (hover: hover) and (pointer: fine) {
-  :global(html),
-  :global(body),
-  :global(a),
-  :global(button),
-  :global(input),
-  :global(textarea),
-  :global(*) {
-    cursor: none !important;
-  }
+  /* Default cursor hiding moved to globals.css to avoid impure CSS Module selectors */
 }
 
 /* Hide custom cursor on touchscreens */
@@ -59,10 +51,5 @@
   .cursorDot,
   .cursorRing {
     display: none !important;
-  }
-  :global(html),
-  :global(body),
-  :global(*) {
-    cursor: auto !important;
   }
 }
