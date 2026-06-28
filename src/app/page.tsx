@@ -9,14 +9,30 @@ import Skills from "@/components/Skills/Skills";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact/Contact";
 
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
 import { socials } from "@/config/socials";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ThreeCanvas = dynamic(() => import("@/components/ThreeCanvas/ThreeCanvas"), {
   ssr: false,
 });
 
 export default function Home() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <ThreeCanvas />
@@ -52,6 +68,24 @@ export default function Home() {
           </div>
         </footer>
       </div>
+
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            className={styles.scrollTopBtn}
+            onClick={scrollToTop}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={20} />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </>
   );
 }
