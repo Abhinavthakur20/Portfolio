@@ -1,6 +1,6 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useProgress, Html } from "@react-three/drei";
 import ParticleField from "./ParticleField";
 
@@ -16,6 +16,40 @@ function CanvasLoader() {
 }
 
 export default function ThreeCanvas() {
+  const [shouldRender, setShouldRender] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Deactivate canvas when scrolled far down to save GPU resources
+      if (window.scrollY > 2200) {
+        setShouldRender(false);
+      } else {
+        setShouldRender(true);
+      }
+    };
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        setShouldRender(false);
+      } else {
+        handleScroll();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    // Run initial check
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, []);
+
+  if (!shouldRender) return null;
+
   return (
     <div style={containerStyle}>
       <Canvas
