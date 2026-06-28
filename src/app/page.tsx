@@ -51,18 +51,42 @@ export default function Home() {
               Building practical web and AI products — <strong>Abhinav Thakur</strong>
             </p>
             <div className={styles.footerSocials}>
-              <a href={socials.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
+              <motion.a 
+                href={socials.github} target="_blank" rel="noopener noreferrer" 
+                className={styles.socialLink} aria-label="GitHub"
+                style={{ "--social-hover-color": "#24292e" } as React.CSSProperties}
+                whileHover={{ scale: 1.15, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Github size={18} />
-              </a>
-              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+              </motion.a>
+              <motion.a 
+                href={socials.linkedin} target="_blank" rel="noopener noreferrer" 
+                className={styles.socialLink} aria-label="LinkedIn"
+                style={{ "--social-hover-color": "#0077b5" } as React.CSSProperties}
+                whileHover={{ scale: 1.15, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Linkedin size={18} />
-              </a>
-              <a href={socials.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Twitter">
+              </motion.a>
+              <motion.a 
+                href={socials.twitter} target="_blank" rel="noopener noreferrer" 
+                className={styles.socialLink} aria-label="Twitter"
+                style={{ "--social-hover-color": "#1da1f2" } as React.CSSProperties}
+                whileHover={{ scale: 1.15, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Twitter size={18} />
-              </a>
-              <a href={socials.email} className={styles.socialLink} aria-label="Email">
+              </motion.a>
+              <motion.a 
+                href={socials.email} 
+                className={styles.socialLink} aria-label="Email"
+                style={{ "--social-hover-color": "var(--accent-red)" } as React.CSSProperties}
+                whileHover={{ scale: 1.15, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Mail size={18} />
-              </a>
+              </motion.a>
             </div>
             <p className={styles.footerCopy}>© {new Date().getFullYear()}</p>
           </div>

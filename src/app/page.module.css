@@ -80,8 +80,7 @@
 }
 
 .socialLink:hover {
-  color: var(--accent-red);
-  transform: translateY(-2px);
+  color: var(--social-hover-color);
 }
 
 .scrollTopBtn {
