@@ -93,6 +93,10 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
+        <motion.div className={styles.statusBadge} variants={itemVariants}>
+          <span className={styles.statusDot}></span>
+          <span>Available for work</span>
+        </motion.div>
         <motion.p className={styles.greeting} variants={itemVariants}>
           Hi, I&apos;m Abhinav
         </motion.p>

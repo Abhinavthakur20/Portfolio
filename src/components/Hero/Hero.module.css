@@ -60,6 +60,47 @@
   color: var(--text-secondary);
 }
 
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(45, 147, 108, 0.08);
+  border: 1px solid rgba(45, 147, 108, 0.2);
+  border-radius: 20px;
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2d936c;
+  margin-bottom: 0.5rem;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  background-color: #2d936c;
+  border-radius: 50%;
+  position: relative;
+}
+
+.statusDot::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  background-color: #2d936c;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
 .title {
   font-family: var(--font-fraunces), Georgia, serif;
   font-size: clamp(3rem, 7vw, 5.5rem);
