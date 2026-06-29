@@ -29,6 +29,13 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("abhinav.thakur.work@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -101,6 +108,20 @@ export default function Contact() {
         >
           Have an idea or a project? Drop me a message — I&apos;d love to hear from you.
         </motion.p>
+
+        <motion.div 
+          className={styles.directEmail}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        >
+          <span>Or email directly:</span>
+          <button onClick={handleCopyEmail} className={styles.emailTextBtn} type="button">
+            <strong>abhinav.thakur.work@gmail.com</strong>
+            <span className={styles.copyTooltip}>{copied ? "Copied! 🎉" : "Copy"}</span>
+          </button>
+        </motion.div>
 
         <div className={styles.formWrapper}>
           <AnimatePresence mode="wait">
