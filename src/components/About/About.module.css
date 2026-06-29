@@ -237,3 +237,36 @@
     gap: 1.25rem;
   }
 }
+
+.aboutActions {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.resumeBtn {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.02);
+}
+
+.resumeBtn:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.1);
+}
+
+.resumeBtn:hover .arrowIcon {
+  transform: translateX(3px);
+}

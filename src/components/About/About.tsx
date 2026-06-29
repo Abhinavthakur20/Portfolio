@@ -75,6 +75,18 @@ export default function About() {
                 <span className={styles.metricLabel}>Months Trainee</span>
               </div>
             </div>
+
+            <div className={styles.aboutActions}>
+              <a 
+                href="/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.resumeBtn}
+              >
+                <span>View Resume</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '6px', transition: 'transform 0.2s' }} className={styles.arrowIcon}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
           </motion.div>
 
           <motion.div 
