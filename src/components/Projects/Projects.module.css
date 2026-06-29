@@ -24,6 +24,39 @@
   line-height: 1.6;
 }
 
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: -1.5rem auto 2.5rem;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.filterBtn {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  background: var(--bg-primary);
+  border-color: rgba(26, 26, 26, 0.2);
+}
+
+.filterBtn.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
 /* Bento Grid - Uniform 2x2 */
 .grid {
   display: grid;

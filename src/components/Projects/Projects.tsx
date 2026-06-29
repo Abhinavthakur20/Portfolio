@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { Github, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Projects.module.css";
 
 const projects = [
@@ -15,6 +16,7 @@ const projects = [
     github: "https://github.com/Abhinavthakur20/BagPacker",
     live: "https://bag-packer.vercel.app/",
     color: "#89CFF0",
+    category: "Full-Stack",
   },
   {
     id: "02",
@@ -25,6 +27,7 @@ const projects = [
     github: "https://github.com/Abhinavthakur20/Drawza",
     live: "https://drawza.vercel.app/",
     color: "#e63946",
+    category: "Real-Time",
   },
   {
     id: "03",
@@ -35,6 +38,7 @@ const projects = [
     github: "https://github.com/Abhinavthakur20/eco-route",
     live: "https://eco-route-psi.vercel.app/",
     color: "#2d936c",
+    category: "Frontend",
   },
   {
     id: "04",
@@ -45,8 +49,11 @@ const projects = [
     github: "https://github.com/Abhinavthakur20/Rag-Chatbot",
     live: "https://rag-chatbot-ashen-iota.vercel.app/",
     color: "#7c3aed",
+    category: "AI",
   },
 ];
+
+const categories = ["All", "Full-Stack", "Real-Time", "Frontend", "AI"];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -72,6 +79,12 @@ const cardVariants = {
 };
 
 export default function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredProjects = selectedCategory === "All"
+    ? projects
+    : projects.filter((project) => project.category === selectedCategory);
+
   return (
     <section id="projects" className={`${styles.projects} section`}>
       <div className={`${styles.inner} container`}>
@@ -96,6 +109,18 @@ export default function Projects() {
           real-time collaboration to AI-powered workflows.
         </motion.p>
 
+        <div className={styles.filters}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`${styles.filterBtn} ${selectedCategory === cat ? styles.active : ""}`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+        
         <motion.div 
           className={styles.grid}
           variants={containerVariants}
@@ -103,57 +128,63 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              className={styles.card}
-              variants={cardVariants}
-              style={{
-                "--card-theme-color": project.color,
-                "--card-theme-color-bg": project.color + "1a",
-              } as React.CSSProperties}
-              whileHover={{ 
-                y: -6, 
-                boxShadow: "0 12px 30px rgba(26, 26, 26, 0.06)",
-                transition: { duration: 0.2 } 
-              }}
-            >
-              <div className={styles.cardImage}>
-                <div
-                  className={styles.cardImageBg}
-                  style={{ backgroundColor: project.color + "12" }}
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={800}
-                    height={500}
-                    className={styles.img}
-                    priority={project.id === "01"}
-                  />
-                </div>
-              </div>
-              <div className={styles.cardBody}>
-                <div className={styles.cardTop}>
-                  <h3 className={styles.cardTitle}>{project.title}</h3>
-                  <div className={styles.cardLinks}>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.cardLink} aria-label={`${project.title} GitHub repository`}>
-                      <Github size={14} />
-                    </a>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.cardLink} aria-label={`${project.title} live site`}>
-                      <ArrowUpRight size={14} />
-                    </a>
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.25 }}
+                className={styles.card}
+                style={{
+                  "--card-theme-color": project.color,
+                  "--card-theme-color-bg": project.color + "1a",
+                } as React.CSSProperties}
+                whileHover={{ 
+                  y: -6, 
+                  boxShadow: "0 12px 30px rgba(26, 26, 26, 0.06)",
+                  transition: { duration: 0.2 } 
+                }}
+              >
+                <div className={styles.cardImage}>
+                  <div
+                    className={styles.cardImageBg}
+                    style={{ backgroundColor: project.color + "12" }}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={800}
+                      height={500}
+                      className={styles.img}
+                      priority={project.id === "01"}
+                    />
                   </div>
                 </div>
-                <p className={styles.cardDesc}>{project.desc}</p>
-                <div className={styles.cardTags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag} className={styles.tag}>{tag}</span>
-                  ))}
+                <div className={styles.cardBody}>
+                  <div className={styles.cardTop}>
+                    <h3 className={styles.cardTitle}>{project.title}</h3>
+                    <div className={styles.cardLinks}>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.cardLink} aria-label={`${project.title} GitHub repository`}>
+                        <Github size={14} />
+                      </a>
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.cardLink} aria-label={`${project.title} live site`}>
+                        <ArrowUpRight size={14} />
+                      </a>
+                    </div>
+                  </div>
+                  <p className={styles.cardDesc}>{project.desc}</p>
+                  <div className={styles.cardTags}>
+                    {project.tags.map((tag) => (
+                      <span key={tag} className={styles.tag}>{tag}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </motion.div>
       </div>
     </section>
